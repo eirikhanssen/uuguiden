@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="uuguiden.css"/>
+        <script src="uuguiden.js"></script>
+    </head>
+<body>
+    <header id="header">
+        <h1>uuguiden.no</h1>
+        <p>Tilpasset veileder for universell utforming av digitalt innhold</p>
+    </header>
+    
+    <section id="tilpass">
+        <h2>Tilpass denne veilederen</h2>
+        <p>Velg hva slags type digitalt innhold du arbeider med og programvare du bruker for å få en tilpasset veileder for universell utforming av innholdet du jobber med akkurat nå.</p>
+        <form action="">
+            <fieldset>
+                <legend>Innholdstype</legend>
+                <p>Velg alle innholdstypene som passer til det digitale innholdet du jobber med nå.</p>
+                <label><span>Tekstdokument</span><input type="checkbox"/></label>
+                <label><span>Presentasjon</span><input type="checkbox"/></label>
+                <label><span>Bilde (foto/punktgrafikk)</span><input type="checkbox"/></label>
+                <label><span>Bilde (diagrammer)</span><input type="checkbox"/></label>
+                <label><span>Lydfil/Podcast</span><input type="checkbox"/></label>
+                <label><span>Video</span><input type="checkbox"/></label>
+            </fieldset>
+            <fieldset>
+                <legend>Programvare</legend>
+                <p>Hvilken programvare lager du innholdet i? (flere valg er mulig)</p>
+
+                <fieldset>
+                    <legend>Skriveprogrammer</legend>
+                    <label><span>Microsoft Word for Windows 2019 (latest)</span><input type="checkbox"/></label>
+                    <label><span>Microsoft Word for MAC (latest)</span><input type="checkbox"/></label>
+                    <label><span>Microsoft Word 2019</span><input type="checkbox"/></label>
+                    <label><span>Microsoft Word 2013-2016</span><input type="checkbox"/></label>
+                    <label><span>Microsoft Word 2010</span><input type="checkbox"/></label>
+                    <label><span>Libre Office Writer</span><input type="checkbox"/></label>
+                    <label><span>Apple Pages</span><input type="checkbox"/></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Presentasjonsprogramare</legend>
+                    <label><span>Microsoft PowerPoint</span><input type="checkbox"/></label>
+                    <label><span>Libre Office Impress</span><input type="checkbox"/></label>
+                    <label><span>Apple Keynote</span><input type="checkbox"/></label>
+                    <label><span>Sozi</span><input type="checkbox"/></label>
+                    <label><span>Google Slides</span><input type="checkbox"/></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Lærings- og innholdsplattformer</legend>
+                    <label><span>EdX</span><input type="checkbox"/></label>
+                    <label><span>Canvas</span><input type="checkbox"/></label>
+                    <label><span>Moodle</span><input type="checkbox"/></label>
+                    <label><span>Wordpress</span><input type="checkbox"/></label>
+                    <label><span>Joomla</span><input type="checkbox"/></label>
+                    <label><span>Drupal</span><input type="checkbox"/></label>
+                </fieldset>
+                
+            </fieldset>
+            
+            <button>Tilpass veiledningen</button>
+            <button>Vis hele veiledningen</button>
+        </form>
+    </section>
+    <section id="veileder">
+        <h2>Veileder</h2>
+        <section id="dokumentstruktur">
+            <h3>Dokumentstruktur</h3>
+            <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer dette å bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til tabeller </p>
+        </section>
+        </section>
+            <h3>Tekstinnstillinger</h3>
+            <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
+            <ul>
+                <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
+                <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
+                <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>. <strong>Unngå for spesifikke regler i CSS</strong> som gjør dette vanskelig:
+                <ul>
+                    <li>Ikke bruk !important i CSS-relger for tekst</li>
+                    <li>Ikke definer CSS-relger for tekst i style-attributter</li>
+                </ul></li>
+            </ul>
+        </section>
+        <section class="overskriftsnivåer">
+            <h3>Overskriftsnivåer</h3>
+            <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra for alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet muligheten til å navigere effektivt.</p>
+            <ul>
+                <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i dokumentet.</li>
+                <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du heller se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
+                <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå. F.eks skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
+            </ul>
+        </section>
+        <section id="bilder">
+            <h3>Bilder</h3>
+        </section>
+        <section id="pdf-eksport">
+            <h3>PDF-eksport</h3>
+            <p class="generelt">Et godt strukturert dokument har bakt inn informasjon som gjør at det fungerer godt med forskjellig støtteteknologi. For at vi ikke skal miste dette må dokumentet eksporteres på rett måte.</p>
+        </section>
+        <section>
+            <h3>Sjekk tilgjengeligheten</h3>
+            <p class="generelt">Flere programmer har innebygde verktøy som hjelper deg å sjekke tilgjengeligheten. Men noen ting må du teste manuelt.</p>
+        </section>
+    </section>
+    
+    
+</body></html>

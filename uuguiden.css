@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+* {font-family: 'Open Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6,summary {font-family: Roboto, sans-serif;}
+
+h1 {font-size: 2.5rem; margin-top:0; padding-top: 1rem;}
+h2 {font-size: 2rem;}
+h3, summary {font-size: 1.5rem;}
+
+html {background-color: whitesmoke; margin:0;padding:0rem;}
+body {background-color: white; max-width: 75rem; margin: auto; margin-top:0; padding:2rem;}
+
+.intro {
+    background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;;
+}
+
+summary {
+    font-weight: bold;
+    margin-left: -2rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+details {
+    padding-left:0;
+    padding-left: 2rem;
+    padding-top:0;
+    padding-right:0;
+    background-color: white;
+    border: 1px solid #aaa;
+}
+
+details + details {margin-top: .5rem;}
+
+details[open] {padding-bottom: 1rem;}
+
+details[open] summary {background-color: black; color:white;}
+
+details strong {background-color: #ffe8c3; border-radius: .25rem;}
+.self-url {margin-top: 2rem;}
+
+.notice {font-family:monospace;}
+
+.version {
+    background-color: #007ce8;
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+dt {font-weight: bold;}
+dd dt {font-style: italic; color: #333}
