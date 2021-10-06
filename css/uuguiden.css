@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@700&display=swap');
 * {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6,summary {font-family: Roboto, sans-serif;}
+h1,h2,h3,h4,h5,h6,summary {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+
+}
 
 h1 {font-size: 2.5rem; margin-top:0; padding-top: 1rem;}
 h2 {font-size: 2rem;}
@@ -50,3 +54,14 @@ details strong {background-color: #ffe8c3; border-radius: .25rem;}
 
 dt {font-weight: bold;}
 dd dt {font-style: italic; color: #333}
+
+label > input {
+    float:left;
+}
+label {
+    display: block;
+}
+
+legend {
+    font-weight: bold;
+}
