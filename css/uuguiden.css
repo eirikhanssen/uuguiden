@@ -3,19 +3,72 @@
 h1,h2,h3,h4,h5,h6,summary {
     font-family: Roboto, sans-serif;
     font-weight: bold;
-
 }
 
-h1 {font-size: 2.5rem; margin-top:0; padding-top: 1rem;}
-h2 {font-size: 2rem;}
-h3, summary {font-size: 1.5rem;}
+h1,h2,h3,h4,h5,h6 {margin-bottom: 0;}
 
-html {background-color: whitesmoke; margin:0;padding:0rem;}
-body {background-color: white; max-width: 75rem; margin: auto; margin-top:0; padding:2rem;}
+h1 {font-size: 3.5rem; margin-top:0; padding-top: 1rem;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.5rem;}
 
+summary {font-size: 1.25rem;}
+
+#header {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    position: relative;
+    background-color: mintcream;
+    border-bottom: 1px solid silver;
+    box-sizing: content-box;
+}
+
+.headercontent {
+    padding-left: 8rem;
+    background-image: url('/favicon.svg');
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    background-size: 6rem auto;
+    padding-bottom: .5rem;
+}
+.headercontent p {
+    margin-top: 0;
+}
+
+#header::after {
+    content:"";
+    position: absolute;
+    display: block;
+    top:0;
+    bottom:0;
+    width:100vw;
+    background-color:inherit;
+    border-bottom: inherit;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    height: 100%;
+    
+}
+
+#veileder > section {
+    border: 1px solid slategrey;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#veileder > section + section {}
+
+#veileder > section > h3 {
+    margin-top: 0;
+}
+html {background-color: white; margin:0;padding:0rem;}
+body {background-color: white; max-width: 75rem; margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
+/*
 .intro {
-    background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;;
-}
+    background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;
+    background-color: red;
+}*/
 
 summary {
     font-weight: bold;
@@ -64,4 +117,30 @@ label {
 
 legend {
     font-weight: bold;
+}
+
+.skiplink {
+    position: absolute;
+    right: -100%    ;
+    top:4px;
+    left:auto;
+    display: inline-block;
+    font-size: 2rem;
+    border: 1px solid black;
+    width: 7em;
+    text-align: center;
+    background-color: white;
+    font-weight:bold;
+}
+
+.skiplink:focus {
+    right:0;
+    left:0;
+    margin:auto;
+}
+
+:focus {
+    outline-color: orange;
+    outline-width: 4px;
+    outline-style: solid;
 }
