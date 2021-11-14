@@ -1,4 +1,5 @@
-var init = function(){
+var uuguiden = function(){
+  console.log('uuguiden()');
   var openRequestedDetails = function(){
     var location_hash = location.hash.split('?')[0];
 
@@ -31,4 +32,4 @@ links[i].addEventListener('click',openTargetDetails,false);
 openRequestedDetails();
 }
 
-window.addEventListener('load',init, false);
+window.addEventListener('load',uuguiden, false);
