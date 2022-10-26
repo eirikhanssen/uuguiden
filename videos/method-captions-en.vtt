@@ -1,0 +1,466 @@
+WEBVTT
+
+1
+00:00:03.014 --> 00:00:05.256
+Good evening, good morning or good afternoon!
+
+2
+00:00:05.457 --> 00:00:11.143
+Depending on when you're listening to my presentation.
+
+3
+00:00:11.871 --> 00:00:16.100
+First, let's talk about the topic which I've chosen.
+
+4
+00:00:16.271 --> 00:00:22.186
+It is somthing which has interested me a lot
+
+5
+00:00:22.429 --> 00:00:24.557
+For several years.
+
+6
+00:00:24.757 --> 00:00:30.831
+It's about supporting people who want to create accessible digital content.
+
+7
+00:00:31.031 --> 00:00:36.371
+The scope of this project is "in an educational context"
+
+8
+00:00:39.200 --> 00:00:43.461
+So, who are we talking about? Who's the target group?
+
+9
+00:00:43.661 --> 00:00:49.229
+This project, even if it's relevant for a lot of people
+
+10
+00:00:51.186 --> 00:00:54.642
+The target group is teachers and other content creators
+
+11
+00:00:54.842 --> 00:01:03.114
+Who create digital content which is intended to be used in higher education.
+
+12
+00:01:03.314 --> 00:01:07.330
+So, what am I going to do in this project?
+
+13
+00:01:07.530 --> 00:01:12.836
+First, I am going to develop an interactive guide
+
+14
+00:01:13.036 --> 00:01:17.857
+To help content creators create accessible digital content
+
+15
+00:01:18.700 --> 00:01:22.829
+And it also has to be universally designed
+
+16
+00:01:25.414 --> 00:01:27.271
+Why is this important?
+
+17
+00:01:28.629 --> 00:01:31.514
+Aren't there enough resources out there already?
+
+18
+00:01:31.857 --> 00:01:36.270
+Well, the problem is, there are so many resources out there
+
+19
+00:01:36.470 --> 00:01:38.829
+You just don't know where to begin looking.
+
+20
+00:01:39.271 --> 00:01:46.837
+Another factor that many people I have talked to are stressing is that
+
+21
+00:01:47.043 --> 00:01:51.914
+It's the time! You don't have... Do you have the time?
+
+22
+00:01:52.086 --> 00:01:56.314
+To spend hours, looking at different guides 
+
+23
+00:01:56.514 --> 00:02:01.086
+to figure out exactly what do you have to do
+
+24
+00:02:01.286 --> 00:02:06.700
+to make this document, or this digital content accessible
+
+25
+00:02:06.900 --> 00:02:11.129
+this is a quote I actually heard from a teacher
+
+26
+00:02:11.329 --> 00:02:15.843
+Something like "I am so stressed for time, just give me a list and show me how to do it!"
+
+27
+00:02:18.400 --> 00:02:21.857
+So, how will I try to solve this problem?
+
+28
+00:02:22.357 --> 00:02:26.814
+My study uses a mixed methods approach
+
+29
+00:02:27.014 --> 00:02:30.593
+We have one method for development
+
+30
+00:02:30.786 --> 00:02:35.271
+and another method for evaluation
+
+31
+00:02:35.757 --> 00:02:40.300
+Now I will talk about development methodology
+
+32
+00:02:40.500 --> 00:02:46.327
+From Human Centered Design we have chosen
+
+33
+00:02:46.527 --> 00:02:49.743
+to use an iterative prototype development methodology
+
+34
+00:02:49.943 --> 00:02:52.529
+This is quite common in Human Centered Design.
+
+35
+00:02:52.729 --> 00:02:54.814
+The idea is that
+
+36
+00:02:54.834 --> 00:02:57.629
+If you want to develop something for users
+
+37
+00:02:57.829 --> 00:02:59.643
+you have to involve them from the beginning
+
+38
+00:02:59.843 --> 00:03:02.400
+so how do you do this?
+
+39
+00:03:02.600 --> 00:03:05.157
+it's an iterative process
+
+40
+00:03:05.357 --> 00:03:07.157
+you develop something small
+
+41
+00:03:07.357 --> 00:03:11.039
+and you get some users to test it
+
+42
+00:03:11.239 --> 00:03:15.371
+and the users in this case are from the target group
+
+43
+00:03:15.571 --> 00:03:18.043
+which are university teachers and other staff
+
+44
+00:03:18.243 --> 00:03:20.761
+so we get user feedback 
+
+45
+00:03:20.957 --> 00:03:25.657
+from the first iteration of the prototype
+
+46
+00:03:25.857 --> 00:03:28.832
+based on this feedback
+
+47
+00:03:29.032 --> 00:03:33.129
+we decide on how to improve the prototype
+
+48
+00:03:33.130 --> 00:03:35.771
+for the next generation
+
+49
+00:03:35.971 --> 00:03:41.771
+so the iterative process continues for several generations
+
+50
+00:03:41.971 --> 00:03:44.786
+or we call it "iterations"
+
+51
+00:03:51.900 --> 00:03:54.378
+This is also part of the development methodology
+
+52
+00:03:54.400 --> 00:03:55.698
+There's something called
+
+53
+00:03:55.898 --> 00:03:59.943
+low fidelity vs high fidelity prototypes
+
+54
+00:04:01.314 --> 00:04:04.629
+low fidelity, we can also call it paper prototyping
+
+55
+00:04:04.829 --> 00:04:07.917
+which means we can sketch out some ideas on paper
+
+56
+00:04:08.117 --> 00:04:12.885
+all we need is paper, pen, maybe scissors
+
+57
+00:04:13.085 --> 00:04:17.260
+and we can start brainstorming ideas
+
+58
+00:04:17.460 --> 00:04:22.243
+try to figure out what is this thing we're making
+
+59
+00:04:22.443 --> 00:04:23.793
+what's it going to be like
+
+60
+00:04:23.857 --> 00:04:27.243
+the advantage to using paper prototyping 
+
+61
+00:04:27.443 --> 00:04:29.243
+or low fidelity prototyping
+
+62
+00:04:29.443 --> 00:04:35.610
+is that you can generate a lot of ideas quite quickly 
+
+63
+00:04:35.810 --> 00:04:38.533
+and not a lot of time is invested 
+
+64
+00:04:38.733 --> 00:04:44.955
+so it's easy to scrap some bad ideas and try out some new ideas
+
+65
+00:04:44.975 --> 00:04:59.553
+when we reach a stage that the design has stabilized a little bit
+
+66
+00:04:59.753 --> 00:05:04.171
+then we can move on to high fidelity prototyping
+
+67
+00:05:04.191 --> 00:05:06.799
+these are more time consuming
+
+68
+00:05:06.999 --> 00:05:15.671
+and they can be interactive and quite close to the final product or prototype
+
+69
+00:05:15.871 --> 00:05:23.053
+in this case I'm developing an interactive guide in the form of a webpage
+
+70
+00:05:23.257 --> 00:05:30.986
+so, in the low fidelity stage, which I actually did before involving users
+
+71
+00:05:31.186 --> 00:05:33.778
+I used paper and pen
+
+72
+00:05:33.978 --> 00:05:43.114
+and then with user feedback I was working in the high fidelity prototyping stage
+
+73
+00:05:43.314 --> 00:05:54.114
+after developing the final prototype...
+
+74
+00:05:54.314 --> 00:05:59.500
+you know, you can go on forever to improve a prototype
+
+75
+00:05:59.700 --> 00:06:06.140
+but at some time, at some point, we just have to stop and evaluate it
+
+76
+00:06:06.340 --> 00:06:12.345
+so how do we evaluate this interactive guide?
+
+77
+00:06:12.545 --> 00:06:18.987
+well, we choose some participants
+
+78
+00:06:19.187 --> 00:06:27.042
+and either, we can ask them to present some documents they have made before
+
+79
+00:06:27.242 --> 00:06:33.728
+or I will do a heuristic review of these documents
+
+80
+00:06:33.743 --> 00:06:39.314
+this means that I will have a checklist of different things I'm looking for
+
+81
+00:06:39.334 --> 00:06:44.903
+different accessibility mistakes I will be looking for in these documents
+
+82
+00:06:45.103 --> 00:06:55.071
+and then the participant can have access to this guide and try to create some new documents
+
+83
+00:06:55.271 --> 00:07:05.647
+and I can also do a heuristic review of the documents they are making when they have access to this guide
+
+84
+00:07:05.847 --> 00:07:10.843
+then I can compare before and after (having access to the interactive guide)
+
+85
+00:07:11.043 --> 00:07:15.751
+what kind of accessibility mistakes have been made
+
+86
+00:07:15.951 --> 00:07:22.350
+we also collect data qualitatively
+
+87
+00:07:22.550 --> 00:07:27.147
+by user observation which is similar to user testing
+
+88
+00:07:27.347 --> 00:07:33.357
+when we have a participant who is creating some digital content 
+
+89
+00:07:33.557 --> 00:07:36.420
+while using the interactive guide 
+
+90
+00:07:36.620 --> 00:07:41.732
+which is supposed to help them create accessible content
+
+91
+00:07:41.932 --> 00:07:45.529
+then I will just be observing and making notes
+
+92
+00:07:45.729 --> 00:07:54.286
+then after, we will have the users or participants fill out something called
+
+93
+00:07:54.486 --> 00:07:58.039
+the system usability scale, which is a lickert scale
+
+94
+00:07:58.239 --> 00:08:01.726
+It will ask different questions about how usable this guide is
+
+95
+00:08:01.926 --> 00:08:09.955
+and finally, we will interview the participants using semi structured interviews
+
+96
+00:08:10.155 --> 00:08:18.271
+so, what are the preliminary results
+
+97
+00:08:18.471 --> 00:08:23.255
+well some of the results are the feedback I have already received 
+
+98
+00:08:23.455 --> 00:08:26.986
+some of the types of feedback received 
+
+99
+00:08:27.186 --> 00:08:34.161
+is about the structure of the guide, also naming of things, language and grammar
+
+100
+00:08:34.361 --> 00:08:43.573
+several users commented that they were looking forward to 
+
+101
+00:08:43.773 --> 00:08:49.211
+specific instructions on different software they would be using
+
+102
+00:08:49.411 --> 00:08:54.463
+also the guide has some filtering which needs to be fixed
+
+103
+00:08:54.663 --> 00:09:02.429
+there are different kinds of parameters that will taylor the guide to the user's needs
+
+104
+00:09:02.629 --> 00:09:08.428
+so if you're working with video, you will have an interactive guide
+
+105
+00:09:08.443 --> 00:09:12.622
+which will tell you about how to make an accessible video
+
+106
+00:09:12.822 --> 00:09:15.683
+if your'e working with a document, say in Word
+
+107
+00:09:15.883 --> 00:09:20.000
+then you will have a taylored guide which will give you 
+
+108
+00:09:20.200 --> 00:09:23.671
+the tips you need when working with documents in Word
+
+109
+00:09:23.871 --> 00:09:25.686
+and also what kind of content you have there
+
+110
+00:09:25.886 --> 00:09:29.950
+if you have images, then you can get image specific feedback
+
+111
+00:09:30.150 --> 00:09:36.104
+so another preliminary result is the result of
+
+112
+00:09:36.304 --> 00:09:44.002
+implementing the feedback from round 1 actually
+
+113
+00:09:44.202 --> 00:09:49.909
+This is the beginning, the top of the webpage
+
+114
+00:09:50.109 --> 00:09:55.517
+before considering the second round of feedback
+
+115
+00:09:55.629 --> 00:10:02.486
+So I think that will be all for this presentation
+
+116
+00:10:02.586 --> 00:10:09.984
+I will be seeing you later!
+

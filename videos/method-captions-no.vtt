@@ -1,0 +1,465 @@
+WEBVTT
+
+1
+00:00:03.014 --> 00:00:05.256
+God kveld, god morgen eller god ettermiddag!
+
+2
+00:00:05.457 --> 00:00:11.143
+Avhengig av når du hører på presentasjonen min.
+
+3
+00:00:11.871 --> 00:00:16.100
+La oss først snakke om emnet jeg har valgt.
+
+4
+00:00:16.271 --> 00:00:22.186
+Det er noe som har interessert meg mye
+
+5
+00:00:22.429 --> 00:00:24.557
+I flere år.
+
+6
+00:00:24.757 --> 00:00:30.831
+Det handler om å støtte folk som ønsker å lage tilgjengelig digitalt innhold.
+
+7
+00:00:31.031 --> 00:00:36.371
+Omfanget av dette prosjektet er "i en pedagogisk kontekst"
+
+8
+00:00:39.200 --> 00:00:43.461
+Så hvem snakker vi om? Hvem er målgruppen?
+
+9
+00:00:43.661 --> 00:00:49.229
+Dette prosjektet, selv om det er relevant for mange mennesker
+
+10
+00:00:51.186 --> 00:00:54.642
+Målgruppen er lærere og andre innholdsskapere
+
+11
+00:00:54.842 --> 00:01:03.114
+Som lager digitalt innhold som er ment å brukes i høyere utdanning.
+
+12
+00:01:03.314 --> 00:01:07.330
+Så hva skal jeg gjøre i dette prosjektet?
+
+1. 3
+00:01:07.530 --> 00:01:12.836
+Først skal jeg utvikle en interaktiv guide
+
+14
+00:01:13.036 --> 00:01:17.857
+For å hjelpe innholdsskapere med å lage tilgjengelig digitalt innhold
+
+15
+00:01:18.700 --> 00:01:22.829
+Og den må også være universelt utformet
+
+16
+00:01:25.414 --> 00:01:27.271
+Hvorfor er dette viktig?
+
+17
+00:01:28.629 --> 00:01:31.514
+Er det ikke nok ressurser der ute allerede?
+
+18
+00:01:31.857 --> 00:01:36.270
+Vel, problemet er at det er så mange ressurser der ute
+
+19
+00:01:36.470 --> 00:01:38.829
+Du vet bare ikke hvor du skal begynne å lete.
+
+20
+00:01:39.271 --> 00:01:46.837
+En annen faktor som mange jeg har snakket med stresser er det
+
+21
+00:01:47.043 --> 00:01:51.914
+Det er på tide! Du har ikke... Har du tid?
+
+22
+00:01:52.086 --> 00:01:56.314
+Å bruke timer på å se på forskjellige guider
+
+23
+00:01:56.514 --> 00:02:01.086
+for å finne ut nøyaktig hva du må gjøre
+
+24
+00:02:01.286 --> 00:02:06.700
+for å gjøre dette dokumentet, eller dette digitale innholdet tilgjengelig
+
+25
+00:02:06.900 --> 00:02:11.129
+dette er et sitat jeg faktisk har hørt fra en lærer
+
+26
+00:02:11.329 --> 00:02:15.843
+Noe sånt som "Jeg er så stresset over tid, bare gi meg en liste og vis meg hvordan jeg gjør det!"
+
+27
+00:02:18.400 --> 00:02:21.857
+Så hvordan skal jeg prøve å løse dette problemet?
+
+28
+00:02:22.357 --> 00:02:26.814
+Studien min bruker en tilnærming med blandede metoder
+
+29
+00:02:27.014 --> 00:02:30.593
+Vi har én metode for utvikling
+
+30
+00:02:30.786 --> 00:02:35.271
+og en annen metode for evaluering
+
+31
+00:02:35.757 --> 00:02:40.300
+Nå skal jeg snakke om utviklingsmetodikk
+
+32
+00:02:40.500 --> 00:02:46.327
+Fra Human Centered Design har vi valgt
+
+33
+00:02:46.527 --> 00:02:49.743
+å bruke en iterativ prototypeutviklingsmetodikk
+
+34
+00:02:49.943 --> 00:02:52.529
+Dette er ganske vanlig i Human Centered Design.
+
+35
+00:02:52.729 --> 00:02:54.814
+Tanken er det
+
+36
+00:02:54.834 --> 00:02:57.629
+Hvis du vil utvikle noe for brukerne
+
+37
+00:02:57.829 --> 00:02:59.643
+du må involvere dem fra begynnelsen
+
+38
+00:02:59.843 --> 00:03:02.400
+så hvordan gjør du dette?
+
+39
+00:03:02.600 --> 00:03:05.157
+det er en iterativ prosess
+
+40
+00:03:05.357 --> 00:03:07.157
+du utvikler noe lite
+
+41
+00:03:07.357 --> 00:03:11.039
+og du får noen brukere til å teste det
+
+42
+00:03:11.239 --> 00:03:15.371
+og brukerne i dette tilfellet er fra målgruppen
+
+43
+00:03:15.571 --> 00:03:18.043
+som er universitetslærere og andre ansatte
+
+44
+00:03:18.243 --> 00:03:20.761
+så vi får tilbakemeldinger fra brukerne
+
+45
+00:03:20.957 --> 00:03:25.657
+fra den første iterasjonen av prototypen
+
+46
+00:03:25.857 --> 00:03:28.832
+basert på denne tilbakemeldingen
+
+47
+00:03:29.032 --> 00:03:33.129
+vi bestemmer oss for hvordan vi skal forbedre prototypen
+
+48
+00:03:33.130 --> 00:03:35.771
+for neste generasjon
+
+49
+00:03:35.971 --> 00:03:41.771
+så den iterative prosessen fortsetter i flere generasjoner
+
+50
+00:03:41.971 --> 00:03:44.786
+eller vi kaller det "iterasjoner"
+
+51
+00:03:51.900 --> 00:03:54.378
+Dette er også en del av utviklingsmetodikken
+
+52
+00:03:54.400 --> 00:03:55.698
+Det er noe som heter
+
+53
+00:03:55.898 --> 00:03:59.943
+low fidelity vs high fidelity prototyper
+
+54
+00:04:01.314 --> 00:04:04.629
+low fidelity, vi kan også kalle det papirprototyping
+
+55
+00:04:04.829 --> 00:04:07.917
+som betyr at vi kan skissere noen ideer på papir
+
+56
+00:04:08.117 --> 00:04:12.885
+alt vi trenger er papir, penn, kanskje saks
+
+57
+00:04:13.085 --> 00:04:17.260
+og vi kan begynne å brainstorme ideer
+
+58
+00:04:17.460 --> 00:04:22.243
+prøv å finne ut hva er dette vi lager
+
+59
+00:04:22.443 --> 00:04:23.793
+hvordan blir det
+
+60
+00:04:23.857 --> 00:04:27.243
+fordelen med å bruke papirprototyping
+
+61
+00:04:27.443 --> 00:04:29.243
+eller low fidelity prototyping
+
+62
+00:04:29.443 --> 00:04:35.610
+er at du kan generere mange ideer ganske raskt
+
+63
+00:04:35.810 --> 00:04:38.533
+og ikke mye tid er investert
+
+64
+00:04:38.733 --> 00:04:44.955
+så det er lett å skrote
+
+65
+00:04:44.975 --> 00:04:59.553
+når vi når et stadium at designet har stabilisert seg litt
+
+66
+00:04:59.753 --> 00:05:04.171
+så kan vi gå videre til high fidelity prototyping
+
+67
+00:05:04.191 --> 00:05:06.799
+disse er mer tidkrevende
+
+68
+00:05:06.999 --> 00:05:15.671
+og de kan være interaktive og ganske nær sluttproduktet eller prototypen
+
+69
+00:05:15.871 --> 00:05:23.053
+i dette tilfellet utvikler jeg en interaktiv guide i form av en nettside
+
+70
+00:05:23.257 --> 00:05:30.986
+så, i low fidelity-stadiet, som jeg faktisk gjorde før jeg involverte brukere
+
+71
+00:05:31.186 --> 00:05:33.778
+Jeg brukte papir og penn
+
+72
+00:05:33.978 --> 00:05:43.114
+og så med tilbakemeldinger fra brukere, jobbet jeg i high fidelity prototyping-stadiet
+
+73
+00:05:43.314 --> 00:05:54.114
+etter å ha utviklet den endelige prototypen...
+
+74
+00:05:54.314 --> 00:05:59.500
+du vet, du kan fortsette for alltid å forbedre en prototype
+
+75
+00:05:59.700 --> 00:06:06.140
+men på et tidspunkt, på et tidspunkt, må vi bare stoppe og evaluere det
+
+76
+00:06:06.340 --> 00:06:12.345
+så hvordan evaluerer vi denne interaktive guiden?
+
+77
+00:06:12.545 --> 00:06:18.987
+vel, vi velger noen deltakere
+
+78
+00:06:19.187 --> 00:06:27.042
+og enten kan vi be dem om å presentere noen dokumenter de har laget før
+
+79
+00:06:27.242 --> 00:06:33.728
+eller jeg vil gjøre en heuristisk gjennomgang av disse dokumentene
+
+80
+00:06:33.743 --> 00:06:39.314
+dette betyr at jeg vil ha en sjekkliste over forskjellige ting jeg ser etter
+
+81
+00:06:39.334 --> 00:06:44.903
+forskjellige tilgjengelighetsfeil jeg vil se etter i disse dokumentene
+
+82
+00:06:45.103 --> 00:06:55.071
+og så kan deltakeren få tilgang til denne veiledningen og prøve å lage noen nye dokumenter
+
+83
+00:06:55.271 --> 00:07:05.647
+og jeg kan også gjøre en heuristisk gjennomgang av dokumentene de lager når de har tilgang til denne veiledningen
+
+84
+00:07:05.847 --> 00:07:10.843
+så kan jeg sammenligne før og etter (å ha tilgang til den interaktive guiden)
+
+85
+00:07:11.043 --> 00:07:15.751
+hva slags tilgjengelighetsfeil som er gjort
+
+86
+00:07:15.951 --> 00:07:22.350
+vi samler også inn data kvalitativt
+
+87
+00:07:22.550 --> 00:07:27.147
+ved brukerobservasjon som ligner på brukertesting
+
+88
+00:07:27.347 --> 00:07:33.357
+når vi har en deltaker som lager noe digitalt innhold
+
+89
+00:07:33.557 --> 00:07:36.420
+mens du bruker den interaktive veiledningen
+
+90
+00:07:36.620 --> 00:07:41.732
+som skal hjelpe dem med å lage tilgjengelig innhold
+
+91
+00:07:41.932 --> 00:07:45.529
+da skal jeg bare observere og lage notater
+
+92
+00:07:45.729 --> 00:07:54.286
+så etterpå vil vi få brukerne eller deltakerne til å fylle ut noe som heter
+
+93
+00:07:54.486 --> 00:07:58.039
+systembrukbarhetsskalaen, som er en slikkeskala
+
+94
+00:07:58.239 --> 00:08:01.726
+Den vil stille forskjellige spørsmål om hvor brukbar denne veiledningen er
+
+95
+00:08:01.926 --> 00:08:09.955
+og til slutt vil vi intervjue deltakerne ved hjelp av semistrukturerte intervjuer
+
+96
+00:08:10.155 --> 00:08:18.271
+så, hva er de foreløpige resultatene
+
+97
+00:08:18.471 --> 00:08:23.255
+vel noen av resultatene er tilbakemeldingene jeg allerede har fått
+
+98
+00:08:23.455 --> 00:08:26.986
+noen av typene tilbakemeldinger som er mottatt
+
+99
+00:08:27.186 --> 00:08:34.161
+handler om strukturen i veiledningen, også navn på ting, språk og grammatikk
+
+100
+00:08:34.361 --> 00:08:43.573
+flere brukere kommenterte at de gledet seg til
+
+101
+00:08:43.773 --> 00:08:49.211
+spesifikke instruksjoner om annen programvare de vil bruke
+
+102
+00:08:49.411 --> 00:08:54.463
+guiden har også noe filtrering som må fikses
+
+103
+00:08:54.663 --> 00:09:02.429
+det finnes ulike typer parametere som vil skreddersy veiledningen til brukerens behov
+
+104
+00:09:02.629 --> 00:09:08.428
+så hvis du jobber med video, vil du ha en interaktiv guide
+
+105
+00:09:08.443 --> 00:09:12.622
+som vil fortelle deg om hvordan du lager en tilgjengelig video
+
+106
+00:09:12.822 --> 00:09:15.683
+hvis du jobber med et dokument, si i Word
+
+107
+00:09:15.883 --> 00:09:20.000
+så vil du ha en skreddersydd guide som vil gi deg
+
+108
+00:09:20.200 --> 00:09:23.671
+tipsene du trenger når du arbeider med dokumenter i Word
+
+109
+00:09:23.871 --> 00:09:25.686
+og også hva slags innhold du har der
+
+110
+00:09:25.886 --> 00:09:29.950
+hvis du har bilder, kan du få bildespesifikk tilbakemelding
+
+111
+00:09:30.150 --> 00:09:36.104
+Et annet foreløpig resultat er resultatet av
+
+112
+00:09:36.304 --> 00:09:44.002
+de implementerte tilbakemeldingene fra runde 1 faktisk
+
+113
+00:09:44.202 --> 00:09:49.909
+Dette er begynnelsen, toppen av nettsiden
+
+114
+00:09:50.109 --> 00:09:55.517
+før du vurderer den andre runden med tilbakemeldinger
+
+115
+00:09:55.629 --> 00:10:02.486
+Så jeg tror det er alt for denne presentasjonen
+
+116
+00:10:02.586 --> 00:10:09.984
+Sees senere!
