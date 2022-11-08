@@ -18,7 +18,7 @@
         </div>
     </header>
 
-    <a class="skiplink" href="#veileder">Gå til innhold</a>
+    <a class="skiplink" href="#veileder">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
 
     <section id="customize">
         <h2>Tilpass denne veilederen</h2>
@@ -48,7 +48,7 @@
         <fieldset id="filter-main-radios" action="" class="gv">
 
             <legend>Hvordan vil du bruke veilederen?</legend>
-            
+
             <div class="gh3">
                 <label>
                     <input type="radio" name="customizer-main" id="filter-show-all" value="show-all" checked="checked">
@@ -75,7 +75,8 @@
 
                 <legend>Innholdstype</legend>
 
-                <p>Velg innholdstypene som passer til det digitale innholdet du jobber med nå. Noen innholdstyper velger automatisk andre, men du kan velge vekk etterpå.</p>
+                <p>Velg innholdstypene som passer til det digitale innholdet du jobber med nå. Noen innholdstyper velger
+                    automatisk andre, men du kan velge vekk etterpå.</p>
 
                 <div id="filter-by-content-type-alternatives" class="gv">
                     <label class="sample"><input type="checkbox" /><span>Tekstdokument</span></label>
@@ -103,8 +104,8 @@
                 <legend>Skriveprogrammer</legend>
 
                 <div id="filter-by-software-writing-alternatives" class="gv">
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for Windows 2019 (latest)</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for MAC (latest)</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for Windows 2019</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for MAC</span></label>
                     <label class="sample"><input type="checkbox" /><span>Microsoft Word 2019</span></label>
                     <label class="sample"><input type="checkbox" /><span>Microsoft Word 2013-2016</span></label>
                     <label class="sample"><input type="checkbox" /><span>Microsoft Word 2010</span></label>
@@ -135,7 +136,7 @@
             <fieldset id="filter-by-software-lcms" class="gv">
 
                 <legend>Lærings- og innholdsplattformer</legend>
-                
+
                 <div id="filter-by-software-lcms-alternatives" class="gv">
                     <label class="sample"><input type="checkbox" /><span>EdX</span></label>
                     <label class="sample"><input type="checkbox" /><span>Canvas</span></label>
@@ -144,7 +145,7 @@
                     <label class="sample"><input type="checkbox" /><span>Joomla</span></label>
                     <label class="sample"><input type="checkbox" /><span>Drupal</span></label>
                 </div>
-                
+
                 <button>Bekreft valg for lærings- og innholdsplattformer</button>
 
             </fieldset>
@@ -155,151 +156,197 @@
         <button>Vis hele veiledningen</button>-->
 
     </section>
-    <section id="veileder" tabindex="0">
-        <h2>Veileder</h2>
-        <section id="dokumentstruktur" tabindex="0">
-            <h3>Dokumentstruktur</h3>
-            <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer dette å
-                bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til tabeller
-            </p>
-        </section>
-        <section id="tekstinnstillinger" tabindex="0">
-            <h3>Tekstinnstillinger</h3>
-            <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
-            <ul>
-                <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
-                <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
-                <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>. <strong>Unngå
-                        for spesifikke regler i CSS</strong> som gjør dette vanskelig:
-                    <ul>
-                        <li>Ikke bruk !important i CSS-relger for tekst</li>
-                        <li>Ikke definer CSS-relger for tekst i style-attributter</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section id="overskriftsnivåer" tabindex="0">
-            <h3>Overskriftsnivåer</h3>
-            <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra for
-                alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet
-                muligheten til å navigere effektivt.</p>
-            <ul>
-                <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke
-                    skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i
-                    dokumentet.</li>
-                <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du heller
-                    se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
-                <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå. F.eks
-                    skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
-            </ul>
-        </section>
-        <section id="bilder" tabindex="0">
-            <h3>Bilder og figurer</h3>
-            <p>Bilder og figurer kan være en god støtte til budskapet. Noen ting må du tenke på når du bruker bilder.
-            </p>
-            <details>
-                <summary>Har du husket på at noen ikke kan se bildet og trenger et tekstalternativ?</summary>
-                <p></p>
-            </details>
-            <details>
-                <summary>Er det tilstrekkelig kontrast mellom forgrunn og bakgrunn på tekst og andre elementer i bildet?
-                </summary>
-                <p>God nok kontrast er viktig for at leserne dine skal klare å tyde innholdet.</p>
-            </details>
-            <details>
-                <summary>
-                    Bruk ikke kun farge i bilder/figurer for å formidle innhold
-                </summary>
-                <p>Du vet ikke hvem som kommer til å lese innholdet ditt eller under hvilke forhold det blir vist. Noen
-                    personer er fargeblinde, og det kan være at innholdet ditt blir skrevet ut i sort/hvitt, eller vist
-                    på en skjerm som står i sollys hvor det er vanskelig å skille fargene.</p>
-                <p>
-                    Skal du vise flere grafer, kan du f.eks ha variasjon i mønster i tillegg til farge, og du kan
-                    supplere med tekstetiketter.
+    <main id="main">
+        <nav id="toc"></nav>
+        <section id="guide" tabindex="0">
+            <h2>Veileder</h2>
+            <section id="textdocument" tabindex="0" data-content="text-document" data-related="image table text-properties">
+                <h3>Tekstdokument!!</h3>
+            </section>
+            <section id="dokumentstruktur" tabindex="0">
+                <h3>Dokumentstruktur</h3>
+                <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer dette å
+                    bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til
+                    tabeller
                 </p>
-            </details>
-            <details>
-                <summary>Er eventuelle symboler som er brukt tilstrekkelig forklart så de ikke kan misforstås?</summary>
-                <p>Hvordan man forstår symboler kan være kulturelt betinget, og det kommer an på om man har sett
-                    symbolet mange ganger før om man skal forstå betydningen av det. Forklar hvis du er i tvil.</p>
-            </details>
-            <details>
-                <summary>Har du en fornuftig filstørrelse som passer mediet du skal vise det i?</summary>
-                <p>Skaler ned bilder til en fornuftig filstørrelse og velg en passe komprimering.</p>
-                <p>Dagens mobilkameraer har veldig høy oppløsning som gjør at bilder de tar egner seg for utskrift. Skal
-                    du publisere noe som skal deles på nett, så er det viktig å få ned filstørrelsen. Dette gjør at
-                    innholdet ditt lastes mye raskere og at filene blir mindre. For de som bruker mobildata, gjør du i
-                    tillegg en god tjeneste så de ikke bruker unødvendig med datatrafikk. Dette kan gjøres ved å lage en
-                    versjon hvor du skalerer ned og evt beskjærer bildet, og så eksporterer det med så høy komprimering
-                    som mulig uten at det går på bekostning av kvaliteten.</p>
-            </details>
+            </section>
+            <section id="table" data-content="table" data-related="text-properties">
+                <h3>Tabell</h3>
+                <p>Husk at tabeller er for data, ikke for layout.</p>
+                <h4>Lage tabeller i skriveprogram</h4>
+                <ol>
+                    <li>Bygg opp tabellen med tabellverktøy</li>
+                    <li>Del store tabeller opp i mindre hvis det er mulig</li>
+                    <li>Husk å definer overskriftsrad via tabellalternativer.</li>
+                </ol>
+                
+            </section>
+            <section id="text-properties" data-content="text-properties" data-relContent = "text-document table" tabindex="0">
+                <h3>Tekstinnstillinger</h3>
+                <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
+                <ul>
+                    <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
+                    <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
+                    <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>.
+                        <strong>Unngå
+                            for spesifikke regler i CSS</strong> som gjør dette vanskelig:
+                        <ul>
+                            <li>Ikke bruk !important i CSS-relger for tekst</li>
+                            <li>Ikke definer CSS-relger for tekst i style-attributter</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section id="outline" tabindex="0" data-related="textdocument">
+                <h3>Overskriftsnivåer</h3>
+                <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra
+                    for
+                    alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet
+                    muligheten til å navigere effektivt.</p>
+                <ul>
+                    <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke
+                        skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i
+                        dokumentet.</li>
+                    <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du
+                        heller
+                        se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
+                    <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå.
+                        F.eks
+                        skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
+                </ul>
+            </section>
+            <section id="image" tabindex="0">
+                <h3>Bilder og figurer</h3>
+                <p>Bilder og figurer kan være en god støtte til budskapet. Noen ting må du tenke på når du bruker
+                    bilder.
+                </p>
+                <details>
+                    <summary>Har du husket på at noen ikke kan se bildet og trenger et tekstalternativ?</summary>
+                    <p></p>
+                </details>
+                <details>
+                    <summary>Er det tilstrekkelig kontrast mellom forgrunn og bakgrunn på tekst og andre elementer i
+                        bildet?
+                    </summary>
+                    <p>God nok kontrast er viktig for at leserne dine skal klare å tyde innholdet.</p>
+                </details>
+                <details>
+                    <summary>
+                        Bruk ikke kun farge i bilder/figurer for å formidle innhold
+                    </summary>
+                    <p>Du vet ikke hvem som kommer til å lese innholdet ditt eller under hvilke forhold det blir vist.
+                        Noen
+                        personer er fargeblinde, og det kan være at innholdet ditt blir skrevet ut i sort/hvitt, eller
+                        vist
+                        på en skjerm som står i sollys hvor det er vanskelig å skille fargene.</p>
+                    <p>
+                        Skal du vise flere grafer, kan du f.eks ha variasjon i mønster i tillegg til farge, og du kan
+                        supplere med tekstetiketter.
+                    </p>
+                </details>
+                <details>
+                    <summary>Er eventuelle symboler som er brukt tilstrekkelig forklart så de ikke kan misforstås?
+                    </summary>
+                    <p>Hvordan man forstår symboler kan være kulturelt betinget, og det kommer an på om man har sett
+                        symbolet mange ganger før om man skal forstå betydningen av det. Forklar hvis du er i tvil.</p>
+                </details>
+                <details>
+                    <summary>Har du en fornuftig filstørrelse som passer mediet du skal vise det i?</summary>
+                    <p>Skaler ned bilder til en fornuftig filstørrelse og velg en passe komprimering.</p>
+                    <p>Dagens mobilkameraer har veldig høy oppløsning som gjør at bilder de tar egner seg for utskrift.
+                        Skal
+                        du publisere noe som skal deles på nett, så er det viktig å få ned filstørrelsen. Dette gjør at
+                        innholdet ditt lastes mye raskere og at filene blir mindre. For de som bruker mobildata, gjør du
+                        i
+                        tillegg en god tjeneste så de ikke bruker unødvendig med datatrafikk. Dette kan gjøres ved å
+                        lage en
+                        versjon hvor du skalerer ned og evt beskjærer bildet, og så eksporterer det med så høy
+                        komprimering
+                        som mulig uten at det går på bekostning av kvaliteten.</p>
+                </details>
 
-            <details>
-                <summary>Har du brukt et bildeformat som passer til innholdet i bildet?</summary>
-                <p>Noen bildeformater egner seg bedre til visse typer bilder. De to hovedklassene av bilder er
-                    punktgrafikk og skalerbar vektorgrafikk.</p>
-            </details>
-            <details>
-                <summary>Er det tilstrekkelig god kvalitet på bildet?</summary>
-            </details>
-            <h4>Feil bruk av bilder</h4>
-            <p>Det er også mulig å bruke bilder på feil måte. Unngå disse vanlige feilene.</p>
-            <details>
-                <summary>Ikke bruk bilde av tekst</summary>
-                <p>I stedet for bilde av tekst, er det mer fornufig å ha selve teksten i dokumentet eller på nettsiden.
-                    Bilde av tekst er usynlig for støtteteknologi som noen er avhengige av. Hvis det er et poeng å vise
-                    teksten slik den fremstår visuelt, så husk på at bildet trenger et tekstalternativ som kan gjengi
-                    teksten i bildet.</p>
-            </details>
-            <details>
-                <summary>Ikke bruk bilde av en tabell</summary>
-                <p>En tabell har viktig innebygget dokumentstruktur som man ikke får i et bilde av en tabell. Opprett en
-                    tabell med tabellverktøy. </p>
-                <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan navigere
-                    i tabellen og forstå sammenhengen mellom celler og overskrifter. I tillegg vil sannsynligvis
-                    kvaliteten bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst tar
-                    mindre lagringsplass enn bilde.</p>
-            </details>
-            <details>
-                <summary>Ikke bruk bilde av en liste</summary>
-                <p>En liste har viktig innebygget dokumentstruktur som man ikke får i et bilde av en liste. Opprett en
-                    liste med listeverktøy.</p>
-                <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan lett og
-                    overskiktlig navigere i listen selv om den har flere nivåer. I tillegg vil sannsynligvis kvaliteten
-                    bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst tar mindre
-                    lagringsplass enn bilde.</p>
-            </details>
-            <details>
-                <summary>Ikke sett inn et dokument i et annet dokument slik at hver tekstside blir satt inn som bilde
-                </summary>
-                <p>Dette kan f.eks skje hvis du prøver å sette en PDF inn i et Word-dokument. Teksten blir uskarp, og
-                    det hjelper ikke å zoome inn. Teksten blir usynlig for støtteteknologi som noen er avhengige av.
-                    Hvis mange sider tekst blir satt inn som bilder, blir filstørrelsen veldig stor, og det hjelper lite
-                    å komprimere bildene.</p>
-            </details>
+                <details>
+                    <summary>Har du brukt et bildeformat som passer til innholdet i bildet?</summary>
+                    <p>Noen bildeformater egner seg bedre til visse typer bilder. De to hovedklassene av bilder er
+                        punktgrafikk og skalerbar vektorgrafikk.</p>
+                </details>
+                <details>
+                    <summary>Er det tilstrekkelig god kvalitet på bildet?</summary>
+                </details>
+                <h4>Feil bruk av bilder</h4>
+                <p>Det er også mulig å bruke bilder på feil måte. Unngå disse vanlige feilene.</p>
+                <details>
+                    <summary>Ikke bruk bilde av tekst</summary>
+                    <p>I stedet for bilde av tekst, er det mer fornufig å ha selve teksten i dokumentet eller på
+                        nettsiden.
+                        Bilde av tekst er usynlig for støtteteknologi som noen er avhengige av. Hvis det er et poeng å
+                        vise
+                        teksten slik den fremstår visuelt, så husk på at bildet trenger et tekstalternativ som kan
+                        gjengi
+                        teksten i bildet.</p>
+                </details>
+                <details>
+                    <summary>Ikke bruk bilde av en tabell</summary>
+                    <p>En tabell har viktig innebygget dokumentstruktur som man ikke får i et bilde av en tabell.
+                        Opprett en
+                        tabell med tabellverktøy. </p>
+                    <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan
+                        navigere
+                        i tabellen og forstå sammenhengen mellom celler og overskrifter. I tillegg vil sannsynligvis
+                        kvaliteten bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst
+                        tar
+                        mindre lagringsplass enn bilde.</p>
+                </details>
+                <details>
+                    <summary>Ikke bruk bilde av en liste</summary>
+                    <p>En liste har viktig innebygget dokumentstruktur som man ikke får i et bilde av en liste. Opprett
+                        en
+                        liste med listeverktøy.</p>
+                    <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan lett
+                        og
+                        overskiktlig navigere i listen selv om den har flere nivåer. I tillegg vil sannsynligvis
+                        kvaliteten
+                        bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst tar mindre
+                        lagringsplass enn bilde.</p>
+                </details>
+                <details>
+                    <summary>Ikke sett inn et dokument i et annet dokument slik at hver tekstside blir satt inn som
+                        bilde
+                    </summary>
+                    <p>Dette kan f.eks skje hvis du prøver å sette en PDF inn i et Word-dokument. Teksten blir uskarp,
+                        og
+                        det hjelper ikke å zoome inn. Teksten blir usynlig for støtteteknologi som noen er avhengige av.
+                        Hvis mange sider tekst blir satt inn som bilder, blir filstørrelsen veldig stor, og det hjelper
+                        lite
+                        å komprimere bildene.</p>
+                </details>
 
 
+            </section>
+            <section id="pdf-eksport" tabindex="0">
+                <h3>PDF-eksport</h3>
+                <p class="generelt">Et godt strukturert dokument har bakt inn informasjon som gjør at det fungerer godt
+                    med
+                    forskjellig støtteteknologi. For at vi ikke skal miste dette må dokumentet eksporteres på rett måte.
+                </p>
+                <ul>
+                    <li><a href="https://uuguiden.no/topics/word-pdf-export.html">Slik bevarer man dokumentstrukturen
+                            ved
+                            PDF export fra Word (uuguiden.no)</a></li>
+                    <li><a
+                            href="https://support.microsoft.com/nb-no/office/lagre-eller-konvertere-til-pdf-eller-xps-i-project-skrivebord-d85416c5-7d77-4fd6-a216-6f4bf7c7c110">Lagre
+                            eller konvertere til PDF eller XPS i Project-skrivebord (support.microsoft.com)</a></li>
+                </ul>
+            </section>
+            <section tabindex="0">
+                <h3>Sjekk tilgjengeligheten</h3>
+                <p class="generelt">Flere programmer har innebygde verktøy som hjelper deg å sjekke tilgjengeligheten.
+                    Men
+                    noen ting må du teste manuelt.</p>
+            </section>
         </section>
-        <section id="pdf-eksport" tabindex="0">
-            <h3>PDF-eksport</h3>
-            <p class="generelt">Et godt strukturert dokument har bakt inn informasjon som gjør at det fungerer godt med
-                forskjellig støtteteknologi. For at vi ikke skal miste dette må dokumentet eksporteres på rett måte.</p>
-            <ul>
-                <li><a href="https://uuguiden.no/topics/word-pdf-export.html">Slik bevarer man dokumentstrukturen ved
-                        PDF export fra Word (uuguiden.no)</a></li>
-                <li><a
-                        href="https://support.microsoft.com/nb-no/office/lagre-eller-konvertere-til-pdf-eller-xps-i-project-skrivebord-d85416c5-7d77-4fd6-a216-6f4bf7c7c110">Lagre
-                        eller konvertere til PDF eller XPS i Project-skrivebord (support.microsoft.com)</a></li>
-            </ul>
-        </section>
-        <section tabindex="0">
-            <h3>Sjekk tilgjengeligheten</h3>
-            <p class="generelt">Flere programmer har innebygde verktøy som hjelper deg å sjekke tilgjengeligheten. Men
-                noen ting må du teste manuelt.</p>
-        </section>
-    </section>
 
-
+    </main>
 </body>
 
 </html>

@@ -91,8 +91,29 @@ var uuguiden = function () {
     }
   }
 
-  openRequestedDetails();
+  function create_filter_item_in_node_by_selector(selector,name, displayname) {
+    let parent = document.querySelector(selector);
+    let label = document.createElement("label");
+    label.innerHTML = '<input type="checkbox" name="' + name + '"/><span>' + displayname + '</span>';
+    parent.appendChild(label);
+  }
 
+  function populate_secondary_filtering() {
+    let dataset_content_sections = [];
+    let sections = document.querySelectorAll("section");
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].dataset.content !== undefined) {
+        dataset_content_sections[i] = sections[i];
+      }
+    }
+    dataset_content_sections.forEach(node => {
+      create_filter_item_in_node_by_selector("#filter-by-content-type-alternatives",node.dataset.content, node.querySelector('h3').innerText);
+      //console.log(node);
+    });
+  }
+
+  openRequestedDetails();
+  populate_secondary_filtering();
 }
 
 window.addEventListener('load', uuguiden, false);
