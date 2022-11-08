@@ -3,10 +3,14 @@ body[data-filter-main=show-all] {
 }
 
 body[data-filter-main=by-content-type] {
-    background:yellow;
+    background:rgba(3, 248, 228, 0.1);
 }
 
 body[data-filter-main=by-software] {
-    background:magenta;
+    background:rgba(255, 0, 200, 0.1);
+}
+
+.sample {
+    opacity:0.5;
 }
 

@@ -38,14 +38,58 @@ var uuguiden = function () {
   function apply_filter_main_buttons(e) {
     target = e.target;
     document.body.setAttribute("data-filter-main", target.getAttribute("data-filter"));
+    update_main_filtering();
   }
   add_clicker_fn_to_selector("#filter-main button", apply_filter_main_buttons);
 
 
   function apply_filter_main_radios() {
     document.body.setAttribute("data-filter-main", document.querySelector('input[name="customizer-main"]:checked').value);
+    update_main_filtering();
   }
   add_clicker_fn_to_selector("#filter-main-radios button", apply_filter_main_radios);
+
+  function hide_software_filter() {
+    el = document.querySelector("#section-filter-by-software");
+    el.hidden = true;
+  }
+
+  function show_software_filter() {
+    el = document.querySelector("#section-filter-by-software");
+    el.hidden = false;
+  }
+
+  function show_content_filter() {
+    el = document.querySelector("#section-filter-by-content-type");
+    el.hidden = false
+  }
+
+  function hide_content_filter() {
+    el = document.querySelector("#section-filter-by-content-type");
+    el.hidden = true;
+  }
+
+  function update_main_filtering() {
+    let data_filter_main = document.body.dataset.filterMain;
+    switch (data_filter_main) {
+      case "show-all":
+        hide_content_filter();
+        hide_software_filter();
+        break;
+      case "by-content-type":
+        hide_software_filter();  
+        show_content_filter();
+        break;
+      case "by-software":
+        hide_content_filter();  
+        show_software_filter();
+        break;
+      default: 
+        console.log("update_main_filtering(): this is unexpected!");
+        console.log(data_filter_main);
+        break;
+    }
+  }
 
   openRequestedDetails();
 

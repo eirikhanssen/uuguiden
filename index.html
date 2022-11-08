@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="css/uuguiden.css?v=4" />
     <link rel="stylesheet" href="css/debug.css?v=1" />
-    <script src="js/uuguiden.js?v=2"></script>
+    <script src="js/uuguiden.js?v=3"></script>
 </head>
 
 <body data-filter-main="show-all">
@@ -26,30 +26,32 @@
             med nå?</p>
 
         <fieldset id="filter-main" action="">
+
             <legend>Hvordan vil du bruke veilederen?</legend>
+
             <div class="gh3">
-                <button 
-                id="filter-main-show-all"
-                data-filter="show-all"
-                data-selected="selected" aria-describedby="#show-all-button-desc">Se hele veilederen</button>
+                <button id="filter-main-show-all" data-filter="show-all" data-selected="selected"
+                    aria-describedby="#show-all-button-desc">Se hele veilederen</button>
 
 
-                <button id="filter-main-filter-by-content-type" 
-                data-filter="by-content-type" aria-describedby="#content-type-button-desc">Tilpass basert på innholdstype</button>
+                <button id="filter-main-filter-by-content-type" data-filter="by-content-type"
+                    aria-describedby="#content-type-button-desc">Tilpass basert på innholdstype</button>
 
 
-                <button id="filter-main-filter-by-software" data-filter="by-software" aria-describedby="#filter-by-software-button-desc">Tilpass basert på programvare</button>
+                <button id="filter-main-filter-by-software" data-filter="by-software"
+                    aria-describedby="#filter-by-software-button-desc">Tilpass basert på programvare</button>
 
             </div>
 
         </fieldset>
 
-        <fieldset id="filter-main-radios" action="">
+        <fieldset id="filter-main-radios" action="" class="gv">
+
             <legend>Hvordan vil du bruke veilederen?</legend>
+            
             <div class="gh3">
                 <label>
-                    <input type="radio" name="customizer-main" id="filter-show-all" value="show-all"
-                        checked="checked">
+                    <input type="radio" name="customizer-main" id="filter-show-all" value="show-all" checked="checked">
                     <span>Vis hele veilederen</span>
                 </label>
                 <label>
@@ -60,58 +62,91 @@
                     <input type="radio" name="customizer-main" id="filter-by-software" value="by-software">
                     <span>Tilpass basert på programvare</span>
                 </label>
-                <button>Bekreft valg</button>
+            </div>
+
+            <button>Endre valg for bruk av veileder</button>
+
         </fieldset>
 
-        <section hidden>
+        <section id="section-filter-by-content-type">
             <h3>Tilpass basert på innholdstype</h3>
 
-            <fieldset>
+            <fieldset id="filter-by-content-type" class="gv">
+
                 <legend>Innholdstype</legend>
-                <p>Velg alle innholdstypene som passer til det digitale innholdet du jobber med nå.</p>
-                <label><input type="checkbox" /><span>Tekstdokument</span></label>
-                <label><input type="checkbox" /><span>Nettside</span></label>
-                <label><input type="checkbox" /><span>Presentasjon</span></label>
-                <label><input type="checkbox" /><span>Bilde (foto/punktgrafikk)</span></label>
-                <label><input type="checkbox" /><span>Bilde (diagrammer)</span></label>
-                <label><input type="checkbox" /><span>Lydfil/Podcast</span></label>
-                <label><input type="checkbox" /><span>Video</span></label>
+
+                <p>Velg innholdstypene som passer til det digitale innholdet du jobber med nå. Noen innholdstyper velger automatisk andre, men du kan velge vekk etterpå.</p>
+
+                <div id="filter-by-content-type-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" /><span>Tekstdokument</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Nettside</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Presentasjon</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Bilde (foto/punktgrafikk)</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Bilde (diagrammer)</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Lydfil/Podcast</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Video</span></label>
+                </div>
+
+                <button>Bekreft valg for innholdstyper</button>
+
             </fieldset>
+
         </section>
 
 
 
-        <section hidden>
+        <section id="section-filter-by-software">
             <h3>Tilpass basert på programvare</h3>
 
-            <fieldset>
+            <fieldset id="filter-by-software-writing" class="gv">
+
                 <legend>Skriveprogrammer</legend>
-                <label><input type="checkbox" /><span>Microsoft Word for Windows 2019 (latest)</span></label>
-                <label><input type="checkbox" /><span>Microsoft Word for MAC (latest)</span></label>
-                <label><input type="checkbox" /><span>Microsoft Word 2019</span></label>
-                <label><input type="checkbox" /><span>Microsoft Word 2013-2016</span></label>
-                <label><input type="checkbox" /><span>Microsoft Word 2010</span></label>
-                <label><input type="checkbox" /><span>Libre Office Writer</span></label>
-                <label><input type="checkbox" /><span>Apple Pages</span></label>
+
+                <div id="filter-by-software-writing-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for Windows 2019 (latest)</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for MAC (latest)</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2019</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2013-2016</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2010</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Libre Office Writer</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Apple Pages</span></label>
+                </div>
+
+                <button>Bekreft valg for skriveprogram</button>
+
             </fieldset>
 
-            <fieldset>
+            <fieldset id="filter-by-software-presentation" class="gv">
+
                 <legend>Presentasjonsprogramare</legend>
-                <label><input type="checkbox" /><span>Microsoft PowerPoint</span></label>
-                <label><input type="checkbox" /><span>Libre Office Impress</span></label>
-                <label><input type="checkbox" /><span>Apple Keynote</span></label>
-                <label><input type="checkbox" /><span>Sozi</span></label>
-                <label><input type="checkbox" /><span>Google Slides</span></label>
+
+                <div id="filter-by-software-presentation-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" /><span>Microsoft PowerPoint</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Libre Office Impress</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Apple Keynote</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Sozi</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Google Slides</span></label>
+                </div>
+
+                <button>Bekreft valg for presentasjonsprogram</button>
+
             </fieldset>
 
-            <fieldset>
+            <fieldset id="filter-by-software-lcms" class="gv">
+
                 <legend>Lærings- og innholdsplattformer</legend>
-                <label><input type="checkbox" /><span>EdX</span></label>
-                <label><input type="checkbox" /><span>Canvas</span></label>
-                <label><input type="checkbox" /><span>Moodle</span></label>
-                <label><input type="checkbox" /><span>Wordpress</span></label>
-                <label><input type="checkbox" /><span>Joomla</span></label>
-                <label><input type="checkbox" /><span>Drupal</span></label>
+                
+                <div id="filter-by-software-lcms-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" /><span>EdX</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Canvas</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Moodle</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Wordpress</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Joomla</span></label>
+                    <label class="sample"><input type="checkbox" /><span>Drupal</span></label>
+                </div>
+                
+                <button>Bekreft valg for lærings- og innholdsplattformer</button>
+
             </fieldset>
 
         </section>
