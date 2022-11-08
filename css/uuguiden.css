@@ -1,3 +1,36 @@
+:root {
+    --filter-bg: rgb(255, 241, 232);
+    --widget-radius: .5rem;
+    --button-bg: rgb(17, 49, 92);
+    --button-bg-hover: rgb(112, 255, 120);
+    --button-fg: white;
+    --button-fg-hover: rgb(0, 0, 0);
+    --button-border: none;
+    --widget-font-weight: bold;
+    --widget-space: .5rem .5rem;
+    --widget-margin: 0;
+    --label-bg: #eee;
+    --form-control-color: rgb(32, 100, 176);
+    --form-control-border-color: rgb(56, 56, 56);
+    --form-control-margin: auto .25rem;
+    --form-background: white;
+    --form-control-gap: .25rem;
+}
+
+*,
+*::before, *::after {
+  box-sizing: border-box;
+}
+    
+ #main-filter-options {
+    background-color: var(--filter-bg);
+    border-radius: var(--widget-radius);
+}
+
+#main-filter-buttons .buttons {
+    margin-top: var(--widget-space);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@700&display=swap');
 * {font-family: 'Open Sans', sans-serif;}
 h1,h2,h3,h4,h5,h6,summary {
@@ -12,7 +45,7 @@ h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
 h4 {font-size: 1.5rem;}
 
-summary {font-size: 1.25rem;}
+
 
 #header {
     margin-left: -1rem;
@@ -25,7 +58,7 @@ summary {font-size: 1.25rem;}
 
 .headercontent {
     padding-left: 8rem;
-    background-image: url('/favicon.svg');
+    background-image: url('../favicon.svg');
     background-repeat: no-repeat;
     background-position: left 1rem center;
     background-size: 6rem auto;
@@ -64,34 +97,14 @@ summary {font-size: 1.25rem;}
 }
 html {background-color: white; margin:0;padding:0rem;}
 body {background-color: white; max-width: 75rem; margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
+
 /*
 .intro {
     background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;
     background-color: red;
 }*/
 
-summary {
-    font-weight: bold;
-    margin-left: -2rem;
-    cursor: pointer;
-    padding: .5rem;
-}
-details {
-    padding-left:0;
-    padding-left: 2rem;
-    padding-top:0;
-    padding-right:0;
-    background-color: white;
-    border: 1px solid #aaa;
-}
 
-details + details {margin-top: .5rem;}
-
-details[open] {padding-bottom: 1rem;}
-
-details[open] summary {background-color: black; color:white;}
-
-details strong {background-color: #ffe8c3; border-radius: .25rem;}
 .self-url {margin-top: 2rem;}
 
 .notice {font-family:monospace;}
@@ -108,16 +121,28 @@ details strong {background-color: #ffe8c3; border-radius: .25rem;}
 dt {font-weight: bold;}
 dd dt {font-style: italic; color: #333}
 
-label > input {
-    float:left;
-}
-label {
-    display: block;
-}
+
 
 legend {
     font-weight: bold;
+    margin: var(--widget-space);
 }
+
+/* interactive elements */
+button {
+    background-color: var(--button-bg);
+    color: var(--button-fg);
+    border: var(--button-border);
+    border-radius: var(--widget-radius);
+    font-weight: var(--widget-font-weight);
+    padding: var(--widget-space);
+  }
+
+  button:hover, button:focus {
+    background-color: var(--button-bg-hover);
+    color: var(--button-fg-hover);
+
+  }
 
 .skiplink {
     position: absolute;
@@ -144,3 +169,103 @@ legend {
     outline-width: 4px;
     outline-style: solid;
 }
+
+summary {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: -2rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+details {
+    padding-left:0;
+    padding-left: 2rem;
+    padding-top:0;
+    padding-right:0;
+    background-color: white;
+    border: 1px solid #aaa;
+}
+
+details + details {margin-top: .5rem;}
+
+details[open] {padding-bottom: 1rem;}
+
+details[open] summary {background-color: black; color:white;}
+
+details strong {background-color: #ffe8c3; border-radius: .25rem;}
+
+label {
+    background: var(--label-bg);
+    margin: var(--widget-margin);
+    padding: var(--widget-space);
+    border-radius: var(--widget-radius);
+    display:grid;
+    grid-template-columns: 2em auto;
+    grid-template-rows: auto;
+    column-gap: var(--form-control-gap);
+}
+
+input[type=radio] {
+    transform:scale(1.5);
+    border-color: black;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: var(--form-control-margin);
+    font:inherit;
+    color:currentColor;
+    width: 1.75em;
+    height: 1.75em;
+    border: 3px solid var(--form-control-border-color);
+    border-radius: 50%;
+    transform:translateY(0);
+    display:grid;
+    place-content: center;
+}
+
+input[type=radio]+span {
+    display: grid;
+    place-content: start;
+    margin:auto 0;
+    align-self: stretch;
+  }
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* layout stuff */
+
+fieldset {
+    line-height: 1.5em;
+}
+
+/* align children horizontally and grandchildren horizonatally */
+.h {
+    display: flex;
+    justify-content:space-between;
+        flex-flow: column nowrap;
+}
+@media screen and (min-width: 40rem) {
+    .h {
+        flex-flow: row nowrap;
+    }
+}
+.h > * {
+    flex-grow: 1;
+}
+
+.gh3 {
+    display: grid;
+    grid-gap: var(--form-control-gap);
+  }

@@ -1,0 +1,12 @@
+body[data-filter-main=show-all] {
+    background:white;
+}
+
+body[data-filter-main=by-content-type] {
+    background:yellow;
+}
+
+body[data-filter-main=by-software] {
+    background:magenta;
+}
+
