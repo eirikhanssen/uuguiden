@@ -100,16 +100,38 @@ var uuguiden = function () {
 
   function populate_secondary_filtering() {
     let dataset_content_sections = [];
+    let dataset_software_sections = [];
+    let added_software_filter_options = [];
+
     let sections = document.querySelectorAll("section");
     for (let i = 0; i < sections.length; i++) {
       if (sections[i].dataset.content !== undefined) {
         dataset_content_sections[i] = sections[i];
       }
+      if (sections[i].dataset.software !== undefined) {
+        dataset_software_sections[i] = sections[i];
+      }
     }
+
+    
+
+    // populate filter options for content type
     dataset_content_sections.forEach(node => {
-      create_filter_item_in_node_by_selector("#filter-by-content-type-alternatives",node.dataset.content, node.querySelector('h3').innerText);
+      create_filter_item_in_node_by_selector("#filter-by-content-type-alternatives",node.dataset.content, node.querySelector('h4').innerText);
       //console.log(node);
     });
+
+    dataset_software_sections.forEach(node => {
+      let software = node.dataset.software;
+      if (!added_software_filter_options.includes(software)) {
+        added_software_filter_options.push(software);
+        create_filter_item_in_node_by_selector("#filter-by-software-" + node.dataset.category + "-alternatives",node.dataset.software, node.dataset.software);
+      }
+     
+      //console.log(node);
+    });
+
+
   }
 
   openRequestedDetails();

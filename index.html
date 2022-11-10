@@ -7,25 +7,25 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="css/uuguiden.css?v=4" />
     <link rel="stylesheet" href="css/debug.css?v=1" />
-    <script src="js/uuguiden.js?v=3"></script>
+    <script src="js/uuguiden.js?v=4"></script>
 </head>
 
 <body data-filter-main="show-all">
     <header id="header">
         <div class="headercontent">
             <h1>uuguiden.no</h1>
-            <p>Tilpasset veileder for universell utforming av digitalt innhold</p>
+            <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
         </div>
     </header>
 
     <a class="skiplink" href="#veileder">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
 
-    <section id="customize">
-        <h2>Tilpass denne veilederen</h2>
+    <section id="customize" aria-labelledby="customize-heading">
+        <h2 id="customize-heading">Tilpass denne veilederen</h2>
         <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
             med nå?</p>
 
-        <fieldset id="filter-main" action="">
+        <fieldset id="filter-main" action="" hidden>
 
             <legend>Hvordan vil du bruke veilederen?</legend>
 
@@ -44,6 +44,7 @@
             </div>
 
         </fieldset>
+        <!--#filter-main-->
 
         <fieldset id="filter-main-radios" action="" class="gv">
 
@@ -67,8 +68,9 @@
             <button>Endre valg for bruk av veileder</button>
 
         </fieldset>
+        <!--#filter-main-radios-->
 
-        <section id="section-filter-by-content-type">
+        <section id="section-filter-by-content-type" hidden>
             <h3>Tilpass basert på innholdstype</h3>
 
             <fieldset id="filter-by-content-type" class="gv">
@@ -79,39 +81,33 @@
                     automatisk andre, men du kan velge vekk etterpå.</p>
 
                 <div id="filter-by-content-type-alternatives" class="gv">
-                    <label class="sample"><input type="checkbox" /><span>Tekstdokument</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Nettside</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Presentasjon</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Bilde (foto/punktgrafikk)</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Bilde (diagrammer)</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Lydfil/Podcast</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Video</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Tekstdokument</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Nettside</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Presentasjon</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Bilde (foto/punktgrafikk)</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Bilde (diagrammer)</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Lydfil/Podcast</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Video</span></label>
                 </div>
 
                 <button>Bekreft valg for innholdstyper</button>
 
             </fieldset>
+            <!--#filter-by-content-type-->
 
         </section>
+        <!--#section-filter-by-content-type-->
 
 
 
-        <section id="section-filter-by-software">
+        <section id="section-filter-by-software" hidden>
             <h3>Tilpass basert på programvare</h3>
 
             <fieldset id="filter-by-software-writing" class="gv">
 
                 <legend>Skriveprogrammer</legend>
 
-                <div id="filter-by-software-writing-alternatives" class="gv">
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for Windows 2019</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word for MAC</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2019</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2013-2016</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Microsoft Word 2010</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Libre Office Writer</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Apple Pages</span></label>
-                </div>
+                <div id="filter-by-software-writing-alternatives" class="gv"></div>
 
                 <button>Bekreft valg for skriveprogram</button>
 
@@ -122,11 +118,11 @@
                 <legend>Presentasjonsprogramare</legend>
 
                 <div id="filter-by-software-presentation-alternatives" class="gv">
-                    <label class="sample"><input type="checkbox" /><span>Microsoft PowerPoint</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Libre Office Impress</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Apple Keynote</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Sozi</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Google Slides</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Microsoft PowerPoint</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Libre Office Impress</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Apple Keynote</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Sozi</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Google Slides</span></label>
                 </div>
 
                 <button>Bekreft valg for presentasjonsprogram</button>
@@ -138,12 +134,12 @@
                 <legend>Lærings- og innholdsplattformer</legend>
 
                 <div id="filter-by-software-lcms-alternatives" class="gv">
-                    <label class="sample"><input type="checkbox" /><span>EdX</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Canvas</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Moodle</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Wordpress</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Joomla</span></label>
-                    <label class="sample"><input type="checkbox" /><span>Drupal</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>EdX</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Canvas</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Moodle</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Wordpress</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Joomla</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Drupal</span></label>
                 </div>
 
                 <button>Bekreft valg for lærings- og innholdsplattformer</button>
@@ -156,65 +152,118 @@
         <button>Vis hele veiledningen</button>-->
 
     </section>
+    <!--#customize-->
+
+
+
     <main id="main">
-        <nav id="toc"></nav>
-        <section id="guide" tabindex="0">
-            <h2>Veileder</h2>
-            <section id="textdocument" tabindex="0" data-content="text-document" data-related="image table text-properties">
-                <h3>Tekstdokument!!</h3>
-            </section>
-            <section id="dokumentstruktur" tabindex="0">
-                <h3>Dokumentstruktur</h3>
-                <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer dette å
-                    bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til
-                    tabeller
+
+        <section id="section-guide" tabindex="0" aria-labelledby="heading-guide">
+            <h2 id="heading-guide">Veileder</h2>
+            <nav id="toc"></nav>
+
+            <section id="section-complex-content-types" aria-labelledby="heading-complex-content-types">
+                <h3 id="heading-complex-content-types">Sammensatte innholdstyper</h3>
+                <p>Med sammensatt innholdstyper mener vi innholdstyper som kan bestå av mange enkelstående elementer.
+                    Eksempler er nettsider, dokumenter og presentasjoner.</p>
+
+                <section id="section-text-document" tabindex="0" data-content="text-document"
+                    data-related="image table text-properties">
+                    <h4 id="heading-text-document">Tekstdokument</h4>
+                    <h5>Vanlige filformater</h5>
+                    <ul>
+                        <li>Office Open XML (.docx) - Microsoft Word sitt standardformater, men kan også redigeres i
+                            f.eks
+                            Libre Office</li>
+                        <li>Open Document Format (.odt) - Libre Office sitt standardformat for tektdokumenter, men kan
+                            også
+                            redigers av f.eks Microsoft Word</li>
+                    </ul>
+                    <p>Med tekstdokument mener vi komplekse dokumenter som hovedsakelig er bygget opp med tekst, men som
+                        også kan inneholde elementer som:</p>
+                    <ol>
+                        <li>overskrifter</li>
+                        <li>avsnitt</li>
+                        <li>lister</li>
+                        <li>tabeller</li>
+                        <li>bilder/grafikk</li>
+                        <li>video (sjelden)</li>
+                        <li>lyd (sejelden)</li>
+                    </ol>
+
+                </section>
+                <!--textdocument-->
+
+                <section id="section-outline" tabindex="0">
+                    <h4 id="section-outline">Dokumentstruktur</h4>
+                    <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer
+                        dette å
+                        bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til
+                        tabeller
+                    </p>
+                </section>
+                <!--#section-outline-->
+
+                <section id="section-outline" tabindex="0" data-mandatory="text-document">
+                    <h4 id="heading-outline">Overskriftsnivåer</h4>
+                    <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra
+                        for
+                        alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet
+                        muligheten til å navigere effektivt.</p>
+                    <ul>
+                        <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke
+                            skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i
+                            dokumentet.</li>
+                        <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du
+                            heller
+                            se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
+                        <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå.
+                            F.eks
+                            skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
+                    </ul>
+                </section>
+    
+            </section><!--#section-complex-content-types-->
+
+            <section id="section-individual-content-types" aria-labelledby="heading-individual-content-types">
+                <h3 id="heading-individual-content-types">Enkeltstående innholdstyper</h3>
+                <p>Med enkeltstående innholdstyper mener vi elementer som vanligvis utgjør en del av en større helhet.
                 </p>
-            </section>
-            <section id="table" data-content="table" data-related="text-properties">
-                <h3>Tabell</h3>
-                <p>Husk at tabeller er for data, ikke for layout.</p>
-                <h4>Lage tabeller i skriveprogram</h4>
-                <ol>
-                    <li>Bygg opp tabellen med tabellverktøy</li>
-                    <li>Del store tabeller opp i mindre hvis det er mulig</li>
-                    <li>Husk å definer overskriftsrad via tabellalternativer.</li>
-                </ol>
-                
-            </section>
-            <section id="text-properties" data-content="text-properties" data-relContent = "text-document table" tabindex="0">
-                <h3>Tekstinnstillinger</h3>
-                <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
-                <ul>
-                    <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
-                    <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
-                    <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>.
-                        <strong>Unngå
-                            for spesifikke regler i CSS</strong> som gjør dette vanskelig:
-                        <ul>
-                            <li>Ikke bruk !important i CSS-relger for tekst</li>
-                            <li>Ikke definer CSS-relger for tekst i style-attributter</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="outline" tabindex="0" data-related="textdocument">
-                <h3>Overskriftsnivåer</h3>
-                <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra
-                    for
-                    alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet
-                    muligheten til å navigere effektivt.</p>
-                <ul>
-                    <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke
-                        skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i
-                        dokumentet.</li>
-                    <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du
-                        heller
-                        se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
-                    <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå.
-                        F.eks
-                        skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
-                </ul>
-            </section>
+
+                <section id="section-text" data-content="text" data-relContent="text-document table" tabindex="0">
+                    <h4>Tekst</h4>
+                    <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
+                    <ul>
+                        <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
+                        <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
+                        <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>.
+                            <strong>Unngå
+                                for spesifikke regler i CSS</strong> som gjør dette vanskelig:
+                            <ul>
+                                <li>Ikke bruk !important i CSS-relger for tekst</li>
+                                <li>Ikke definer CSS-relger for tekst i style-attributter</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="section-table" data-content="table" data-related="text-properties">
+                    <h4>Tabell</h4>
+                    <p>Husk at tabeller er for data, ikke for layout.</p>
+                    <h5>Lage tabeller i skriveprogram</h5>
+                    <ol>
+                        <li>Bygg opp tabellen med tabellverktøy</li>
+                        <li>Del store tabeller opp i mindre hvis det er mulig</li>
+                        <li>Husk å definer overskriftsrad via tabellalternativer.</li>
+                    </ol>
+    
+                </section><!--#section-table-->
+
+            </section><!--#section-individual-content-types-->
+
+
+
+            
             <section id="image" tabindex="0">
                 <h3>Bilder og figurer</h3>
                 <p>Bilder og figurer kan være en god støtte til budskapet. Noen ting må du tenke på når du bruker
@@ -323,6 +372,7 @@
 
 
             </section>
+
             <section id="pdf-eksport" tabindex="0">
                 <h3>PDF-eksport</h3>
                 <p class="generelt">Et godt strukturert dokument har bakt inn informasjon som gjør at det fungerer godt
@@ -338,12 +388,69 @@
                             eller konvertere til PDF eller XPS i Project-skrivebord (support.microsoft.com)</a></li>
                 </ul>
             </section>
-            <section tabindex="0">
-                <h3>Sjekk tilgjengeligheten</h3>
-                <p class="generelt">Flere programmer har innebygde verktøy som hjelper deg å sjekke tilgjengeligheten.
-                    Men
-                    noen ting må du teste manuelt.</p>
+
+
+
+            <section tabindex="0" data-software="Microsoft Word" data-category="writing">
+                <h3>Tilgjengelighetssjekk i Word</h3>
+                <p class="generelt">Bruk den innebygde tilgjengelighetssjekken i Word for å finne og rette de fleste
+                    vanlige tilgjengelighetsproblemene.</p>
+                <p>Dette er en god start. Men vær obs på at den innebygde tilgjengelighetssjekken ikke klarer å fange
+                    opp alt. Tilgjengelighetssjekken klarer f.eks å oppdage om et bilde mangler alternativ tekst, men
+                    klarer ikke å teste om den alternative teksten er meningsfull. Tilgjengelighetssjekken fanger heller
+                    ikke opp uheldige valg med tanke på utseende av skrift, eller om du har glemt å definere
+                    overskriftsrad for en tabell.</p>
             </section>
+
+            <section tabindex="0" data-software="Microsoft Word" data-category="writing">
+                <h3>Legg inn alternativ tekst i Word</h3>
+                <p class="generelt">Bruk den innebygde tilgjengelighetssjekken i Word for å finne og rette de fleste
+                    vanlige tilgjengelighetsproblemene.</p>
+                <p>Tilgjengelighetssjekken rapporterer bilder som mangler alternativ tekst.</p>
+                <p>For hvert av bildene må du vurdere om bildet kun er til pynt, eller om det har meningsbærende
+                    informasjon som skal presenteres for f.eks svaksynte og blinde personer gjennom opplesning på en
+                    skjermleser.</p>
+                <p>Er bildet pynt? Da velger du "marker som dekorativt" eller "mark decorative"</p>
+                <p>Er bildet meningsbærende skal du gi en kort tekst som kan leses opp som sier hva det er bildet
+                    formidler. Dette må sees i sammenheng med konteksten til bildet.</p>
+            </section>
+
+            <!--software - writing - Apple Pages-->
+
+            <section tabindex="0" data-software="Apple Pages" data-category="writing">
+                <h3>Lag tilgjengelige dokumenter med Apple Pages </h3>
+                <p>Lær mer om hvordan du lager tilgjengelige dokumenter med Apple Pages fra <a
+                        href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets, or
+                        presentations with Pages, Numbers, or Keynote</a> (support.apple.com)</p>
+            </section>
+
+            <!--software - writing - libre office writer -->
+
+            <section tabindex="0" data-software="Libre Office Writer" data-category="writing">
+                <h3>Lag overskrifter i Libre Office Writer</h3>
+                <p>Bruk de innebygde overskriftsstilene for å lage overskrifter i Libre Office Writer: <a
+                        href="https://wiki.documentfoundation.org/Accessibility/Creating_Accessible_LibreOffice_Files#How_to_add_headings">Adding
+                        headings in LibreOffice Writer (PC and Mac)</a></p>
+            </section>
+
+            <!--software - presentation-->
+
+            <section tabindex="0" data-software="PowerPoint" data-category="presentation">
+                <h3>Overskrifter i PowerPoint</h3>
+                <p>Les mer om hvoran man legger inn overskrit i PowerPoint: <a
+                        href="https://support.microsoft.com/en-us/office/title-a-slide-c5286802-495a-4b47-a8ae-212fb8a7dc74">Title
+                        a slide (support.microsoft.com)</a></p>
+            </section>
+
+            <section tabindex="0" data-software="Apple Keynote" data-category="presentation">
+                <h3>Dokumenttilgjengelighet i Keynote</h3>
+                <p>Hvis du bruker Keynote til å lage presentasjoner, så bør du lese <a
+                        href="https://cte.tcu.edu/resources/accessibility/keynote-document-accessibility/">Keynote
+                        Document Accessibility</a> og <a href="https://support.apple.com/en-us/HT210563">Create
+                        accessible documents, spreadsheets, or presentations with Pages, Numbers, or Keynote</a></p>
+            </section>
+
+            <!-- learning management systems and content management systems -->
         </section>
 
     </main>

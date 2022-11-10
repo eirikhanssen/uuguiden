@@ -1,4 +1,4 @@
-body[data-filter-main=show-all] {
+/*body[data-filter-main=show-all] {
     background:white;
 }
 
@@ -8,7 +8,7 @@ body[data-filter-main=by-content-type] {
 
 body[data-filter-main=by-software] {
     background:rgba(255, 0, 200, 0.1);
-}
+}*/
 
 .sample {
     opacity:0.5;
