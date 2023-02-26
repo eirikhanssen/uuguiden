@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <link rel="icon" type="image/svg+xml" href="/favicon.svg">
       <link rel="stylesheet" href="css/uuguiden.css?v=2">
-      <link rel="stylesheet" href="css/debug.css?v=3"><script src="js/uuguiden.js?v=2"></script></head>
+      <link rel="stylesheet" href="css/debug.css?v=3"><script src="js/uuguiden.js?v=3"></script></head>
    <body data-filter-main="show-all">
       <header id="header">
          <div class="headercontent">
@@ -28,7 +28,7 @@
                <fieldset id="filter-content">
                   <legend>Kryss av for innhold du jobber med nå</legend>
                   <ul>
-                     <li><label><input id="filter-content-text-documents" type="checkbox" data-topic="text-documents"><span>Tekstbehandling</span></label></li>
+                     <li><label><input id="filter-content-text-documents" type="checkbox" data-topic="text-documents" data-children="filter-content-plaintext filter-content-docx-documents filter-content-odt-documents filter-content-apple-pages-documents"><span>Tekstbehandling</span></label></li>
                      <ul>
                         <li><label><input id="filter-content-plaintext" type="checkbox" data-parent="filter-content-text-documents" data-topic="plaintext"><span>Ren tekst (.txt)</span></label></li>
                         <li><label><input id="filter-content-docx-documents" type="checkbox" data-parent="filter-content-text-documents" data-topic="docx-documents"><span>Word-dokumenter (.docx)</span></label></li>
@@ -36,7 +36,7 @@
                         <li><label><input id="filter-content-apple-pages-documents" type="checkbox" data-parent="filter-content-text-documents" data-topic="apple-pages-documents"><span>Apple Pages (.Pages)</span></label></li>
                      </ul>
                      <li><label><input id="filter-content-webpage" type="checkbox" data-topic="webpage"><span>Nettsider</span></label></li>
-                     <li><label><input id="filter-content-presenter" type="checkbox" data-topic="presenter"><span>Presentasjon</span></label></li>
+                     <li><label><input id="filter-content-presenter" type="checkbox" data-topic="presenter" data-children="filter-content-powerpoint filter-content-impress filter-content-keynote filter-content-sozi filter-content-google-slides"><span>Presentasjon</span></label></li>
                      <ul>
                         <li><label><input id="filter-content-powerpoint" type="checkbox" data-parent="filter-content-presenter" data-topic="powerpoint"><span>PowerPoint (.pptx)</span></label></li>
                         <li><label><input id="filter-content-impress" type="checkbox" data-parent="filter-content-presenter" data-topic="impress"><span>Impress (.odp)</span></label></li>
@@ -47,12 +47,12 @@
                      <li><label><input id="filter-content-text" type="checkbox" data-topic="text"><span>Ren tekst</span></label></li>
                      <li><label><input id="filter-content-list" type="checkbox" data-topic="list"><span>Liste</span></label></li>
                      <li><label><input id="filter-content-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
-                     <li><label><input id="filter-content-images" type="checkbox" data-topic="images"><span>Bilder</span></label></li>
+                     <li><label><input id="filter-content-images" type="checkbox" data-topic="images" data-children="filter-content-photo filter-content-infographics"><span>Bilder</span></label></li>
                      <ul>
                         <li><label><input id="filter-content-photo" type="checkbox" data-parent="filter-content-images" data-topic="photo"><span>Foto og illustrasjoner</span></label></li>
                         <li><label><input id="filter-content-infographics" type="checkbox" data-parent="filter-content-images" data-topic="infographics"><span>Infografikk og diagrammer</span></label></li>
                      </ul>
-                     <li><label><input id="filter-content-audio" type="checkbox" data-topic="audio"><span>Audio/lyd</span></label></li>
+                     <li><label><input id="filter-content-audio" type="checkbox" data-topic="audio" data-children="filter-content-podcast filter-content-vision-"><span>Audio/lyd</span></label></li>
                      <ul>
                         <li><label><input id="filter-content-podcast" type="checkbox" data-parent="filter-content-audio" data-topic="podcast"><span>Podcast</span></label></li>
                         <li><label><input id="filter-content-vision-" type="checkbox" data-parent="filter-content-audio" data-topic="vision-"><span>Synstolking</span></label></li>
@@ -63,19 +63,19 @@
                <fieldset id="filter-app">
                   <legend>Kryss av for program du bruker nå</legend>
                   <ul>
-                     <li><label><input id="filter-app-text" type="checkbox" data-topic="text"><span>Tekstbehandler</span></label></li>
+                     <li><label><input id="filter-app-text" type="checkbox" data-topic="text" data-children="filter-app-word filter-app-libre-office-writer filter-app-apple-pages"><span>Tekstbehandler</span></label></li>
                      <ul>
                         <li><label><input id="filter-app-word" type="checkbox" data-parent="filter-app-text" data-topic="word"><span>Microsoft Word</span></label></li>
                         <li><label><input id="filter-app-libre-office-writer" type="checkbox" data-parent="filter-app-text" data-topic="libre-office-writer"><span>Libre Office Writer</span></label></li>
                         <li><label><input id="filter-app-apple-pages" type="checkbox" data-parent="filter-app-text" data-topic="apple-pages"><span>Apple Pages</span></label></li>
                      </ul>
-                     <li><label><input id="filter-app-web-lcms" type="checkbox" data-topic="web-lcms"><span>Nettsider/CMS/LMS</span></label></li>
+                     <li><label><input id="filter-app-web-lcms" type="checkbox" data-topic="web-lcms" data-children="filter-app-openedx filter-app-canvas filter-app-wordpress"><span>Nettsider/CMS/LMS</span></label></li>
                      <ul>
                         <li><label><input id="filter-app-openedx" type="checkbox" data-parent="filter-app-web-lcms" data-topic="openedx"><span>OpenEdx</span></label></li>
                         <li><label><input id="filter-app-canvas" type="checkbox" data-parent="filter-app-web-lcms" data-topic="canvas"><span>Canvas</span></label></li>
                         <li><label><input id="filter-app-wordpress" type="checkbox" data-parent="filter-app-web-lcms" data-topic="wordpress"><span>Wordpress</span></label></li>
                      </ul>
-                     <li><label><input id="filter-app-presenter" type="checkbox" data-topic="presenter"><span>Presentasjon</span></label></li>
+                     <li><label><input id="filter-app-presenter" type="checkbox" data-topic="presenter" data-children="filter-app-powerpoint filter-app-impress filter-app-keynote filter-app-sozi filter-app-google-slides"><span>Presentasjon</span></label></li>
                      <ul>
                         <li><label><input id="filter-app-powerpoint" type="checkbox" data-parent="filter-app-presenter" data-topic="powerpoint"><span>PowerPoint</span></label></li>
                         <li><label><input id="filter-app-impress" type="checkbox" data-parent="filter-app-presenter" data-topic="impress"><span>Impress</span></label></li>
@@ -93,7 +93,7 @@
             <h2 id="heading-guide">Veileder</h2>
             <nav id="guide-toc"></nav>
             <!--#guide-toc skal bli generert av JS-->
-            <div id="#topics">
+            <div id="topics">
                <section id="topic-document-structure">
                   <h3>Dokumentstruktur og tagging for tilgjengelighet</h3>
                   <div class="general">

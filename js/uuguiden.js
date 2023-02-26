@@ -10,13 +10,6 @@ var uuguiden = function () {
         }
     }
 
-    function set_parent_checkbox_to_checked(idstr) {
-        var parent_checkbox = document.querySelector("#" + idstr);
-        if (parent_checkbox && parent_checkbox.tagName == "INPUT" && parent_checkbox.type == "checkbox") {
-            parent_checkbox.checked = true;
-        }
-    }
-
     var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
 
     var filter_main_customize_button = document.querySelector("#filter-main-customize");
@@ -61,9 +54,16 @@ var uuguiden = function () {
 
     function add_checkbox_listeners() {
 
+        function set_parent_checkbox_to_checked(idstr) {
+            var parent_checkbox = document.querySelector("#" + idstr);
+            if (parent_checkbox && parent_checkbox.tagName == "INPUT" && parent_checkbox.type == "checkbox") {
+                parent_checkbox.checked = true;
+            }
+        }
+
         dmsg('add checkbox change listeners');
 
-        function check_listener(e) {
+        function see_if_parent_checkbox_should_be_checked(e) {
             var target = e.target;
             dmsg(target.id);
             if (target.dataset.parent && target.checked) {
@@ -72,29 +72,6 @@ var uuguiden = function () {
             } else {
                 dmsg('no parent');
             }
-        }
-
-        function add_child_boxes_id_to_parents_children_dataset(el) {
-            var child_id = el.id;
-
-            // if element has a checkbox-parent
-            if (el.dataset.parent) {
-
-                var parent_checkbox_el = document.getElementById(el.dataset.parent);
-                if (parent_checkbox_el) {
-
-                    // if parent_checkbox_el.dataset does not exist yet
-                    if (!parent_checkbox_el.dataset.children) {
-                        parent_checkbox_el.dataset.children = child_id;
-                    }
-
-                    // parent_checkbox_el.dataset already has children property
-                    else {
-                        parent_checkbox_el.dataset.children += " " + child_id;
-                    }
-                }
-            }
-
         }
 
         function add_unselect_children_event_listener_to_checkbox_inputs_with_children(el) {
@@ -138,13 +115,10 @@ var uuguiden = function () {
         }
 
         for (let i = 0; i < checkboxes.length; i++) {
-            add_child_boxes_id_to_parents_children_dataset(checkboxes[i]);
-            //add_unselect_children_event_listener_to_checkbox_inputs_with_children(checkboxes[i]);
-            checkboxes[i].addEventListener('change', check_listener, false);
+            checkboxes[i].addEventListener('change', see_if_parent_checkbox_should_be_checked, false);
         }
 
         var parent_checkboxes = document.querySelectorAll("input[type=checkbox][data-children]");
-
         for (let i = 0; i < parent_checkboxes.length; i++) {
             add_unselect_children_event_listener_to_checkbox_inputs_with_children(parent_checkboxes[i]);
         }

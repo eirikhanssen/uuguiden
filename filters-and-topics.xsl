@@ -17,7 +17,7 @@
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
                 <link rel="stylesheet" href="css/uuguiden.css?v=2"/>
                 <link rel="stylesheet" href="css/debug.css?v=3"/>
-                <script src="js/uuguiden.js?v=2"></script> 
+                <script src="js/uuguiden.js?v=3"></script> 
             </head>
             <body data-filter-main="show-all">
                 <header id="header">
@@ -41,10 +41,6 @@
 
                             <button id="filter-main-customize" data-filter="customize">Vis filter for å tilpasse veilederen<span class="selected">  (valgt)</span></button>
                            
-<!--                            <button id="filter-main-filter-by-content-type" data-filter="by-content-type"
-                                aria-describedby="#content-type-button-desc">Tilpass basert på innholdstype</button>
-                            <button id="filter-main-filter-by-software" data-filter="by-software"
-                                aria-describedby="#filter-by-software-button-desc">Tilpass basert på programvare</button>-->
                         </div>
                     </fieldset>
                     <xsl:comment>#filter-main</xsl:comment>
@@ -90,14 +86,27 @@
     </xsl:template>
     
     <xsl:template match="filter">
+        <xsl:variable name="fieldset_prefix" select="concat('filter-',ancestor::fieldset/@prefix,'-')"/>
         <li>
             <label>
-                <input id="{concat('filter-',ancestor::fieldset/@prefix,'-',@topic)}" type="checkbox">
+                <input id="{concat($fieldset_prefix,@topic)}" type="checkbox">
                     <xsl:if test="parent::filter-group[@parent]">
-                        <xsl:attribute name="data-parent" select="concat('filter-',ancestor::fieldset/@prefix,'-', parent::filter-group/@parent)"/>
+                        <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent)"/>
                     </xsl:if>
                     <xsl:if test="@topic">
                         <xsl:attribute name="data-topic" select="@topic"/>
+                    </xsl:if>
+                    <xsl:if test="@topic = ../filter-group/@parent">
+                        <xsl:variable name="current_topic" select="@topic"/>
+                        <xsl:variable name="children" select="../filter-group[@parent=$current_topic]/filter"/>
+                        <xsl:variable name="children_string" select="string-join(($children/@topic), ';')"/>
+                        <xsl:variable name="filter_children_string">
+                            <xsl:analyze-string select="$children_string" regex=";">
+                                <xsl:matching-substring><xsl:text> </xsl:text></xsl:matching-substring>
+                                <xsl:non-matching-substring><xsl:value-of select="concat($fieldset_prefix, .)"/></xsl:non-matching-substring>
+                            </xsl:analyze-string>
+                        </xsl:variable>
+                        <xsl:attribute name="data-children" select="$filter_children_string"></xsl:attribute>
                     </xsl:if>
                 </input><span><xsl:value-of select="."/></span></label>
         </li>
@@ -129,7 +138,7 @@
     </xsl:template>-->
     
     <xsl:template match="topics">
-        <div id="#topics">
+        <div id="topics">
             <xsl:apply-templates/>    
         </div><xsl:comment>#topics</xsl:comment>
     </xsl:template>
