@@ -1,141 +1,166 @@
 var uuguiden = function () {
-  console.log('uuguiden()');
-  var openRequestedDetails = function () {
-    var location_hash = location.hash.split('?')[0];
 
-    if (location_hash != undefined && location_hash != '') {
-      var requested_details = document.querySelector('details' + location_hash);
-      if (requested_details != null) {
-        requested_details.setAttribute("open", "");
-      }
-    }
-  }
+    var debug = true;
 
-  var openTargetDetails = function (e) {
-    // check if link target is a target details on the same page.
-    // set the open attribute if it is
+    dmsg('uuguiden()');
 
-    var anchor = e.target;
-    var href = anchor.getAttribute("href");
-    console.log('anchor-href: ' + href);
-
-    document.querySelector(href).setAttribute('open', 'open');
-
-  }
-
-  var links = document.querySelectorAll('a');
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', openTargetDetails, false);
-  }
-
-  function add_clicker_fn_to_selector(selector, fn) {
-    let domnodes = document.querySelectorAll(selector);
-    for (let i = 0; i < domnodes.length; i++) {
-      domnodes[i].addEventListener('click', fn)
-    }
-  }
-
-  function apply_filter_main_buttons(e) {
-    target = e.target;
-    document.body.setAttribute("data-filter-main", target.getAttribute("data-filter"));
-    update_main_filtering();
-  }
-  add_clicker_fn_to_selector("#filter-main button", apply_filter_main_buttons);
-
-
-  function apply_filter_main_radios() {
-    document.body.setAttribute("data-filter-main", document.querySelector('input[name="customizer-main"]:checked').value);
-    update_main_filtering();
-  }
-  add_clicker_fn_to_selector("#filter-main-radios button", apply_filter_main_radios);
-
-  function hide_software_filter() {
-    el = document.querySelector("#section-filter-by-software");
-    el.hidden = true;
-  }
-
-  function show_software_filter() {
-    el = document.querySelector("#section-filter-by-software");
-    el.hidden = false;
-  }
-
-  function show_content_filter() {
-    el = document.querySelector("#section-filter-by-content-type");
-    el.hidden = false
-  }
-
-  function hide_content_filter() {
-    el = document.querySelector("#section-filter-by-content-type");
-    el.hidden = true;
-  }
-
-  function update_main_filtering() {
-    let data_filter_main = document.body.dataset.filterMain;
-    switch (data_filter_main) {
-      case "show-all":
-        hide_content_filter();
-        hide_software_filter();
-        break;
-      case "by-content-type":
-        hide_software_filter();  
-        show_content_filter();
-        break;
-      case "by-software":
-        hide_content_filter();  
-        show_software_filter();
-        break;
-      default: 
-        console.log("update_main_filtering(): this is unexpected!");
-        console.log(data_filter_main);
-        break;
-    }
-  }
-
-  function create_filter_item_in_node_by_selector(selector,name, displayname) {
-    let parent = document.querySelector(selector);
-    let label = document.createElement("label");
-    label.innerHTML = '<input type="checkbox" name="' + name + '"/><span>' + displayname + '</span>';
-    parent.appendChild(label);
-  }
-
-  function populate_secondary_filtering() {
-    let dataset_content_sections = [];
-    let dataset_software_sections = [];
-    let added_software_filter_options = [];
-
-    let sections = document.querySelectorAll("section");
-    for (let i = 0; i < sections.length; i++) {
-      if (sections[i].dataset.content !== undefined) {
-        dataset_content_sections[i] = sections[i];
-      }
-      if (sections[i].dataset.software !== undefined) {
-        dataset_software_sections[i] = sections[i];
-      }
+    function dmsg(str) {
+        if (debug) {
+            console.log(str);
+        }
     }
 
-    
+    function set_parent_checkbox_to_checked(idstr) {
+        var parent_checkbox = document.querySelector("#" + idstr);
+        if (parent_checkbox && parent_checkbox.tagName == "INPUT" && parent_checkbox.type == "checkbox") {
+            parent_checkbox.checked = true;
+        }
+    }
 
-    // populate filter options for content type
-    dataset_content_sections.forEach(node => {
-      create_filter_item_in_node_by_selector("#filter-by-content-type-alternatives",node.dataset.content, node.querySelector('h4').innerText);
-      //console.log(node);
-    });
+    var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
 
-    dataset_software_sections.forEach(node => {
-      let software = node.dataset.software;
-      if (!added_software_filter_options.includes(software)) {
-        added_software_filter_options.push(software);
-        create_filter_item_in_node_by_selector("#filter-by-software-" + node.dataset.category + "-alternatives",node.dataset.software, node.dataset.software);
-      }
-     
-      //console.log(node);
-    });
+    var filter_main_customize_button = document.querySelector("#filter-main-customize");
+    var filter_main_show_all_button = document.querySelector("#filter-main-show-all");
+    var section_customize = document.querySelector("#customize");
+
+    function filter_main_customize_button_action() {
+        filter_main_customize_button.setAttribute("data-selected", "selected");
+        filter_main_show_all_button.removeAttribute("data-selected");
+        show_customize_section();
+    }
+    filter_main_customize_button.addEventListener('click', filter_main_customize_button_action, false);
+
+    function filter_main_show_all_button_action() {
+        filter_main_show_all_button.setAttribute("data-selected", "selected");
+        filter_main_customize_button.removeAttribute("data-selected");
+        hide_customize_section();
+    }
+    filter_main_show_all_button.addEventListener('click', filter_main_show_all_button_action, false);
+
+    function show_customize_section() {
+        section_customize.removeAttribute("hidden");
+    }
+
+    function hide_customize_section() {
+        section_customize.setAttribute("hidden", "hidden");
+    }
 
 
-  }
+    function get_selected_topics() {
+        var selected_topics = [];
 
-  openRequestedDetails();
-  populate_secondary_filtering();
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selected_topics.push(checkboxes[i].dataset.topic)
+            }
+        }
+        return selected_topics;
+    }
+
+    // get_selected_topics();
+
+    function add_checkbox_listeners() {
+
+        dmsg('add checkbox change listeners');
+
+        function check_listener(e) {
+            var target = e.target;
+            dmsg(target.id);
+            if (target.dataset.parent && target.checked) {
+                dmsg('parent: ' + target.dataset.parent);
+                set_parent_checkbox_to_checked(target.dataset.parent);
+            } else {
+                dmsg('no parent');
+            }
+        }
+
+        function add_child_boxes_id_to_parents_children_dataset(el) {
+            var child_id = el.id;
+
+            // if element has a checkbox-parent
+            if (el.dataset.parent) {
+
+                var parent_checkbox_el = document.getElementById(el.dataset.parent);
+                if (parent_checkbox_el) {
+
+                    // if parent_checkbox_el.dataset does not exist yet
+                    if (!parent_checkbox_el.dataset.children) {
+                        parent_checkbox_el.dataset.children = child_id;
+                    }
+
+                    // parent_checkbox_el.dataset already has children property
+                    else {
+                        parent_checkbox_el.dataset.children += " " + child_id;
+                    }
+                }
+            }
+
+        }
+
+        function add_unselect_children_event_listener_to_checkbox_inputs_with_children(el) {
+            dmsg("add_unselect_children_event_listener_to_checkbox_inputs_with_children(el). parent: " + el.id + ", children: " + el.dataset.children);
+            if (el.tagName == "INPUT" && el.type == "checkbox" && el.dataset.children) {
+                // is a input type = checkbox and has children dataset
+
+                let child_ids = el.dataset.children.split(' ');
+
+                dmsg("id: " + el.id + " children: " + el.dataset.children);
+
+                var child_checkboxes = [];
+
+                var current_el;
+
+                for (let i = 0; i < child_ids.length; i++) {
+                    dmsg("child_ids: " + child_ids);
+                    current_el = document.getElementById(child_ids[i]);
+                    if (current_el && current_el.tagName == "INPUT" && current_el.type == "checkbox") {
+                        dmsg("child_checkboxes.push(current_el) :" + current_el.id);
+                        child_checkboxes.push(current_el);
+                    }
+                }
+
+                function unselect_children_on_change(e) {
+                    var target = e.target;
+
+                    if (!target.checked) {
+                        for (let i = 0; i < child_checkboxes.length; i++) {
+                            child_checkboxes[i].checked = false;
+                        }
+                    }
+                }
+
+                el.addEventListener('change', unselect_children_on_change, false);
+
+                // if element is input type = checkbox and element has children dataset and children dataset is not empty
+                // add an event listener for change - if after the change the checkbox is not checked, then set children to not checked as well.
+
+            }
+        }
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            add_child_boxes_id_to_parents_children_dataset(checkboxes[i]);
+            //add_unselect_children_event_listener_to_checkbox_inputs_with_children(checkboxes[i]);
+            checkboxes[i].addEventListener('change', check_listener, false);
+        }
+
+        var parent_checkboxes = document.querySelectorAll("input[type=checkbox][data-children]");
+
+        for (let i = 0; i < parent_checkboxes.length; i++) {
+            add_unselect_children_event_listener_to_checkbox_inputs_with_children(parent_checkboxes[i]);
+        }
+
+    }
+
+    // when checking a checkbox, also set parent checkbox to checked
+
+
+    // when unchecking a checkbox, also uncheck it's children
+
+    add_checkbox_listeners();
+
+
 }
+
+
 
 window.addEventListener('load', uuguiden, false);

@@ -265,7 +265,7 @@ fieldset {
     flex-grow: 1;
 }
 
-.gh3, .gh2, .gv {
+.gh3, .gv {
     display: grid;
     grid-gap: var(--form-control-gap);
 }
@@ -276,109 +276,3 @@ fieldset {
         grid-template-rows: auto;
     }
 }
-
-@media screen and (min-width: 30rem) {
-    .gh2 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-}
-
-
-#customize input {
- 
-}
-
-#customize ul {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-#customize ul label {
-  padding-left: .3rem;
-  margin-top: .3rem;
-  background-color: #f0f0f0;
-}
-
-#customize ul ul label {
-  padding-left: 2.3rem;
-}
-
-#customize ul ul ul label {
-  padding-left: 4.3rem;
-}
-
-#customize ul ul ul ul label {
-  padding-left: 6.3rem;
-}
-/*
-@media screen and (min-width: 40rem) {
-    #filters {
-      display: flex;
-    }
-    #filters fieldset {
-      flex-grow: 1;
-      flex-basis: 50%;
-    }
-  }
-
-  */
-
-  @media screen and (min-width: 40rem) {
-  
-    #filters {
-  
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
-    }
-    
-  }
-  
-  #filters label {
-    border: 1px solid #fff;
-  }
-  
-  
-  fieldset {
-    border: none;
-    padding:0;
-  }
-  
-  fieldset legend {
-    margin: 0;
-    margin-top: 1rem;
-  }
-  
-  fieldset legend + * {
-    margin-top: 1rem;
-  }
-
-  #confirm-choices-button {
-    width: 100%;
-  }
-
-/* toggle display of selected button text  */  
-  button:not([data-selected=selected]) .selected {
-    display: none;
-  }
-
-  button:not([data-selected=selected]) .not-selected {
-    display: inline;
-  }
-
-  button[data-selected=selected] .selected {
-    display: inline;
-  }
-
-  button[data-selected=selected] .not-selected {
-    display: none;
-  }
-
-  button, #filters label, #filters input {
-    cursor:pointer;
-  }
-
-  #filters label:hover {
-    border: 1px solid black;
-  }
