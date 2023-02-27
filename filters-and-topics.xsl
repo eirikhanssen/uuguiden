@@ -37,9 +37,9 @@
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
                         <div class="gh2">
-                            <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (ta vekk filter)</span><span class="selected">  (valgt)</span></button>
+                            <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (deaktiver og skjul filter)</span><span class="selected">  (valgt)</span></button>
 
-                            <button id="filter-main-customize" data-filter="customize">Vis filter for å tilpasse veilederen<span class="selected">  (valgt)</span></button>
+                            <button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>
                            
                         </div>
                     </fieldset>
@@ -82,7 +82,7 @@
             <div id="filters">
                 <xsl:apply-templates/>    
             </div>
-            <button id="confirm-choices-button">Tilpass veilederen etter valgte alternativer</button>
+            <button id="confirm-choices-button">Aktiver filter</button>
         </section>
     </xsl:template>
     

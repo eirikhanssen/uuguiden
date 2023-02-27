@@ -48,7 +48,7 @@
                 <filter-group parent="app-text">
                     <filter topic="app-word">Microsoft Word</filter>
                     <filter topic="app-libre-office-writer">Libre Office Writer</filter>
-                    <filter topic="app-apple-pages">Apple Pages</filter>
+                    <filter topic="app-pages">Apple Pages</filter>
                 </filter-group>
                 <filter topic="app-web-lcms" parent="webpage">Publiseringssystem for nettsider (CMS/LMS)</filter>
                 <filter-group parent="app-web-lcms">

@@ -19,7 +19,7 @@
             med nå?</p>
          <fieldset id="filter-main" action="">
             <legend>Hvordan vil du bruke veilederen?</legend>
-            <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (ta vekk filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter for å tilpasse veilederen<span class="selected">  (valgt)</span></button></div>
+            <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (deaktiver og skjul filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
          </fieldset>
          <!--#filter-main-->
          <section id="customize" hidden>
@@ -45,7 +45,7 @@
                         <li><label><input id="filter-google-slides" type="checkbox" data-parent="filter-presenter" data-topic="google-slides"><span>Google Slides</span></label></li>
                      </ul>
                      <li><label><input id="filter-text" type="checkbox" data-topic="text"><span>Ren tekst</span></label></li>
-                     <li><label><input id="filter-list" type="checkbox" data-topic="list"><span>Lister</span></label></li>
+                     <li><label><input id="filter-list" type="checkbox" data-topic="list"><span>Liste</span></label></li>
                      <li><label><input id="filter-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
                      <li><label><input id="filter-images" type="checkbox" data-topic="images" data-children="filter-photo filter-infographics"><span>Bilde</span></label></li>
                      <ul>
@@ -63,11 +63,11 @@
                <fieldset id="filter-app">
                   <legend>Kryss av for program du bruker nå</legend>
                   <ul>
-                     <li><label><input id="filter-app-text" type="checkbox" data-parent="filter-text-document" data-topic="app-text" data-children="filter-app-word filter-app-libre-office-writer filter-app-apple-pages"><span>Tekstbehandlingsprogram</span></label></li>
+                     <li><label><input id="filter-app-text" type="checkbox" data-parent="filter-text-document" data-topic="app-text" data-children="filter-app-word filter-app-libre-office-writer filter-app-pages"><span>Tekstbehandlingsprogram</span></label></li>
                      <ul>
                         <li><label><input id="filter-app-word" type="checkbox" data-parent="filter-app-text" data-topic="app-word"><span>Microsoft Word</span></label></li>
                         <li><label><input id="filter-app-libre-office-writer" type="checkbox" data-parent="filter-app-text" data-topic="app-libre-office-writer"><span>Libre Office Writer</span></label></li>
-                        <li><label><input id="filter-app-apple-pages" type="checkbox" data-parent="filter-app-text" data-topic="app-apple-pages"><span>Apple Pages</span></label></li>
+                        <li><label><input id="filter-app-pages" type="checkbox" data-parent="filter-app-text" data-topic="app-pages"><span>Apple Pages</span></label></li>
                      </ul>
                      <li><label><input id="filter-app-web-lcms" type="checkbox" data-parent="filter-webpage" data-topic="app-web-lcms" data-children="filter-app-openedx filter-app-canvas filter-app-wordpress"><span>Publiseringssystem for nettsider (CMS/LMS)</span></label></li>
                      <ul>
@@ -85,7 +85,7 @@
                      </ul>
                   </ul>
                   <!--            <button>Bekreft valg for program</button>--></fieldset>
-               <!--<button>Tilpass veilederen</button>--></div><button id="confirm-choices-button">Tilpass veilederen etter valgte alternativer</button></section>
+               <!--<button>Tilpass veilederen</button>--></div><button id="confirm-choices-button">Aktiver filter</button></section>
       </section>
       <!--#customize-->
       <main>
