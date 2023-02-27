@@ -50,8 +50,9 @@
                 </section>
                 <xsl:comment>#customize</xsl:comment>
                 <main>
-                    <section id="veileder">
-                        <h2 id="heading-guide">Veileder</h2>
+                    <section id="contents">
+                        <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
+                        <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
                         <nav id="guide-toc"></nav>
                         <xsl:comment>#guide-toc skal bli generert av JS</xsl:comment>
                         
@@ -86,11 +87,31 @@
     </xsl:template>
     
     <xsl:template match="filter">
-        <xsl:variable name="fieldset_prefix" select="concat('filter-',ancestor::fieldset/@prefix,'-')"/>
+<!--        <xsl:variable name="fieldset_prefix" select="concat('filter-',ancestor::fieldset/@prefix,'-')"/>-->
+        <xsl:variable name="fieldset_prefix" select="'filter-'"/>
         <li>
             <label>
                 <input id="{concat($fieldset_prefix,@topic)}" type="checkbox">
-                    <xsl:if test="parent::filter-group[@parent]">
+<!--                    <xsl:message>Se linje 98- funker ikke etter hensikten</xsl:message>-->
+                    <xsl:variable name="this" select="."/>
+                    <xsl:choose>
+                        <!-- buggy: use js instead -->
+                        <!--<xsl:when test="$this/ancestor::filters//filter[@topic=$this/parent::filter-group[@parent]][@parent]">
+                            <xsl:variable name="grandparent" select="$this/ancestor::filters//filter[@topic=$this/parent::filter-group[@parent]]/@parent"/>
+                            <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent, ' ' , @grandparent)"/>
+                        </xsl:when>-->
+                        <xsl:when test="parent::filter-group[@parent] and @parent">
+                            <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent), ' ' , @parent"/>
+                        </xsl:when>
+                        <xsl:when test="parent::filter-group[@parent]">
+                            <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent)"/>
+                        </xsl:when>
+                        <xsl:when test="@parent">
+                            <xsl:attribute name="data-parent" select="concat($fieldset_prefix,@parent)"/>
+                        </xsl:when>
+                        <xsl:otherwise/>
+                    </xsl:choose>
+                    <xsl:if test="parent::filter-group[@parent] and @parent">
                         <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent)"/>
                     </xsl:if>
                     <xsl:if test="@topic">
@@ -144,14 +165,19 @@
     </xsl:template>
     
     <xsl:template match="topic">
-        <section id="{concat('topic-',@name)}">
+        <article id="{concat('topic-',@name)}">
             <xsl:apply-templates/>
-        </section>
+        </article>
     </xsl:template>
     
     <xsl:template match="topic/title">
         <h3><xsl:value-of select="."/></h3>
     </xsl:template>
+    
+    <xsl:template match="topic/section/title">
+        <h4><xsl:value-of select="."/></h4>
+    </xsl:template>
+    
     
     <xsl:template match="general">
         <div class="general">
