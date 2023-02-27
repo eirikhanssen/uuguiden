@@ -311,6 +311,16 @@ fieldset {
 #customize ul ul ul ul label {
   padding-left: 6.3rem;
 }
+
+nav#guide-toc ul {
+  padding:0;
+  list-style-type: none;
+}
+
+nav#guide-toc ul ul {
+  padding-left: 2rem;
+}
+
 /*
 @media screen and (min-width: 40rem) {
     #filters {
@@ -381,4 +391,14 @@ fieldset {
 
   #filters label:hover {
     border: 1px solid black;
+  }
+
+  /* display some text when content is filtered */
+
+  #contents .filtered {
+    display:none;
+  }
+  
+  .filtered #contents .filtered {
+    display:inline-block;
   }
