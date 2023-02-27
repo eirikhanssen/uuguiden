@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="css/uuguiden.old.css?v=5" />
+    <!--<link rel="stylesheet" href="css/debug.css?v=2" />-->
+    <script src="js/uuguiden.old.js?v=5"></script>
+</head>
+
+<body data-filter-main="show-all">
+    <header id="header">
+        <div class="headercontent">
+            <h1>uuguiden.no</h1>
+            <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
+        </div>
+    </header>
+
+    <a class="skiplink" href="#veileder">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
+
+    <section id="customize" aria-labelledby="customize-heading">
+        <h2 id="customize-heading">Tilpass denne veilederen</h2>
+        <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
+            med nå?</p>
+
+        <fieldset id="filter-main" action="" >
+
+            <legend>Hvordan vil du bruke veilederen?</legend>
+
+            <div class="gh3">
+                <button id="filter-main-show-all" data-filter="show-all" data-selected="selected"
+                    aria-describedby="#show-all-button-desc">Se hele veilederen</button>
+
+
+                <button id="filter-main-filter-by-content-type" data-filter="by-content-type"
+                    aria-describedby="#content-type-button-desc">Tilpass basert på innholdstype</button>
+
+
+                <button id="filter-main-filter-by-software" data-filter="by-software"
+                    aria-describedby="#filter-by-software-button-desc">Tilpass basert på programvare</button>
+
+            </div>
+
+        </fieldset>
+
+        <!--#filter-main-->
+
+        <fieldset id="filter-main-radios" action="" class="gv" hidden>
+
+            <legend>Hvordan vil du bruke veilederen?</legend>
+
+            <div class="gh3">
+                <label>
+                    <input type="radio" name="customizer-main" id="filter-show-all" value="show-all" checked="checked">
+                    <span>Vis hele veilederen</span>
+                </label>
+                <label>
+                    <input type="radio" name="customizer-main" id="filter-by-content" value="by-content-type">
+                    <span>Tilpass basert på innholdstype</span>
+                </label>
+                <label>
+                    <input type="radio" name="customizer-main" id="filter-by-software" value="by-software">
+                    <span>Tilpass basert på programvare</span>
+                </label>
+            </div>
+
+            <button id="filter-main-change-mode-button">Endre valg for bruk av veileder</button>
+
+        </fieldset>
+        <!--#filter-main-radios-->
+
+        <section id="section-filter-by-content-type" hidden>
+            <h3>Tilpass basert på innholdstype</h3>
+
+            <fieldset id="filter-by-content-type" class="gv">
+
+                <legend>Innholdstype</legend>
+
+                <p>Velg innholdstypene som passer til det digitale innholdet du jobber med nå. Noen innholdstyper velger
+                    automatisk andre, men du kan velge vekk etterpå.</p>
+
+                <div id="filter-by-content-type-alternatives" class="gv">
+                    <dl>
+                        <dt>
+                            <label id="label-text-documents">
+                                <input id="filter-text-documents" type="checkbox"><span>Tekstbehandling</span></label>
+                            </dt>
+                        <dd><label id="label-plaintext" data-parent="label-text-documents"><input id="filter-plaintext" data-parent="filter-text-documents" type="checkbox"><span>Ren tekst (.txt)</span></label></dd>
+                        <dd><label id="label-docx-documents" data-parent="label-text-documents"><input id="filter-docx-documents" data-parent="filter-text-documents" type="checkbox"><span>Word-dokumenter (.docx)</span></label></dd>
+                        <dd><label id="label-odt-documents" data-parent="label-text-documents"><input id="filter-odt-documents" data-parent="filter-text-documents" type="checkbox"><span>OpenDocument (.odt)</span></label></dd>
+                        <dd><label data-parent="label-text-documents"><input id="filter-apple-pages-documents" data-parent="filter-text-documents" type="checkbox"><span>Apple Pages (.Pages)</span></label></dd>
+                        <dt><label id="label-webpage"><input id="filter-webpage" type="checkbox"><span>Nettsider</span></label></dt>
+                        <dt><label id="label-presenter"><input id="filter-presenter" type="checkbox"><span>Presentasjon</span></label></dt>
+                        <dd><label data-parent="label-presenter"><input id="filter-powerpoint" data-parent="filter-presenter" type="checkbox"><span>PowerPoint (.pptx)</span></label></dd>
+                        <dd><label data-parent="label-presenter"><input id="fiter-impress" data-parent="filter-presenter" type="checkbox"><span>OpenDocument Presentasjon (.odp)</span></label></dd>
+                        <dd><label data-parent="label-presenter"><input id="filter-keynote" data-parent="filter-presenter" type="checkbox"><span>Keynote (.key)</span></label></dd>
+                        <dd><label data-parent="label-presenter"><input id="filter-sozi" data-parent="filter-presenter" type="checkbox"><span>Sozi</span></label></dd>
+                        <dd><label data-parent="label-presenter"><input id="filter-google-slides" data-parent="filter-presenter" type="checkbox"><span>Google Slides</span></label></dd>
+                        <dt><label id="label-images"><input id="filter-images" type="checkbox"><span>Bilder/grafikk</span></label></dt>
+                        <dd><label data-parent="label-images"><input id="filter-images-photo" data-parent="filter-images" type="checkbox"><span>Foto og illustrasjoner</span></label></dd>
+                        <dd><label data-parent="label-infographics"><input id="filter-images-infographics" data-parent="filter-images" type="checkbox"><span>Infografikk og diagrammer</span></label></dd>
+                        <dt><label id="label-audio"><input id="filter-audio" type="checkbox"><span>Lyd</span></label></dt>
+                        <dd><label data-parent="label-audio"><input id="filter-images-audio" data-parent="filter-images" type="checkbox"><span>Podcast</span></label></dd>
+                        <dt><label id="label-video"><input id="filter-video" type="checkbox"><span>Video</span></label></dt>
+                    </dl>
+                </div>
+
+                <button>Bekreft valg for innholdstyper</button>
+
+            </fieldset>
+            <!--#filter-by-content-type-->
+
+        </section>
+        <!--#section-filter-by-content-type-->
+
+
+
+        <section id="section-filter-by-software" hidden>
+            <h3>Tilpass basert på programvare</h3>
+
+            <fieldset id="filter-by-software-writing" class="gv">
+
+                <legend>Skriveprogrammer</legend>
+                <div id="filter-by-software-writing-alternatives" class="gv"></div>
+                <button>Bekreft valg for skriveprogram</button>
+
+            </fieldset>
+
+            <fieldset id="filter-by-software-presentation" class="gv">
+
+                <legend>Presentasjonsprogramare</legend>
+
+                <div id="filter-by-software-presentation-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" disabled/><span>Microsoft PowerPoint</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Libre Office Impress</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Apple Keynote</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Sozi</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Google Slides</span></label>
+                </div>
+
+                <button>Bekreft valg for presentasjonsprogram</button>
+
+            </fieldset>
+
+            <fieldset id="filter-by-software-lcms" class="gv">
+
+                <legend>Lærings- og innholdsplattformer</legend>
+
+                <div id="filter-by-software-lcms-alternatives" class="gv">
+                    <label class="sample"><input type="checkbox" disabled/><span>EdX</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Canvas</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Moodle</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Wordpress</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Joomla</span></label>
+                    <label class="sample"><input type="checkbox" disabled/><span>Drupal</span></label>
+                </div>
+
+                <button>Bekreft valg for lærings- og innholdsplattformer</button>
+
+            </fieldset>
+
+        </section>
+
+        <!--<button>Tilpass veiledningen</button>
+        <button>Vis hele veiledningen</button>-->
+
+    </section>
+    <!--#customize-->
+
+
+
+    <main id="main">
+
+        <section id="section-guide" tabindex="0" aria-labelledby="heading-guide">
+            <h2 id="heading-guide">Veileder</h2>
+            <nav id="toc"></nav>
+
+            <section id="section-complex-content-types" aria-labelledby="heading-complex-content-types">
+                <h3 id="heading-complex-content-types">Sammensatte innholdstyper</h3>
+                <p>Med sammensatt innholdstyper mener vi innholdstyper som kan bestå av mange enkelstående elementer.
+                    Eksempler er nettsider, dokumenter og presentasjoner.</p>
+
+                <section id="section-text-document" tabindex="0" data-content="text-document"
+                    data-related="image table text-properties">
+                    <h4 id="heading-text-document">Tekstdokument</h4>
+                    <h5>Vanlige filformater</h5>
+                    <ul>
+                        <li>Office Open XML (.docx) - Microsoft Word sitt standardformater, men kan også redigeres i
+                            f.eks
+                            Libre Office</li>
+                        <li>Open Document Format (.odt) - Libre Office sitt standardformat for tektdokumenter, men kan
+                            også
+                            redigers av f.eks Microsoft Word</li>
+                    </ul>
+                    <p>Med tekstdokument mener vi komplekse dokumenter som hovedsakelig er bygget opp med tekst, men som
+                        også kan inneholde elementer som:</p>
+                    <ol>
+                        <li>overskrifter</li>
+                        <li>avsnitt</li>
+                        <li>lister</li>
+                        <li>tabeller</li>
+                        <li>bilder/grafikk</li>
+                        <li>video (sjelden)</li>
+                        <li>lyd (sejelden)</li>
+                    </ol>
+
+                </section>
+                <!--textdocument-->
+
+                <section id="section-outline" tabindex="0">
+                    <h4 id="section-outline">Dokumentstruktur</h4>
+                    <p class="generelt">Bygg opp dokumentet med riktige innholdstyper. I et skriveprogram innebærer
+                        dette å
+                        bruke innebygde overskriftsstiler til overskriftene, listeverktøy til lister, tabellverktøy til
+                        tabeller
+                    </p>
+                </section>
+                <!--#section-outline-->
+
+                <section id="section-outline" tabindex="0" data-mandatory="text-document">
+                    <h4 id="heading-outline">Overskriftsnivåer</h4>
+                    <p class="generelt">Bruk overskriftsnivåer til å organiserer innholdet i dokumentet ditt. Dette er bra
+                        for
+                        alle lesere og helt nødvendig for å gi personer som trenger støtteteknologi for lese dokumentet
+                        muligheten til å navigere effektivt.</p>
+                    <ul>
+                        <li>Bruk de innebygde overskriftsstilene til overskrifter i skriveprogrammer. Unngå å bruke
+                            skriftinnstillingene til å lage "jukse-overskrifter" som mangler kodingen av overskriftsnivå i
+                            dokumentet.</li>
+                        <li>Ikke hopp over overskriftsnivåer. Hvis du ønsker å hoppe fra f.eks nivå 1 til nivå 3, bør du
+                            heller
+                            se på hvordan du kan forbedre teksten din og legge inn en nivå 2 overskrift.</li>
+                        <li>Visuelt bør en overskrift av høyere nivå være tydelig større enn en overskrift av lavere nivå.
+                            F.eks
+                            skal overskriftsnivå 1 være større enn overskriftivå 2 osv.</li>
+                    </ul>
+                </section>
+    
+            </section><!--#section-complex-content-types-->
+
+            <section id="section-individual-content-types" aria-labelledby="heading-individual-content-types">
+                <h3 id="heading-individual-content-types">Enkeltstående innholdstyper</h3>
+                <p>Med enkeltstående innholdstyper mener vi elementer som vanligvis utgjør en del av en større helhet.
+                </p>
+
+                <section id="section-text" data-content="text" data-relContent="text-document table" tabindex="0">
+                    <h4>Tekst</h4>
+                    <p class="generelt">Velg tekstinnstillinger som har god lesbarhet. Noen anbefalinger er:</p>
+                    <ul>
+                        <li>Bruk venstrejustert tekst med ugjevn høyremarg</li>
+                        <li>Tekststørrelse på minst 14-16pt og aldri mindre enn 12pt</li>
+                        <li>For nettsider må det være <em> mulig for bruker å overstyre tekstinnstillinger</em>.
+                            <strong>Unngå
+                                for spesifikke regler i CSS</strong> som gjør dette vanskelig:
+                            <ul>
+                                <li>Ikke bruk !important i CSS-relger for tekst</li>
+                                <li>Ikke definer CSS-relger for tekst i style-attributter</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="section-table" data-content="table" data-related="text-properties">
+                    <h4>Tabell</h4>
+                    <p>Husk at tabeller er for data, ikke for layout.</p>
+                    <h5>Lage tabeller i skriveprogram</h5>
+                    <ol>
+                        <li>Bygg opp tabellen med tabellverktøy</li>
+                        <li>Del store tabeller opp i mindre hvis det er mulig</li>
+                        <li>Husk å definer overskriftsrad via tabellalternativer.</li>
+                    </ol>
+    
+                </section><!--#section-table-->
+
+                <section id="image" tabindex="0" data-content="image">
+                    <h4>Bilder og figurer</h4>
+                    <p>Bilder og figurer kan være en god støtte til budskapet. Noen ting må du tenke på når du bruker
+                        bilder.
+                    </p>
+                    <details>
+                        <summary>Har du husket på at noen ikke kan se bildet og trenger et tekstalternativ?</summary>
+                        <p></p>
+                    </details>
+                    <details>
+                        <summary>Er det tilstrekkelig kontrast mellom forgrunn og bakgrunn på tekst og andre elementer i
+                            bildet?
+                        </summary>
+                        <p>God nok kontrast er viktig for at leserne dine skal klare å tyde innholdet.</p>
+                    </details>
+                    <details>
+                        <summary>
+                            Bruk ikke kun farge i bilder/figurer for å formidle innhold
+                        </summary>
+                        <p>Du vet ikke hvem som kommer til å lese innholdet ditt eller under hvilke forhold det blir vist.
+                            Noen
+                            personer er fargeblinde, og det kan være at innholdet ditt blir skrevet ut i sort/hvitt, eller
+                            vist
+                            på en skjerm som står i sollys hvor det er vanskelig å skille fargene.</p>
+                        <p>
+                            Skal du vise flere grafer, kan du f.eks ha variasjon i mønster i tillegg til farge, og du kan
+                            supplere med tekstetiketter.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Er eventuelle symboler som er brukt tilstrekkelig forklart så de ikke kan misforstås?
+                        </summary>
+                        <p>Hvordan man forstår symboler kan være kulturelt betinget, og det kommer an på om man har sett
+                            symbolet mange ganger før om man skal forstå betydningen av det. Forklar hvis du er i tvil.</p>
+                    </details>
+                    <details>
+                        <summary>Har du en fornuftig filstørrelse som passer mediet du skal vise det i?</summary>
+                        <p>Skaler ned bilder til en fornuftig filstørrelse og velg en passe komprimering.</p>
+                        <p>Dagens mobilkameraer har veldig høy oppløsning som gjør at bilder de tar egner seg for utskrift.
+                            Skal
+                            du publisere noe som skal deles på nett, så er det viktig å få ned filstørrelsen. Dette gjør at
+                            innholdet ditt lastes mye raskere og at filene blir mindre. For de som bruker mobildata, gjør du
+                            i
+                            tillegg en god tjeneste så de ikke bruker unødvendig med datatrafikk. Dette kan gjøres ved å
+                            lage en
+                            versjon hvor du skalerer ned og evt beskjærer bildet, og så eksporterer det med så høy
+                            komprimering
+                            som mulig uten at det går på bekostning av kvaliteten.</p>
+                    </details>
+                </section><!--#section-image-->
+            </section><!--#section-individual-content-types-->
+
+         
+            
+
+                <details>
+                    <summary>Har du brukt et bildeformat som passer til innholdet i bildet?</summary>
+                    <p>Noen bildeformater egner seg bedre til visse typer bilder. De to hovedklassene av bilder er
+                        punktgrafikk og skalerbar vektorgrafikk.</p>
+                </details>
+                <details>
+                    <summary>Er det tilstrekkelig god kvalitet på bildet?</summary>
+                </details>
+                </section>
+                
+                <section>
+                <h4>Feil bruk av bilder</h4>
+                <p>Det er også mulig å bruke bilder på feil måte. Unngå disse vanlige feilene.</p>
+                <details>
+                    <summary>Ikke bruk bilde av tekst</summary>
+                    <p>I stedet for bilde av tekst, er det mer fornufig å ha selve teksten i dokumentet eller på
+                        nettsiden.
+                        Bilde av tekst er usynlig for støtteteknologi som noen er avhengige av. Hvis det er et poeng å
+                        vise
+                        teksten slik den fremstår visuelt, så husk på at bildet trenger et tekstalternativ som kan
+                        gjengi
+                        teksten i bildet.</p>
+                </details>
+                <details>
+                    <summary>Ikke bruk bilde av en tabell</summary>
+                    <p>En tabell har viktig innebygget dokumentstruktur som man ikke får i et bilde av en tabell.
+                        Opprett en
+                        tabell med tabellverktøy. </p>
+                    <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan
+                        navigere
+                        i tabellen og forstå sammenhengen mellom celler og overskrifter. I tillegg vil sannsynligvis
+                        kvaliteten bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst
+                        tar
+                        mindre lagringsplass enn bilde.</p>
+                </details>
+                <details>
+                    <summary>Ikke bruk bilde av en liste</summary>
+                    <p>En liste har viktig innebygget dokumentstruktur som man ikke får i et bilde av en liste. Opprett
+                        en
+                        liste med listeverktøy.</p>
+                    <p>Da oppnår du at støtteteknologi kan lese den og personer som er avhengige av slikt ustyr kan lett
+                        og
+                        overskiktlig navigere i listen selv om den har flere nivåer. I tillegg vil sannsynligvis
+                        kvaliteten
+                        bli mye bedre (slipper at det blir uskarpt), og filstørrelsen blir mindre fordi tekst tar mindre
+                        lagringsplass enn bilde.</p>
+                </details>
+                <details>
+                    <summary>Ikke sett inn et dokument i et annet dokument slik at hver tekstside blir satt inn som
+                        bilde
+                    </summary>
+                    <p>Dette kan f.eks skje hvis du prøver å sette en PDF inn i et Word-dokument. Teksten blir uskarp,
+                        og
+                        det hjelper ikke å zoome inn. Teksten blir usynlig for støtteteknologi som noen er avhengige av.
+                        Hvis mange sider tekst blir satt inn som bilder, blir filstørrelsen veldig stor, og det hjelper
+                        lite
+                        å komprimere bildene.</p>
+                </details>
+
+
+            </section>
+
+            <section id="pdf-eksport" tabindex="0">
+                <h3>PDF-eksport</h3>
+                <p class="generelt">Et godt strukturert dokument har bakt inn informasjon som gjør at det fungerer godt
+                    med
+                    forskjellig støtteteknologi. For at vi ikke skal miste dette må dokumentet eksporteres på rett måte.
+                </p>
+                <ul>
+                    <li><a href="https://uuguiden.no/topics/word-pdf-export.html">Slik bevarer man dokumentstrukturen
+                            ved
+                            PDF export fra Word (uuguiden.no)</a></li>
+                    <li><a
+                            href="https://support.microsoft.com/nb-no/office/lagre-eller-konvertere-til-pdf-eller-xps-i-project-skrivebord-d85416c5-7d77-4fd6-a216-6f4bf7c7c110">Lagre
+                            eller konvertere til PDF eller XPS i Project-skrivebord (support.microsoft.com)</a></li>
+                </ul>
+            </section>
+
+
+
+            <section tabindex="0" data-software="Microsoft Word" data-category="writing">
+                <h3>Tilgjengelighetssjekk i Word</h3>
+                <p class="generelt">Bruk den innebygde tilgjengelighetssjekken i Word for å finne og rette de fleste
+                    vanlige tilgjengelighetsproblemene.</p>
+                <p>Dette er en god start. Men vær obs på at den innebygde tilgjengelighetssjekken ikke klarer å fange
+                    opp alt. Tilgjengelighetssjekken klarer f.eks å oppdage om et bilde mangler alternativ tekst, men
+                    klarer ikke å teste om den alternative teksten er meningsfull. Tilgjengelighetssjekken fanger heller
+                    ikke opp uheldige valg med tanke på utseende av skrift, eller om du har glemt å definere
+                    overskriftsrad for en tabell.</p>
+            </section>
+
+            <section tabindex="0" data-software="Microsoft Word" data-category="writing">
+                <h3>Legg inn alternativ tekst i Word</h3>
+                <p class="generelt">Bruk den innebygde tilgjengelighetssjekken i Word for å finne og rette de fleste
+                    vanlige tilgjengelighetsproblemene.</p>
+                <p>Tilgjengelighetssjekken rapporterer bilder som mangler alternativ tekst.</p>
+                <p>For hvert av bildene må du vurdere om bildet kun er til pynt, eller om det har meningsbærende
+                    informasjon som skal presenteres for f.eks svaksynte og blinde personer gjennom opplesning på en
+                    skjermleser.</p>
+                <p>Er bildet pynt? Da velger du "marker som dekorativt" eller "mark decorative"</p>
+                <p>Er bildet meningsbærende skal du gi en kort tekst som kan leses opp som sier hva det er bildet
+                    formidler. Dette må sees i sammenheng med konteksten til bildet.</p>
+            </section>
+
+            <!--software - writing - Apple Pages-->
+
+            <section tabindex="0" data-software="Apple Pages" data-category="writing">
+                <h3>Lag tilgjengelige dokumenter med Apple Pages </h3>
+                <p>Lær mer om hvordan du lager tilgjengelige dokumenter med Apple Pages fra <a
+                        href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets, or
+                        presentations with Pages, Numbers, or Keynote</a> (support.apple.com)</p>
+            </section>
+
+            <!--software - writing - libre office writer -->
+
+            <section tabindex="0" data-software="Libre Office Writer" data-category="writing">
+                <h3>Lag overskrifter i Libre Office Writer</h3>
+                <p>Bruk de innebygde overskriftsstilene for å lage overskrifter i Libre Office Writer: <a
+                        href="https://wiki.documentfoundation.org/Accessibility/Creating_Accessible_LibreOffice_Files#How_to_add_headings">Adding
+                        headings in LibreOffice Writer (PC and Mac)</a></p>
+            </section>
+
+            <!--software - presentation-->
+
+            <section tabindex="0" data-software="PowerPoint" data-category="presentation">
+                <h3>Overskrifter i PowerPoint</h3>
+                <p>Les mer om hvoran man legger inn overskrit i PowerPoint: <a
+                        href="https://support.microsoft.com/en-us/office/title-a-slide-c5286802-495a-4b47-a8ae-212fb8a7dc74">Title
+                        a slide (support.microsoft.com)</a></p>
+            </section>
+
+            <section tabindex="0" data-software="Apple Keynote" data-category="presentation">
+                <h3>Dokumenttilgjengelighet i Keynote</h3>
+                <p>Hvis du bruker Keynote til å lage presentasjoner, så bør du lese <a
+                        href="https://cte.tcu.edu/resources/accessibility/keynote-document-accessibility/">Keynote
+                        Document Accessibility</a> og <a href="https://support.apple.com/en-us/HT210563">Create
+                        accessible documents, spreadsheets, or presentations with Pages, Numbers, or Keynote</a></p>
+            </section>
+
+            <!-- learning management systems and content management systems -->
+        </section>
+
+    </main>
+</body>
+
+</html>
