@@ -15,9 +15,9 @@
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
                 <meta charset="UTF-8"/>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-                <link rel="stylesheet" href="css/uuguiden.css?v=2"/>
-                <link rel="stylesheet" href="css/debug.css?v=3"/>
-                <script src="js/uuguiden.js?v=3"></script> 
+                <link rel="stylesheet" href="css/uuguiden.css?v=3.0a"/>
+                <link rel="stylesheet" href="css/debug.css?v=3.0a"/>
+                <script src="js/uuguiden.js?v=3.0a"></script> 
             </head>
             <body data-filter-main="show-all">
                 <header id="header">
@@ -26,7 +26,7 @@
                         <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
                     </div>
                 </header>
-                <a class="skiplink" href="#veileder">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
+                <a class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
                 
                 <section>
                     <h2>Tilpass denne veilederen</h2>
