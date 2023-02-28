@@ -1,6 +1,6 @@
 var uuguiden = function () {
 
-    var debug = false;
+    var debug = true;
 
     dmsg('uuguiden()');
 
@@ -46,12 +46,48 @@ var uuguiden = function () {
         var nav_list = document.createElement('ul');
         var active_topics = document.querySelectorAll("#topics article:not([hidden])");
 
+        function create_sub_navlist_item(el) {
+            let list_item = document.createElement('li');
+            let link = document.createElement('a');
+            let href = "#" + el.id;
+            let link_text = el.querySelector('h3,h4').innerHTML;
+            link.setAttribute("href", href);
+            link.innerHTML=link_text;
+            list_item.appendChild(link);
+            return list_item;
+        }
+
+        function create_sub_nav_list(el) {
+
+            var visible_subsections = el.querySelectorAll('section:not([hidden])');
+
+            if(visible_subsections.length == 0) {
+                return false;
+            }
+
+            // at this point there are at least one section descendant of the element
+
+            var sub_nav_list = document.createElement('ul');
+
+            for(let i=0; i<visible_subsections.length; i++) {
+                sub_nav_list.appendChild(create_sub_navlist_item(visible_subsections[i]));
+            }
+            return sub_nav_list;
+        }
+
         function create_nav_link_item(el){
             var link_item = document.createElement("li");
             var internal_link = document.createElement('a');
             internal_link.setAttribute("href", "#" + el.id);
             internal_link.innerHTML=el.querySelector('h3').innerHTML;
             link_item.appendChild(internal_link);
+
+            let sub_nav_list = create_sub_nav_list(el);
+
+            if(sub_nav_list) {
+                link_item.appendChild(sub_nav_list);
+            }
+
             return link_item;
         }
 
@@ -65,14 +101,13 @@ var uuguiden = function () {
     // TODO/WIP - need checking!
     function initialize_filtering () {
         var all_topics = document.querySelectorAll("#topics > article");
-        var all_specifics = document.querySelectorAll("[data-specific]");
+        var all_rels= document.querySelectorAll("[data-rel]");
 
         function get_selected_topics() {
             var selected_topics = [];
     
             for (var i = 0; i < checkboxes.length; i++) {
                 if (checkboxes[i].checked) {
-                    //selected_topics.push('topic-' + checkboxes[i].dataset.topic);
                     selected_topics.push(checkboxes[i].dataset.topic);
                 }
             }
@@ -91,8 +126,8 @@ var uuguiden = function () {
                 all_topics[i].hidden=false;
             }
 
-            for(let i=0; i<all_specifics.length; i++) {
-                all_specifics[i].hidden=false;
+            for(let i=0; i<all_rels.length; i++) {
+                all_rels[i].hidden=false;
             }
 
             update_toc();
@@ -132,11 +167,11 @@ var uuguiden = function () {
 
             // show or hide specific information depending on dataset.specific and selected topics
 
-            for(let i=0; i<all_specifics.length; i++) {
-                if(selected_topics.includes(all_specifics[i].dataset.specific)) {
-                    all_specifics[i].hidden=false;
+            for(let i=0; i<all_rels.length; i++) {
+                if(selected_topics.includes(all_rels[i].dataset.rel)) {
+                    all_rels[i].hidden=false;
                 } else {
-                    all_specifics[i].hidden=true;
+                    all_rels[i].hidden=true;
                 }
             }
         }

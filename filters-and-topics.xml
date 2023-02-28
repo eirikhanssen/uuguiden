@@ -39,7 +39,6 @@
             
                 <filter topic="video">Video</filter>
             </filter-group>
-            <!--<button>Bekreft valg for innhold</button>-->
         </fieldset>
         
         <fieldset prefix="app" legend="Kryss av for program du bruker nå">
@@ -47,7 +46,7 @@
                 <filter topic="app-text" parent="text-document">Tekstbehandlingsprogram</filter>
                 <filter-group parent="app-text">
                     <filter topic="app-word">Microsoft Word</filter>
-                    <filter topic="app-libre-office-writer">Libre Office Writer</filter>
+                    <filter topic="app-writer">Libre Office Writer</filter>
                     <filter topic="app-pages">Apple Pages</filter>
                 </filter-group>
                 <filter topic="app-web-lcms" parent="webpage">Publiseringssystem for nettsider (CMS/LMS)</filter>
@@ -65,76 +64,119 @@
                     <filter topic="app-google-slides">Google Slides</filter>
                 </filter-group>
             </filter-group>
-<!--            <button>Bekreft valg for program</button>-->
         </fieldset>
-        <!--<button>Tilpass veilederen</button>-->
     </filters>
     
     <topics>
         <topic name="document-structure">
-            <title>Dokumentstruktur og tagging for tilgjengelighet</title>
-            <general>
-                <p>Med dokumentstruktur og tagging for tilgjengelighet tenker vi på å organisere innholdet under passende overskrifter og det å bruke rett struktur til innholdet. Det er ikke nok at det ser greit ut. Alt innholdet må i tillegg ha informasjon om hva slags type innhold det er, dvs at innholdet er tagget. Dette gjør at innholdet også fungerer godt for personer som er avhengige av å få lest opp innholdet f.eks med en skjermleser. I praksis betyr dette å følge noen huskeregler når et dokument lages slik at det også fungerer godt med støtteteknologi som f.eks skjermlesere og leselist. Vi kan oppnå dette i et skriveprogram f.eks ved å organisere innholdet med de innebygde overskriftene Overskrift 1 - Overskrift N, bruke listeverktøy til å lage lister, sette inn og bygge opp tabeller med tabellverktøy.</p>
-                <p>Denne veilederen kan gi deg huskelister over hva du må gjøre for at forskjellig type innhold skal ha god tilgjenglighet. Velg hva slags innhold du jobber med nå for å få huskelister tilpasset det du jobber med, eller se i ihholdsfortegnelsen.</p>
-                <details>
-                    <summary>Les mer om dokumentstruktur...</summary>
-                    <p>I et tekstdokument organiserer vi innholdet med innebygde overskrifter som f.eks Overskrift 1 - Overskrift N. Disse overskriftene har definert overskriftsnivå som lar synshemmede personer navigere dokumentet effektivt. Bruker vi de innebygde overskriftsstilene, eller egendefinerte stiler hvor vi har definert overskriftsnivå, får vi skjulte tagger i dokumentet som brukes av skjermlesere. Hvis vi lager "overskrifter" ved å øker skriftstørrelsen og sette skriftstørrelsen til fet skrift, får vi noe som ser ut som overskrifter, men som ikke er ekte overskrifter.</p>
-                    <p>Bruker vi det innebygde listeverktøyet i skriveprogrammet til å lage lister, så blir listen kodet slik at en skjermleser kan presentere at innholdet er en liste, og hva de forskjellige listeelementene er.</p>
-                </details>
-            </general>
-        </topic>
-        <topic name="outline">
-            <title>Overskrift</title>
-            <general>
-                <p>Bruk innebygde overskrifter til å strukturere dokumentet. 
-                    <ul>
-                        <li>Bruk høyeste nivå til hovedoverskriften (Nivå 1).</li>
-                        <li>Bruk nivå 2 til neste overskriftsnivå </li>
-                        <li>Ikke hopp over et overskriftsnivå</li>
-                        <li>Visuelt bør en overskrift av høyere nivå skille seg fra brødtekst og andre overskrifter ved å være større.</li>
+            <title>Dokumentstruktur for tilgjengelighet</title>
+            <sec name="assistive-technology">
+                <title>Støtteteknologi</title>
+                <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert digitalt innhold til en form de kan ha nytte av. Eksempler på     støtteteknologi: <ul>
+                    <li>skjermleser</li>
+                    <li>leselist</li>
+                    <li>bryterstyring</li>
                     </ul>
                 </p>
-            </general>
-            <specific rel="wordprocessor"><p>I skriveprogram bruker du følgende stiler til overskrifter: 
+            </sec>
+            <sec name="code-right">
+                <title>Ting må kodes slik de ser ut</title>
+                <p>En viktig jobb når vi lager digitalt innhold er å sørge for at innholdet er kodet slik det ser ut.</p>
+                <p>Støtteteknologi bruker disse kodene for å kunne fortelle brukerene hva slags type innhold det er, og også å gi brukerne effektiv tilgang til innholdet</p>
+                <p>Godt kodet innhold kan f.eks la blinde personer:
+                    <ul>
+                        <li>navigere raskt gjennom overskrifter</li>
+                        <li>få lest opp alle lenker i et dokument</li>
+                    </ul>
+                </p>
+                <p>For å få dette til bruker vi innebygde verktøy i redigeringsprogram til å lage forskjellig innhold:
+                    <ul>
+                        <li>Lag overskrifter med bruk av innebygde overskriftsstiler eller overskriftsverktøy</li>
+                        <li>Lag tabeller med tabellverktøy</li>
+                        <li>Lag lister med listeverktøy</li>
+                    </ul>
+                </p>
+            </sec>
+            <sec name="discoverable">
+                <title>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte det</title>
+                <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere det på en måte som gjøre det mulig å oppfatte. Noen eksempler på hvordan vi kan gjøre ting mulig å oppfatte for personer som i utgangspunktet ikke kan oppfatte innholdet:
+                <ul>
+                    <li>Et bilde trenger et tekstalternativ - vi setter inn alternativ tekst</li>
+                    <li>Tale i video transkriberes og/eller tekstes til undertekster</li>
+                    <li>Tale i lyd eller podcast transkriberes og kan leses på en nettside</li>
+                    <li>Handlig i video som ikke kan høres blir synstolket - et lydspor som forteller hva som skjer</li>
+                    <li>Man setter ikke inn et bilde av en tabell. Man bygger tabellen opp med tabellverktøy så kan en skjermleser presentere data i tabellen for brukeren.</li>                </ul>
+                </p>
+            </sec>
+        </topic>
+        
+        <topic name="checking-accessibility">
+            <title>Tilgjengelighetssjekk</title>
+            <sec name="accessibility-check-in-word" rel="app-word">
+                <title>Bruk tilgjengelighetssjekken i Word</title>
+                <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:
+                <ul>
+                    <li><a href="https://support.microsoft.com/nb-no/office/gj%C3%B8re-word-dokumenter-tilgjengelige-for-personer-med-funksjonshemninger-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Gjøre Word-dokumenter tilgjengelige for personer med funksjonshemninger (Kundestøtte for Microsoft 365)</a></li>
+                </ul></p>
+            </sec>
+        </topic>
+        
+        <topic name="heading">
+            <title>Overskrift</title>
+            <p>God og rett bruk av overkskrifter er noe av det viktigste vi gjør for å lage tilgjengelig innhold.</p>
+            <p>Overskrifter lar oss raskt scanne innholdet for å få en oversikt over det.</p>
+            <p>For de som bruker skjermleser, kan man gi skjemleseren en kommando for å få presentert alle overskriftene i et dokument. Så får man raskt oversikt over innholdet og kan hoppe til en av overskriftene i innholdet for å lese derfa.</p>
+            <p>NB: Dette forutsetter at overskriftene er kodet på rett måte:
+                <ul>
+                    <li>Bruk innebygde overskrifter til å strukturere dokumentet</li>
+                    <li>Bruk klart og forståelig språk som så kort som mulig beskriver innholdet</li>
+                    <li>Bruk høyeste nivå til hovedoverskriften (Nivå 1).</li>
+                    <li>Vanligvis har man kun en nivå 1 overskrift i et dokument</li>
+                    <li>Bruk nivå 2 til neste overskriftsnivå </li>
+                    <li>Ikke hopp over et overskriftsnivå</li>
+                    <li>Visuelt bør en overskrift av høyere nivå skille seg fra brødtekst og andre overskrifter ved å være større.</li>
+                    <li><em>Ikke lag jukseoverskrifter</em> ved å f.eks kun endre på tekststørrelse og gjøre den fet - dette er ikke noe som en skjermleser forstår</li>
+                </ul>
+            </p>
+            
+            <sec name="app-text" rel="app-text">
+                <title>Bruk innebygde overskriftsstiler i skriveprogram</title>
+                <p>De innebygde overskriftsstilene i skriveprogrammer har en egenskap som heter overskriftsnivå eller outline-level. Denne egenskapen forteller om overskriftshierarkiet og brukes av skjermlesere for å presentere overskrifter og muliggjør effektiv navigering.</p>
+                <p>I skriveprogram bruker du følgende stiler til overskrifter: 
                 <ul>
                     <li>Overskrift 1 (Heading 1) - bruk denne kun på hovedoverskriften</li>
                     <li>Overskrift 2 (Heading 2)</li>
                     <li>Overskrift 3 (Heading 3)</li>
                     <li>(...)</li>
                 </ul>
-            </p>
-            </specific>
-            <specific rel="web"><p>Til en nettside bruker du taggene H1-H6, hvor 1 er høyeste nivå.</p></specific>
-            <specific rel="presenter">
+                </p>
+            </sec>
+            
+            <sec name="webpage" rel="webpage">
+                <title>Overskrifter i nettside</title>
+                <p>Til en nettside bruker du overskriftene Heading 1 til Heading 6, hvor Heading 1 er høyeste nivå. Hvis du jobber i et <em>publiseringssystem for nettsider</em>, se om du finner rett nivå overskrift i editoren. Hvis du redigerer kode, kodes en nivå 1 overskrift kodes i HTML på denne måten: <code>&lt;h1>En nivå 1 overskrift&lt;/h1></code></p>
+            </sec>
+            <sec name="presenter" rel="presenter">
+                <title>Overskrifter i lysbilde</title>
                 <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
-            </specific>
-            <specific rel="presenter powerpoint">
+            </sec>
+            <sec name="powerpoint" rel="presenter powerpoint">
+                <title>Overskrifter i PowerPoint</title>
                 <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
-            </specific>
-            <specific rel="presenter impress">
-            </specific>
-            <explanation>
-                <details>
-                    <summary>
-                        Hvorfor er det viktig?
-                    </summary>
-                    <p>
-                        Overskrifter lar leseren navigere dokumentet effektivt. Dette er nyttig for alle! Noen personer har dessuten nedsatt syn og kan ikke lese uten hjelp fra en skjermleser eller leselist som er støtteteknologi som leser opp dokumentet for dem. Denne støtteteknologien er avhengig av at man har brukt overskrifter som har innebygget overskriftsnivå for å kunne fungere optimalt for brukeren. Hvis du formaterer tekst slik at den likner på en overskrift eller bruker en stil som ikke har innebygget overskriftsnivå, så skjønner ikke støtteteknologien at det skal være en overskrift og da kan ikke personer med nedsatt syn lese og navigere dokumentet effektivt. Hvis overskriftene er kodet rett, kan man trykke en hurtigtast og få lest opp alle overskriftene i dokumentet eller på nettsiden og raskt få en oversikt over innholdet. Det blir samtidig mulig å hoppe til det stedet i teksten som er interessant i stedet for å bli nødt til å få lest opp hele dokumentet.
-                    </p>
-                </details>
-            </explanation>
-            <reading></reading>
+            </sec>
+
         </topic><!-- outline -->
+        
         <topic name="text-properties">
             <title>Tekstegenskaper for god lesbarhet</title>
-            <general>
+
                 <p>Tekstegenskapene har mye å si for hvor raskt og lett det er å lese tekst. Noen anbefalinger:</p>
                 <ul>
                     <li>Sørg for god nok fargekontrast. Bruk sort tekst på hvit bakgrunn, eller finn fargekodene og sjekk selv om fargekontrasten er tilstrekkelig: <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker (WebAIM)</a></li>
                     <li>Skriftstørrelse 12-16pt for brødtekst i dokumenter.</li>
                     
                     <li>Bruk venstrestilt tekst med ugjevn høyremarg. 
-                        <details>
+                        <details class="read-more">
                             <summary>Les mer om valg av tekstjustering.</summary>
                             <p>Venstrestilt tekst med ugjevn høyremarg har den beste lesbarheten fordi:</p>
                             <ul>
@@ -144,19 +186,18 @@
                             </ul>
                         </details>
                     </li>
-                    <li>Slå av CapsLock. Unngå unødvendig bruk av kun store bokstaver i overskrifter eller brødtekst. <details><summary>Les mer om problemer bruk av store bokstaver (CapsLock)</summary></details><p>Vanlig bruk av store og små bokstaver gjør at ordene skiller seg ut i ordbilder som dannes av bokstavenes former, overlengder og underlengder. Dette er noe vi bruker hele tiden når vi leser raskt. Vi trenger ikke å lese hver enkelt bokstav. Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
+                    <li>Slå av CapsLock. Unngå unødvendig bruk av kun store bokstaver i overskrifter eller brødtekst. <details class="read-more"><summary>Les mer om problemer bruk av store bokstaver (CapsLock)</summary></details><p>Vanlig bruk av store og små bokstaver gjør at ordene skiller seg ut i ordbilder som dannes av bokstavenes former, overlengder og underlengder. Dette er noe vi bruker hele tiden når vi leser raskt. Vi trenger ikke å lese hver enkelt bokstav. Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
                         <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p><p>Sett i forhold til hvor lett det er å lese denne setningen som har både små og store bokstaver...</p></li>
                     <li>Unngå blokkjustert tekst. </li>
                 </ul>
-            </general>
-            <specific></specific>
         </topic>
+
         <topic name="table">
             <title>Tabell</title>
             <p>Kort huskeliste for tabeller:</p>
             <ul>
                 <li>Tabeller er for data, ikke for layout</li>
-                <li>Ting skal være kodet som det ser ut som:
+                <li>Ting skal være kodet slik det ser ut:
                     <ul>
                         <li>Bygg opp tabeller med tabellverktøy i redigeringsprogrammet</li>
                         <li>Ikke sett inn et bilde av en tabell</li>
@@ -171,19 +212,7 @@
                 <li>Tabellceller med tekst bør som hovedregel være venstrestilt med ugjevn høyremarg.</li>
                 <li>Tabellceller med numerisk data bør som hovedregel være justert slik at tall over og under er lette å sammenlikne. Dette kan vi oppnå ved å justere tall etter desimalen.</li>
             </ul>
-            
-            <section data-specific="app-word">
-                <title>Lag tilgjengelige tabeller i Microsoft Word</title>
-                <ul>
-                    <li><a href="https://support.microsoft.com/nb-no/office/gjenta-tabelloverskrift-p%C3%A5-etterf%C3%B8lgende-sider-2ff677e0-3150-464a-a283-fa52794b4b41">Gjenta tabelloverskrift på etterfølgende sider (Kundestøtte for Microsoft 365)</a></li>
-                    <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">video om å lage tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>    
-                </ul>
-            </section>
-            <section data-specific="app-pages">
-                <title>Lag tilgjengelige dokumenter med Apple Pages</title>
-                <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or Keynote (support.apple.com)</a>
-            </section>
-            
+
             <details class="read-more">
                 <summary>Les mer om tabeller</summary>
                 <p>En huskeregel er at vi alltid skal sørge for at innhold skal være kodet som det ser ut som. Dette er for at innholdet også skal bli tilgjengelig for personer som er avhengig av skjermleserteknologi.</p>
@@ -196,56 +225,38 @@
                     <ul>
                         <li><a href="https://www.uutilsynet.no/veiledning/tabeller/225">Løsningsforslag for nettsider - Tabeller (uutilsynet)</a></li>
                         <li><a lang="EN" href="https://www.w3.org/WAI/tutorials/tables/">Tables Tutorial (Web Accesibility Initiative)</a></li>
-                        <li data-specific="app-word"><a href=""></a></li>
+                        <li><a href="https://www.uutilsynet.no/veiledning/dokumenter-pa-nettsider/208">Dokumenter på nettsider (uutilsynet.no)</a></li>
                     </ul>    
                 </div>
-                
             </details>
-            <!--
-                    <li>
-                        <details>
-                            <summary>bruk tabellverktøyet i tekstbehandleren</summary>
-                            <p>Når du bruker tabellverkøyet i tekstbehandleren settes det inn kode i dokumentet som gjør at støtteteknologi som skjermlesere forstår at dette er en tabell. Dette er viktig for synshemmede.</p>
-                            <div data-rel="word">
-                                <ol>
-                                    <li>Fra fanen Sett inn, velg Tabell</li>
-                                </ol>
-                            </div>
-                        </details>
-                    </li>
-                    <li>definer overskrifter i kolonner og rader <detalis>
-                        <summary>
-                            <p>Blinde og svaksynte som bruker skjermlesere kan navigere i cellene i en tabell og programmet kan lese opp hvilke kolonne og radoverskrifter som beskriver innholdet.</p>
-                            <p>For at en skjermleser skal kunne presentere hva innholdet i tabell-cellene er, må vi definere overskrifter i kolonner og rader.</p>
-                            <div data-rel="word">
-                                <p>Slik definerer du overskriftsrad i Word:</p>
-                                <ol>
-                                    <li>Plasser markøren i raden som er overskriftsrad. Det er som regel den øverste raden.</li>
-                                    <li>Høyreklikk og velg Tabellegenskaper</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ol>
-                            </div>
-                            
-                        </summary>
-                    </detalis>
-                    </li>
-                    <li>ikke bruk tabulatortasten eller mellomromtasten for å lage noe som ser ut som en tabell</li>
-                    <li>ikke lim inn bilde av en tabell</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>-->
-                <sources>
-                    <a href="https://www.uutilsynet.no/veiledning/dokumenter-pa-nettsider/208">Dokumenter på nettsider (uutilsynet.no)</a>
-                </sources>
+
+            <sec name="acessible-tables-word" rel="app-word">
+                <title>Lag tilgjengelige tabeller i Microsoft Word</title>
+                <ul>
+                    <li><a href="https://support.microsoft.com/nb-no/office/gjenta-tabelloverskrift-p%C3%A5-etterf%C3%B8lgende-sider-2ff677e0-3150-464a-a283-fa52794b4b41">Gjenta tabelloverskrift på etterfølgende sider (Kundestøtte for Microsoft 365)</a></li>
+                    <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">video om å lage tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>    
+                </ul>
+            </sec>
+ 
+            <sec name="accessible-docs-in-pages" rel="app-pages">
+                <title>Lag tilgjengelige dokumenter med Apple Pages</title>
+                <p>Se avsnittet under "Use header rows and columns in tables" i veiledningen <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or Keynote (support.apple.com)</a></p>
+            </sec>
             
-            
+        </topic>
+        
+        <topic>
+            <title>Liste</title>
+            <p>Kort huskeliste for lister:</p>
+            <ul>
+                <li>Ting skal være kodet slik det ser ut:
+                    <ul>
+                        <li>Bygg opp liste med listeverktøy</li>
+                        <li>Ikke lag noe som ser ut som en liste ved å sette inn spesielle tegn som ser ut som kulepunkter.</li>
+                        <li rel="app-word app-writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet i redigeringsprogrammet er valgt.</li>
+                    </ul>
+                </li>
+            </ul>
         </topic>
     </topics>
     

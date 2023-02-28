@@ -15,6 +15,7 @@
     --form-control-margin: auto .25rem;
     --form-background: white;
     --form-control-gap: .5rem;
+    --page-max-width: 70rem;
 }
 
 *,
@@ -96,13 +97,17 @@ h4 {font-size: 1.5rem;}
     margin-top: 0;
 }
 html {background-color: white; margin:0;padding:0rem;}
-body {background-color: white; max-width: 75rem; margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
+body {background-color: white; max-width: var(--page-max-width); margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
 
 /*
 .intro {
     background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;
     background-color: red;
 }*/
+
+.read-more {
+  margin-top: 2rem;
+}
 
 
 .self-url {margin-top: 2rem;}

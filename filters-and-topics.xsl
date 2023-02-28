@@ -68,17 +68,6 @@
     <xsl:template match="filters">
         <section id="customize" hidden="hidden">
             <h2>Filter</h2>
-            <!--<fieldset id="filter-main">
-                <legend>Hvordan vil du bruke veilederen?</legend>
-                <div class="gh3">
-                    <button id="filter-main-show-all" data-filter="show-all" data-selected="selected"
-                        aria-describedby="#show-all-button-desc">Se hele veilederen</button>
-                    <button id="filter-main-filter-by-content-type" data-filter="by-content-type"
-                        aria-describedby="#content-type-button-desc">Tilpass basert på innholdstype</button>
-                    <button id="filter-main-filter-by-software" data-filter="by-software"
-                        aria-describedby="#filter-by-software-button-desc">Tilpass basert på programvare</button>
-                </div>
-            </fieldset>-->
             <div id="filters">
                 <xsl:apply-templates/>    
             </div>
@@ -87,19 +76,14 @@
     </xsl:template>
     
     <xsl:template match="filter">
-<!--        <xsl:variable name="fieldset_prefix" select="concat('filter-',ancestor::fieldset/@prefix,'-')"/>-->
+
         <xsl:variable name="fieldset_prefix" select="'filter-'"/>
         <li>
             <label>
                 <input id="{concat($fieldset_prefix,@topic)}" type="checkbox">
-<!--                    <xsl:message>Se linje 98- funker ikke etter hensikten</xsl:message>-->
                     <xsl:variable name="this" select="."/>
                     <xsl:choose>
-                        <!-- buggy: use js instead -->
-                        <!--<xsl:when test="$this/ancestor::filters//filter[@topic=$this/parent::filter-group[@parent]][@parent]">
-                            <xsl:variable name="grandparent" select="$this/ancestor::filters//filter[@topic=$this/parent::filter-group[@parent]]/@parent"/>
-                            <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent, ' ' , @grandparent)"/>
-                        </xsl:when>-->
+
                         <xsl:when test="parent::filter-group[@parent] and @parent">
                             <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent), ' ' , @parent"/>
                         </xsl:when>
@@ -144,19 +128,11 @@
         </fieldset>
     </xsl:template>
     
-    
-    
     <xsl:template match="fieldset/button">
         <button id="{concat('confirm-choices-',ancestor::fieldset/@prefix)}">
             <xsl:apply-templates/>
         </button>
     </xsl:template>
-    
-<!--    <xsl:template match="filters/button">
-        <button id="confirm-choices-button">
-            <xsl:apply-templates/>
-        </button>
-    </xsl:template>-->
     
     <xsl:template match="topics">
         <div id="topics">
@@ -174,10 +150,9 @@
         <h3><xsl:value-of select="."/></h3>
     </xsl:template>
     
-    <xsl:template match="topic/section/title">
+    <xsl:template match="topic/sec/title">
         <h4><xsl:value-of select="."/></h4>
     </xsl:template>
-    
     
     <xsl:template match="general">
         <div class="general">
@@ -185,9 +160,22 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="specific">
-        <div class="specific" data-rel="{@rel}">
-            <xsl:apply-templates/>
-        </div>
+    <xsl:template match="@rel">
+        <xsl:attribute name="data-rel" select="."/>
     </xsl:template>
+    
+    <xsl:template match="topic/sec/@name">
+        <xsl:attribute name="id" select="concat('topic-', ../../@name, '-', ../@name)"></xsl:attribute>
+    </xsl:template>
+    
+    <xsl:template match="topic/sec">
+        <section>
+            <!-- <xsl:if test="@rel">
+                <xsl:attribute name="data-rel" select="@rel"/>
+            </xsl:if>-->
+<!--            <xsl:attribute name="id" select="concat('topic-', ../@name, '-', @name)"/>-->
+            <xsl:apply-templates select="@*|node()"/>
+        </section>
+    </xsl:template>
+    
 </xsl:stylesheet>
