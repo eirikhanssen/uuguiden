@@ -177,7 +177,7 @@
                     
                     <li>Bruk venstrestilt tekst med ugjevn høyremarg. 
                         <details class="read-more">
-                            <summary>Les mer om valg av tekstjustering.</summary>
+                            <summary>Les mer om valg av tekstjustering</summary>
                             <p>Venstrestilt tekst med ugjevn høyremarg har den beste lesbarheten fordi:</p>
                             <ul>
                                 <li>øyet kan alltid starte med å lese tekst fra samme innrykk fra margen</li>
@@ -186,8 +186,13 @@
                             </ul>
                         </details>
                     </li>
-                    <li>Slå av CapsLock. Unngå unødvendig bruk av kun store bokstaver i overskrifter eller brødtekst. <details class="read-more"><summary>Les mer om problemer bruk av store bokstaver (CapsLock)</summary></details><p>Vanlig bruk av store og små bokstaver gjør at ordene skiller seg ut i ordbilder som dannes av bokstavenes former, overlengder og underlengder. Dette er noe vi bruker hele tiden når vi leser raskt. Vi trenger ikke å lese hver enkelt bokstav. Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
-                        <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p><p>Sett i forhold til hvor lett det er å lese denne setningen som har både små og store bokstaver...</p></li>
+                    <li>Som <em>hovedregel</em>: ikke bruk kun store bokstaver i overskrifter eller brødtekst. 
+                        <details class="read-more"><summary>Les mer om problemer som følge av bruk av kun store bokstaver i ord og tekst</summary>
+                            <p>Vanlig bruk av store og små bokstaver gjør at hvert ord får en særegen form som dannes av bokstavenes former, overlengder og underlengder. Denne formen kalles ordbilde.</p>
+                            <p>Ordbilder gjør at vi kan lese mye raskere fordi vi ikke trenger å lese hver enkelt bokstav. 
+                                Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
+                            <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p>
+                        </details></li>
                     <li>Unngå blokkjustert tekst. </li>
                 </ul>
         </topic>
@@ -232,9 +237,10 @@
 
             <sec name="acessible-tables-word" rel="app-word">
                 <title>Lag tilgjengelige tabeller i Microsoft Word</title>
+                <p>Noen nyttige lenker:</p>
                 <ul>
                     <li><a href="https://support.microsoft.com/nb-no/office/gjenta-tabelloverskrift-p%C3%A5-etterf%C3%B8lgende-sider-2ff677e0-3150-464a-a283-fa52794b4b41">Gjenta tabelloverskrift på etterfølgende sider (Kundestøtte for Microsoft 365)</a></li>
-                    <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">video om å lage tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>    
+                    <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">Video: Opprette tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>    
                 </ul>
             </sec>
  
