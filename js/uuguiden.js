@@ -15,8 +15,14 @@ var uuguiden = function () {
     var filter_main_customize_button = document.querySelector("#filter-main-customize");
     var filter_main_show_all_button = document.querySelector("#filter-main-show-all");
     var confirm_choices_button = document.getElementById("confirm-choices-button");
-
     var section_customize = document.querySelector("#customize");
+
+    function click_filter_main_customize_button() {
+        document.getElementById("filter-main-customize").click();
+    }
+
+    // when clicking the link that leads to the filter main customize button, also activate it.
+    document.querySelector("a[href='#filter-main-customize']").addEventListener('click',click_filter_main_customize_button,false);
 
     function filter_main_customize_button_action() {
         filter_main_customize_button.setAttribute("data-selected", "selected");
