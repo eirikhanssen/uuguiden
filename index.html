@@ -4,8 +4,8 @@
       <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
       <meta charset="UTF-8">
       <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-      <link rel="stylesheet" href="css/uuguiden.css?v=3.0a">
-      <link rel="stylesheet" href="css/debug.css?v=3.0a"><script src="js/uuguiden.js?v=3.0a"></script></head>
+      <link rel="stylesheet" href="css/uuguiden.css?v=3.0b">
+      <link rel="stylesheet" href="css/debug.css?v=3.0b"><script src="js/uuguiden.js?v=3.0b"></script></head>
    <body data-filter-main="show-all">
       <header id="header">
          <div class="headercontent">
@@ -13,75 +13,75 @@
             <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
          </div>
       </header><a class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a><section>
-         <h2>Tilpass denne veilederen</h2>
-         <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er
-            relevant for det du jobber
-            med nå?</p>
          <fieldset id="filter-main" action="">
             <legend>Hvordan vil du bruke veilederen?</legend>
-            <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (deaktiver og skjul filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
+            <ul class="intro">
+               <li>Bruk veilederen som et oppslagsverk: <a href="#contents">Gå til "Innhold"</a></li>
+               <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">Gå til "Vis filter"</a></li>
+            </ul>
+            <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
          </fieldset>
          <!--#filter-main-->
          <section id="customize" hidden>
             <h2>Filter</h2>
             <div id="filters">
-               <fieldset id="filter-content">
+               <fieldset id="filter-">
                   <legend>Kryss av for innhold du jobber med nå</legend>
                   <ul>
-                     <li><label><input id="filter-text-document" type="checkbox" data-topic="text-document" data-children="filter-plaintext filter-docx-document filter-odt-document filter-apple-pages-document"><span>Tekstbehandling</span></label></li>
+                     <li><label><input id="filter-topic-text-document" type="checkbox" data-topic="text-document"><span>Tekstdokument</span></label></li>
                      <ul>
-                        <li><label><input id="filter-plaintext" type="checkbox" data-parent="filter-text-document" data-topic="plaintext"><span>Ren tekst (.txt)</span></label></li>
-                        <li><label><input id="filter-docx-document" type="checkbox" data-parent="filter-text-document" data-topic="docx-document"><span>Word-dokumenter (.docx)</span></label></li>
-                        <li><label><input id="filter-odt-document" type="checkbox" data-parent="filter-text-document" data-topic="odt-document"><span>OpenDocument (.odt)</span></label></li>
-                        <li><label><input id="filter-apple-pages-document" type="checkbox" data-parent="filter-text-document" data-topic="apple-pages-document"><span>Apple Pages (.Pages)</span></label></li>
+                        <li><label><input id="filter-topic-plaintext" type="checkbox" data-parent="filter-topic-text-document" data-topic="plaintext"><span>Ren tekst (.txt)</span></label></li>
+                        <li><label><input id="filter-topic-docx-document" type="checkbox" data-parent="filter-topic-text-document" data-topic="docx-document"><span>Word-dokumenter (.docx)</span></label></li>
+                        <li><label><input id="filter-topic-odt-document" type="checkbox" data-parent="filter-topic-text-document" data-topic="odt-document"><span>OpenDocument (.odt)</span></label></li>
+                        <li><label><input id="filter-topic-apple-pages-document" type="checkbox" data-parent="filter-topic-text-document" data-topic="apple-pages-document"><span>Apple Pages (.Pages)</span></label></li>
                      </ul>
-                     <li><label><input id="filter-webpage" type="checkbox" data-topic="webpage"><span>Nettside</span></label></li>
-                     <li><label><input id="filter-presenter" type="checkbox" data-topic="presenter" data-children="filter-powerpoint filter-impress filter-keynote filter-sozi filter-google-slides"><span>Presentasjon</span></label></li>
+                     <li><label><input id="filter-topic-webpage" type="checkbox" data-topic="webpage"><span>Nettside</span></label></li>
+                     <li><label><input id="filter-topic-presenter" type="checkbox" data-topic="presenter"><span>Presentasjon</span></label></li>
                      <ul>
-                        <li><label><input id="filter-powerpoint" type="checkbox" data-parent="filter-presenter" data-topic="powerpoint"><span>PowerPoint (.pptx)</span></label></li>
-                        <li><label><input id="filter-impress" type="checkbox" data-parent="filter-presenter" data-topic="impress"><span>Impress (.odp)</span></label></li>
-                        <li><label><input id="filter-keynote" type="checkbox" data-parent="filter-presenter" data-topic="keynote"><span>Keynote (.key)</span></label></li>
-                        <li><label><input id="filter-sozi" type="checkbox" data-parent="filter-presenter" data-topic="sozi"><span>Sozi</span></label></li>
-                        <li><label><input id="filter-google-slides" type="checkbox" data-parent="filter-presenter" data-topic="google-slides"><span>Google Slides</span></label></li>
+                        <li><label><input id="filter-topic-powerpoint" type="checkbox" data-parent="filter-topic-presenter" data-topic="powerpoint"><span>PowerPoint (.pptx)</span></label></li>
+                        <li><label><input id="filter-topic-impress" type="checkbox" data-parent="filter-topic-presenter" data-topic="impress"><span>Impress (.odp)</span></label></li>
+                        <li><label><input id="filter-topic-keynote" type="checkbox" data-parent="filter-topic-presenter" data-topic="keynote"><span>Keynote (.key)</span></label></li>
+                        <li><label><input id="filter-topic-sozi" type="checkbox" data-parent="filter-topic-presenter" data-topic="sozi"><span>Sozi</span></label></li>
+                        <li><label><input id="filter-topic-google-slides" type="checkbox" data-parent="filter-topic-presenter" data-topic="google-slides"><span>Google Slides</span></label></li>
                      </ul>
-                     <li><label><input id="filter-text" type="checkbox" data-topic="text"><span>Ren tekst</span></label></li>
-                     <li><label><input id="filter-list" type="checkbox" data-topic="list"><span>Liste</span></label></li>
-                     <li><label><input id="filter-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
-                     <li><label><input id="filter-images" type="checkbox" data-topic="images" data-children="filter-photo filter-infographics"><span>Bilde</span></label></li>
+                     <li><label><input id="filter-topic-text" type="checkbox" data-topic="text"><span>Ren tekst</span></label></li>
+                     <li><label><input id="filter-topic-list" type="checkbox" data-topic="list"><span>Liste</span></label></li>
+                     <li><label><input id="filter-topic-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
+                     <li><label><input id="filter-topic-images" type="checkbox" data-topic="images"><span>Bilde</span></label></li>
                      <ul>
-                        <li><label><input id="filter-photo" type="checkbox" data-parent="filter-images" data-topic="photo"><span>Foto og illustrasjon</span></label></li>
-                        <li><label><input id="filter-infographics" type="checkbox" data-parent="filter-images" data-topic="infographics"><span>Infografikk og diagram</span></label></li>
+                        <li><label><input id="filter-topic-photo" type="checkbox" data-parent="filter-topic-images" data-topic="photo"><span>Foto og illustrasjon</span></label></li>
+                        <li><label><input id="filter-topic-infographics" type="checkbox" data-parent="filter-topic-images" data-topic="infographics"><span>Infografikk og diagram</span></label></li>
                      </ul>
-                     <li><label><input id="filter-audio" type="checkbox" data-topic="audio" data-children="filter-podcast filter-vision-"><span>Audio/lyd</span></label></li>
+                     <li><label><input id="filter-topic-audio" type="checkbox" data-topic="audio"><span>Audio/lyd</span></label></li>
                      <ul>
-                        <li><label><input id="filter-podcast" type="checkbox" data-parent="filter-audio" data-topic="podcast"><span>Podcast</span></label></li>
-                        <li><label><input id="filter-vision-" type="checkbox" data-parent="filter-audio" data-topic="vision-"><span>Synstolking</span></label></li>
+                        <li><label><input id="filter-topic-podcast" type="checkbox" data-parent="filter-topic-audio" data-topic="podcast"><span>Podcast</span></label></li>
+                        <li><label><input id="filter-topic-vision" type="checkbox" data-parent="filter-topic-audio" data-topic="vision"><span>Synstolking</span></label></li>
                      </ul>
-                     <li><label><input id="filter-video" type="checkbox" data-topic="video"><span>Video</span></label></li>
+                     <li><label><input id="filter-topic-video" type="checkbox" data-topic="video"><span>Video</span></label></li>
                   </ul>
                </fieldset>
-               <fieldset id="filter-app">
+               <fieldset id="filter-">
                   <legend>Kryss av for program du bruker nå</legend>
                   <ul>
-                     <li><label><input id="filter-app-text" type="checkbox" data-parent="filter-text-document" data-topic="app-text" data-children="filter-app-word filter-app-writer filter-app-pages"><span>Tekstbehandlingsprogram</span></label></li>
+                     <li><label><input id="filter-app-text" type="checkbox" data-parent="filter-topic-text-document" data-app="text"><span>Tekstbehandlingsprogram</span></label></li>
                      <ul>
-                        <li><label><input id="filter-app-word" type="checkbox" data-parent="filter-app-text" data-topic="app-word"><span>Microsoft Word</span></label></li>
-                        <li><label><input id="filter-app-writer" type="checkbox" data-parent="filter-app-text" data-topic="app-writer"><span>Libre Office Writer</span></label></li>
-                        <li><label><input id="filter-app-pages" type="checkbox" data-parent="filter-app-text" data-topic="app-pages"><span>Apple Pages</span></label></li>
+                        <li><label><input id="filter-app-word" type="checkbox" data-parent="filter-app-text" data-app="word"><span>Microsoft Word</span></label></li>
+                        <li><label><input id="filter-app-writer" type="checkbox" data-parent="filter-app-text" data-app="writer"><span>Libre Office Writer</span></label></li>
+                        <li><label><input id="filter-app-pages" type="checkbox" data-parent="filter-app-text" data-app="pages"><span>Apple Pages</span></label></li>
                      </ul>
-                     <li><label><input id="filter-app-web-lcms" type="checkbox" data-parent="filter-webpage" data-topic="app-web-lcms" data-children="filter-app-openedx filter-app-canvas filter-app-wordpress"><span>Publiseringssystem for nettsider (CMS/LMS)</span></label></li>
+                     <li><label><input id="filter-app-web-lcms" type="checkbox" data-parent="filter-topic-webpage" data-app="web-lcms"><span>Publiseringssystem for nettsider (CMS/LMS)</span></label></li>
                      <ul>
-                        <li><label><input id="filter-app-openedx" type="checkbox" data-parent="filter-app-web-lcms" data-topic="app-openedx"><span>OpenEdx</span></label></li>
-                        <li><label><input id="filter-app-canvas" type="checkbox" data-parent="filter-app-web-lcms" data-topic="app-canvas"><span>Canvas</span></label></li>
-                        <li><label><input id="filter-app-wordpress" type="checkbox" data-parent="filter-app-web-lcms" data-topic="app-wordpress"><span>Wordpress</span></label></li>
+                        <li><label><input id="filter-app-openedx" type="checkbox" data-parent="filter-app-web-lcms" data-app="openedx"><span>OpenEdx</span></label></li>
+                        <li><label><input id="filter-app-canvas" type="checkbox" data-parent="filter-app-web-lcms" data-app="canvas"><span>Canvas</span></label></li>
+                        <li><label><input id="filter-app-wordpress" type="checkbox" data-parent="filter-app-web-lcms" data-app="wordpress"><span>Wordpress</span></label></li>
                      </ul>
-                     <li><label><input id="filter-app-presenter" type="checkbox" data-parent="filter-presenter" data-topic="app-presenter" data-children="filter-app-powerpoint filter-app-impress filter-app-keynote filter-app-sozi filter-app-google-slides"><span>Presentasjonsprogram</span></label></li>
+                     <li><label><input id="filter-app-presenter" type="checkbox" data-parent="filter-topic-presenter" data-app="presenter"><span>Presentasjonsprogram</span></label></li>
                      <ul>
-                        <li><label><input id="filter-app-powerpoint" type="checkbox" data-parent="filter-app-presenter" data-topic="app-powerpoint"><span>PowerPoint</span></label></li>
-                        <li><label><input id="filter-app-impress" type="checkbox" data-parent="filter-app-presenter" data-topic="app-impress"><span>Impress</span></label></li>
-                        <li><label><input id="filter-app-keynote" type="checkbox" data-parent="filter-app-presenter" data-topic="app-keynote"><span>Keynote</span></label></li>
-                        <li><label><input id="filter-app-sozi" type="checkbox" data-parent="filter-app-presenter" data-topic="app-sozi"><span>Sozi</span></label></li>
-                        <li><label><input id="filter-app-google-slides" type="checkbox" data-parent="filter-app-presenter" data-topic="app-google-slides"><span>Google Slides</span></label></li>
+                        <li><label><input id="filter-app-powerpoint" type="checkbox" data-parent="filter-app-presenter" data-app="powerpoint"><span>PowerPoint</span></label></li>
+                        <li><label><input id="filter-app-impress" type="checkbox" data-parent="filter-app-presenter" data-app="impress"><span>Impress</span></label></li>
+                        <li><label><input id="filter-app-keynote" type="checkbox" data-parent="filter-app-presenter" data-app="keynote"><span>Keynote</span></label></li>
+                        <li><label><input id="filter-app-sozi" type="checkbox" data-parent="filter-app-presenter" data-app="sozi"><span>Sozi</span></label></li>
+                        <li><label><input id="filter-app-google-slides" type="checkbox" data-parent="filter-app-presenter" data-app="google-slides"><span>Google Slides</span></label></li>
                      </ul>
                   </ul>
                </fieldset>
@@ -95,9 +95,9 @@
             <nav id="guide-toc"></nav>
             <!--#guide-toc skal bli generert av JS-->
             <div id="topics">
-               <article id="topic-document-structure">
+               <article id="topic-document_structure" data-rel="text-document">
                   <h3>Dokumentstruktur for tilgjengelighet</h3>
-                  <section id="topic-document-structure-assistive-technology">
+                  <section id="topic-document_structure-assistive_technology">
                      <h4>Støtteteknologi</h4>
                      <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert
                         digitalt innhold til en form de kan ha nytte av. Eksempler på     støtteteknologi:
@@ -109,7 +109,7 @@
                         </ul>
                      </p>
                   </section>
-                  <section id="topic-document-structure-code-right">
+                  <section id="topic-document_structure-code_right">
                      <h4>Ting må kodes slik de ser ut</h4>
                      <p>En viktig jobb når vi lager digitalt innhold er å sørge for at innholdet er kodet
                         slik det ser ut.</p>
@@ -132,7 +132,7 @@
                         </ul>
                      </p>
                   </section>
-                  <section id="topic-document-structure-discoverable">
+                  <section id="topic-document_structure-discoverable">
                      <h4>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte
                         det</h4>
                      <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere
@@ -151,9 +151,9 @@
                      </p>
                   </section>
                </article>
-               <article id="topic-checking-accessibility">
+               <article id="topic-checking_accessibility">
                   <h3>Tilgjengelighetssjekk</h3>
-                  <section id="topic-checking-accessibility-accessibility-check-in-word" data-rel="app-word">
+                  <section id="topic-checking_accessibility-accessibility-check-in-word" data-app="word">
                      <h4>Bruk tilgjengelighetssjekken i Word</h4>
                      <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:
                         
@@ -164,7 +164,7 @@
                      </p>
                   </section>
                </article>
-               <article id="topic-heading">
+               <article id="topic-heading" data-rel="text-document webpage presenter">
                   <h3>Overskrift</h3>
                   <p>God og rett bruk av overkskrifter er noe av det viktigste vi gjør for å lage tilgjengelig
                      innhold.</p>
@@ -187,7 +187,7 @@
                            en skjermleser forstår</li>
                      </ul>
                   </p>
-                  <section id="topic-heading-app-text" data-rel="app-text">
+                  <section id="topic-heading-app_text" data-app="text" data-rel="text-document">
                      <h4>Bruk innebygde overskriftsstiler i skriveprogram</h4>
                      <p>De innebygde overskriftsstilene i skriveprogrammer har en egenskap som heter overskriftsnivå
                         eller outline-level. Denne egenskapen forteller om overskriftshierarkiet og brukes
@@ -208,17 +208,9 @@
                         høyeste nivå. Hvis du jobber i et <em>publiseringssystem for nettsider</em>, se om du finner rett nivå overskrift i editoren. Hvis du redigerer kode, kodes en
                         nivå 1 overskrift kodes i HTML på denne måten: <code>&lt;h1&gt;En nivå 1 overskrift&lt;/h1&gt;</code></p>
                   </section>
-                  <section id="topic-heading-presenter" data-rel="presenter">
-                     <h4>Overskrifter i lysbilde</h4>
-                     <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
-                  </section>
-                  <section id="topic-heading-powerpoint" data-rel="presenter powerpoint">
-                     <h4>Overskrifter i PowerPoint</h4>
-                     <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
-                  </section>
                </article>
                <!-- outline -->
-               <article id="topic-text-properties">
+               <article id="topic-text_properties" data-rel="text-document webpage presenter">
                   <h3>Tekstegenskaper for god lesbarhet</h3>
                   <p>Tekstegenskapene har mye å si for hvor raskt og lett det er å lese tekst. Noen anbefalinger:</p>
                   <ul>
@@ -247,11 +239,35 @@
                               bokstav. 
                               Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette
                               fører til at lesehastigheten går betydelig ned.</p>
+                           <p>Dette problemet forsterker seg for personer som har lesevansker.</p>
                            <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p>
                         </details>
                      </li>
-                     <li>Unngå blokkjustert tekst. </li>
+                     <li>Unngå blokkjustert tekst. 
+                        
+                        <details class="read-more">
+                           <summary>Les mer om problemer med blokkjustert tekst</summary>
+                           <p>Blokkjustert tekst gjør at ordmellomrommene blir mindre eller større enn vanlig. Dyslektikere
+                              blir veldig forstyrret av de uregelmessige ordmellomrommene som kan fortone seg som
+                              elver som beveger seg gjennom teksten.</p>
+                           <p>Blokkjustering av tekst gjør at vi mister ugjevn høyremarg. Ugjevn høyremarg har den
+                              gode egenskapen at den lettere lar oss navigere i tekst.</p>
+                           <p>Det går an å minske problemer med ordmellomrom ved å bruke orddeling, men orddeling
+                              er også problematisk for personer med lesevansker.</p>
+                        </details>
+                     </li>
                   </ul>
+               </article>
+               <article id="topic-presenter" topic="presenter">
+                  <h3>Presentasjon/lysbilde</h3>
+                  <section id="topic-presenter-heading">
+                     <h4>Overskrifter i lysbilde</h4>
+                     <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
+                  </section>
+                  <section id="topic-presenter-powerpoint" data-app="presenter powerpoint">
+                     <h4>Overskrifter i PowerPoint</h4>
+                     <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
+                  </section>
                </article>
                <article id="topic-table">
                   <h3>Tabell</h3>
@@ -302,7 +318,7 @@
                         </ul>
                      </div>
                   </details>
-                  <section id="topic-table-acessible-tables-word" data-rel="app-word">
+                  <section id="topic-table-acessible_tables_word" data-app="text word">
                      <h4>Lag tilgjengelige tabeller i Microsoft Word</h4>
                      <p>Noen nyttige lenker:</p>
                      <ul>
@@ -310,13 +326,13 @@
                         <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">Video: Opprette tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>
                      </ul>
                   </section>
-                  <section id="topic-table-accessible-docs-in-pages" data-rel="app-pages">
+                  <section id="topic-table-accessible_docs_in_pages" data-app="text pages">
                      <h4>Lag tilgjengelige dokumenter med Apple Pages</h4>
                      <p>Se avsnittet under "Use header rows and columns in tables" i veiledningen <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or
                            Keynote (support.apple.com)</a></p>
                   </section>
                </article>
-               <article id="topic-">
+               <article id="topic-list">
                   <h3>Liste</h3>
                   <p>Kort huskeliste for lister:</p>
                   <ul>
@@ -326,7 +342,7 @@
                            <li>Bygg opp liste med listeverktøy</li>
                            <li>Ikke lag noe som ser ut som en liste ved å sette inn spesielle tegn som ser ut som
                               kulepunkter.</li>
-                           <li data-rel="app-word app-writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet
+                           <li data-app="text word writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet
                               i redigeringsprogrammet er valgt.</li>
                         </ul>
                      </li>

@@ -1,10 +1,10 @@
 <filters-and-topics>
     
     <filters>
-        <fieldset prefix="content" legend="Kryss av for innhold du jobber med nå">
+        <fieldset legend="Kryss av for innhold du jobber med nå">
             <filter-group>
-                <filter topic="text-document">Tekstbehandling</filter>
-                <filter-group parent="text-document">
+                <filter topic="text-document">Tekstdokument</filter>
+                <filter-group parent="topic-text-document">
                     <filter topic="plaintext">Ren tekst (.txt)</filter>
                     <filter topic="docx-document">Word-dokumenter (.docx)</filter>
                     <filter topic="odt-document">OpenDocument (.odt)</filter>
@@ -13,73 +13,73 @@
                 <filter topic="webpage">Nettside</filter>
                 
                 <filter topic="presenter">Presentasjon</filter>
-                <filter-group parent="presenter">
+                <filter-group parent="topic-presenter">
                     <filter topic="powerpoint">PowerPoint (.pptx)</filter>
                     <filter topic="impress">Impress (.odp)</filter>
                     <filter topic="keynote">Keynote (.key)</filter>
                     <filter topic="sozi">Sozi</filter>
                     <filter topic="google-slides">Google Slides</filter>
                 </filter-group>
-            
+                
                 <filter topic="text">Ren tekst</filter>
                 <filter topic="list">Liste</filter>
                 <filter topic="table">Tabell</filter>
                 
                 <filter topic="images">Bilde</filter>
-                <filter-group parent="images">
+                <filter-group parent="topic-images">
                     <filter topic="photo">Foto og illustrasjon</filter>
                     <filter topic="infographics">Infografikk og diagram</filter>
                 </filter-group>
-            
+                
                 <filter topic="audio">Audio/lyd</filter>
-                <filter-group parent="audio">
+                <filter-group parent="topic-audio">
                     <filter topic="podcast">Podcast</filter>
-                    <filter topic="vision-">Synstolking</filter>
+                    <filter topic="vision">Synstolking</filter>
                 </filter-group>
-            
+                
                 <filter topic="video">Video</filter>
             </filter-group>
         </fieldset>
         
-        <fieldset prefix="app" legend="Kryss av for program du bruker nå">
+        <fieldset legend="Kryss av for program du bruker nå">
             <filter-group>
-                <filter topic="app-text" parent="text-document">Tekstbehandlingsprogram</filter>
+                <filter app="text" parent="topic-text-document">Tekstbehandlingsprogram</filter>
                 <filter-group parent="app-text">
-                    <filter topic="app-word">Microsoft Word</filter>
-                    <filter topic="app-writer">Libre Office Writer</filter>
-                    <filter topic="app-pages">Apple Pages</filter>
+                    <filter app="word">Microsoft Word</filter>
+                    <filter app="writer">Libre Office Writer</filter>
+                    <filter app="pages">Apple Pages</filter>
                 </filter-group>
-                <filter topic="app-web-lcms" parent="webpage">Publiseringssystem for nettsider (CMS/LMS)</filter>
+                <filter app="web-lcms" parent="topic-webpage">Publiseringssystem for nettsider (CMS/LMS)</filter>
                 <filter-group parent="app-web-lcms">
-                    <filter topic="app-openedx">OpenEdx</filter>
-                    <filter topic="app-canvas">Canvas</filter>
-                    <filter topic="app-wordpress">Wordpress</filter>
+                    <filter app="openedx">OpenEdx</filter>
+                    <filter app="canvas">Canvas</filter>
+                    <filter app="wordpress">Wordpress</filter>
                 </filter-group>
-                <filter topic="app-presenter" parent="presenter">Presentasjonsprogram</filter>
+                <filter app="presenter" parent="topic-presenter">Presentasjonsprogram</filter>
                 <filter-group parent="app-presenter">
-                    <filter topic="app-powerpoint">PowerPoint</filter>
-                    <filter topic="app-impress">Impress</filter>
-                    <filter topic="app-keynote">Keynote</filter>
-                    <filter topic="app-sozi">Sozi</filter>
-                    <filter topic="app-google-slides">Google Slides</filter>
+                    <filter app="powerpoint">PowerPoint</filter>
+                    <filter app="impress">Impress</filter>
+                    <filter app="keynote">Keynote</filter>
+                    <filter app="sozi">Sozi</filter>
+                    <filter app="google-slides">Google Slides</filter>
                 </filter-group>
             </filter-group>
         </fieldset>
     </filters>
     
     <topics>
-        <topic name="document-structure">
+        <topic id="document_structure" rel="text-document">
             <title>Dokumentstruktur for tilgjengelighet</title>
-            <sec name="assistive-technology">
+            <sec id="assistive_technology">
                 <title>Støtteteknologi</title>
                 <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert digitalt innhold til en form de kan ha nytte av. Eksempler på     støtteteknologi: <ul>
                     <li>skjermleser</li>
                     <li>leselist</li>
                     <li>bryterstyring</li>
-                    </ul>
+                </ul>
                 </p>
             </sec>
-            <sec name="code-right">
+            <sec id="code_right">
                 <title>Ting må kodes slik de ser ut</title>
                 <p>En viktig jobb når vi lager digitalt innhold er å sørge for at innholdet er kodet slik det ser ut.</p>
                 <p>Støtteteknologi bruker disse kodene for å kunne fortelle brukerene hva slags type innhold det er, og også å gi brukerne effektiv tilgang til innholdet</p>
@@ -97,31 +97,31 @@
                     </ul>
                 </p>
             </sec>
-            <sec name="discoverable">
+            <sec id="discoverable">
                 <title>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte det</title>
                 <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere det på en måte som gjøre det mulig å oppfatte. Noen eksempler på hvordan vi kan gjøre ting mulig å oppfatte for personer som i utgangspunktet ikke kan oppfatte innholdet:
-                <ul>
-                    <li>Et bilde trenger et tekstalternativ - vi setter inn alternativ tekst</li>
-                    <li>Tale i video transkriberes og/eller tekstes til undertekster</li>
-                    <li>Tale i lyd eller podcast transkriberes og kan leses på en nettside</li>
-                    <li>Handlig i video som ikke kan høres blir synstolket - et lydspor som forteller hva som skjer</li>
-                    <li>Man setter ikke inn et bilde av en tabell. Man bygger tabellen opp med tabellverktøy så kan en skjermleser presentere data i tabellen for brukeren.</li>                </ul>
+                    <ul>
+                        <li>Et bilde trenger et tekstalternativ - vi setter inn alternativ tekst</li>
+                        <li>Tale i video transkriberes og/eller tekstes til undertekster</li>
+                        <li>Tale i lyd eller podcast transkriberes og kan leses på en nettside</li>
+                        <li>Handlig i video som ikke kan høres blir synstolket - et lydspor som forteller hva som skjer</li>
+                        <li>Man setter ikke inn et bilde av en tabell. Man bygger tabellen opp med tabellverktøy så kan en skjermleser presentere data i tabellen for brukeren.</li>                </ul>
                 </p>
             </sec>
         </topic>
         
-        <topic name="checking-accessibility">
+        <topic id="checking_accessibility">
             <title>Tilgjengelighetssjekk</title>
-            <sec name="accessibility-check-in-word" rel="app-word">
+            <sec id="accessibility-check-in-word" app="word">
                 <title>Bruk tilgjengelighetssjekken i Word</title>
                 <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:
-                <ul>
-                    <li><a href="https://support.microsoft.com/nb-no/office/gj%C3%B8re-word-dokumenter-tilgjengelige-for-personer-med-funksjonshemninger-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Gjøre Word-dokumenter tilgjengelige for personer med funksjonshemninger (Kundestøtte for Microsoft 365)</a></li>
-                </ul></p>
+                    <ul>
+                        <li><a href="https://support.microsoft.com/nb-no/office/gj%C3%B8re-word-dokumenter-tilgjengelige-for-personer-med-funksjonshemninger-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Gjøre Word-dokumenter tilgjengelige for personer med funksjonshemninger (Kundestøtte for Microsoft 365)</a></li>
+                    </ul></p>
             </sec>
         </topic>
         
-        <topic name="heading">
+        <topic id="heading" rel="text-document webpage presenter">
             <title>Overskrift</title>
             <p>God og rett bruk av overkskrifter er noe av det viktigste vi gjør for å lage tilgjengelig innhold.</p>
             <p>Overskrifter lar oss raskt scanne innholdet for å få en oversikt over det.</p>
@@ -139,65 +139,79 @@
                 </ul>
             </p>
             
-            <sec name="app-text" rel="app-text">
+            <sec id="app_text" app="text" rel="text-document">
                 <title>Bruk innebygde overskriftsstiler i skriveprogram</title>
                 <p>De innebygde overskriftsstilene i skriveprogrammer har en egenskap som heter overskriftsnivå eller outline-level. Denne egenskapen forteller om overskriftshierarkiet og brukes av skjermlesere for å presentere overskrifter og muliggjør effektiv navigering.</p>
                 <p>I skriveprogram bruker du følgende stiler til overskrifter: 
-                <ul>
-                    <li>Overskrift 1 (Heading 1) - bruk denne kun på hovedoverskriften</li>
-                    <li>Overskrift 2 (Heading 2)</li>
-                    <li>Overskrift 3 (Heading 3)</li>
-                    <li>(...)</li>
-                </ul>
+                    <ul>
+                        <li>Overskrift 1 (Heading 1) - bruk denne kun på hovedoverskriften</li>
+                        <li>Overskrift 2 (Heading 2)</li>
+                        <li>Overskrift 3 (Heading 3)</li>
+                        <li>(...)</li>
+                    </ul>
                 </p>
             </sec>
             
-            <sec name="webpage" rel="webpage">
+            <sec id="webpage" rel="webpage">
                 <title>Overskrifter i nettside</title>
                 <p>Til en nettside bruker du overskriftene Heading 1 til Heading 6, hvor Heading 1 er høyeste nivå. Hvis du jobber i et <em>publiseringssystem for nettsider</em>, se om du finner rett nivå overskrift i editoren. Hvis du redigerer kode, kodes en nivå 1 overskrift kodes i HTML på denne måten: <code>&lt;h1>En nivå 1 overskrift&lt;/h1></code></p>
             </sec>
-            <sec name="presenter" rel="presenter">
+            
+            
+        </topic><!-- outline -->
+        
+        <topic id="text_properties" rel="text-document webpage presenter">
+            <title>Tekstegenskaper for god lesbarhet</title>
+            
+            <p>Tekstegenskapene har mye å si for hvor raskt og lett det er å lese tekst. Noen anbefalinger:</p>
+            <ul>
+                <li>Sørg for god nok fargekontrast. Bruk sort tekst på hvit bakgrunn, eller finn fargekodene og sjekk selv om fargekontrasten er tilstrekkelig: <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker (WebAIM)</a></li>
+                <li>Skriftstørrelse 12-16pt for brødtekst i dokumenter.</li>
+                
+                <li>Bruk venstrestilt tekst med ugjevn høyremarg. 
+                    <details class="read-more">
+                        <summary>Les mer om valg av tekstjustering</summary>
+                        <p>Venstrestilt tekst med ugjevn høyremarg har den beste lesbarheten fordi:</p>
+                        <ul>
+                            <li>øyet kan alltid starte med å lese tekst fra samme innrykk fra margen</li>
+                            <li>ordmellomrommene får rett størrelse</li>
+                            <li>ugjevn høyremarg leter navigasjon i teksten</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>Som <em>hovedregel</em>: ikke bruk kun store bokstaver i overskrifter eller brødtekst. 
+                    <details class="read-more"><summary>Les mer om problemer som følge av bruk av kun store bokstaver i ord og tekst</summary>
+                        <p>Vanlig bruk av store og små bokstaver gjør at hvert ord får en særegen form som dannes av bokstavenes former, overlengder og underlengder. Denne formen kalles ordbilde.</p>
+                        <p>Ordbilder gjør at vi kan lese mye raskere fordi vi ikke trenger å lese hver enkelt bokstav. 
+                            Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
+                        <p>Dette problemet forsterker seg for personer som har lesevansker.</p>
+                        <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p>
+                    </details></li>
+                <li>Unngå blokkjustert tekst. 
+                    <details class="read-more"><summary>Les mer om problemer med blokkjustert tekst</summary>
+                        <p>Blokkjustert tekst gjør at ordmellomrommene blir mindre eller større enn vanlig. Dyslektikere blir veldig forstyrret av de uregelmessige ordmellomrommene som kan fortone seg som elver som beveger seg gjennom teksten.</p>
+                        <p>Blokkjustering av tekst gjør at vi mister ugjevn høyremarg. Ugjevn høyremarg har den gode egenskapen at den lettere lar oss navigere i tekst.</p>
+                        <p>Det går an å minske problemer med ordmellomrom ved å bruke orddeling, men orddeling er også problematisk for personer med lesevansker.</p>
+                    </details>
+                </li>
+            </ul>
+        </topic>
+        
+        <topic id="presenter" topic="presenter">
+            <title>Presentasjon/lysbilde</title>
+            
+            <sec id="heading">
                 <title>Overskrifter i lysbilde</title>
                 <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
             </sec>
-            <sec name="powerpoint" rel="presenter powerpoint">
+            
+            <sec id="powerpoint" app="presenter powerpoint">
                 <title>Overskrifter i PowerPoint</title>
                 <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
             </sec>
-
-        </topic><!-- outline -->
-        
-        <topic name="text-properties">
-            <title>Tekstegenskaper for god lesbarhet</title>
-
-                <p>Tekstegenskapene har mye å si for hvor raskt og lett det er å lese tekst. Noen anbefalinger:</p>
-                <ul>
-                    <li>Sørg for god nok fargekontrast. Bruk sort tekst på hvit bakgrunn, eller finn fargekodene og sjekk selv om fargekontrasten er tilstrekkelig: <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker (WebAIM)</a></li>
-                    <li>Skriftstørrelse 12-16pt for brødtekst i dokumenter.</li>
-                    
-                    <li>Bruk venstrestilt tekst med ugjevn høyremarg. 
-                        <details class="read-more">
-                            <summary>Les mer om valg av tekstjustering</summary>
-                            <p>Venstrestilt tekst med ugjevn høyremarg har den beste lesbarheten fordi:</p>
-                            <ul>
-                                <li>øyet kan alltid starte med å lese tekst fra samme innrykk fra margen</li>
-                                <li>ordmellomrommene får rett størrelse</li>
-                                <li>ugjevn høyremarg leter navigasjon i teksten</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>Som <em>hovedregel</em>: ikke bruk kun store bokstaver i overskrifter eller brødtekst. 
-                        <details class="read-more"><summary>Les mer om problemer som følge av bruk av kun store bokstaver i ord og tekst</summary>
-                            <p>Vanlig bruk av store og små bokstaver gjør at hvert ord får en særegen form som dannes av bokstavenes former, overlengder og underlengder. Denne formen kalles ordbilde.</p>
-                            <p>Ordbilder gjør at vi kan lese mye raskere fordi vi ikke trenger å lese hver enkelt bokstav. 
-                                Hvis vi bruker kun store bokstaver i et ord, så blir ordbildet et rektangel og dette fører til at lesehastigheten går betydelig ned.</p>
-                            <p>HVOR LETT ER DET Å LESE DENNE SETNINGEN SOM HAR KUN STORE BOKSTAVER OG INGEN SMÅ BOKSTAVER?</p>
-                        </details></li>
-                    <li>Unngå blokkjustert tekst. </li>
-                </ul>
         </topic>
-
-        <topic name="table">
+        
+        <topic id="table">
             <title>Tabell</title>
             <p>Kort huskeliste for tabeller:</p>
             <ul>
@@ -217,7 +231,7 @@
                 <li>Tabellceller med tekst bør som hovedregel være venstrestilt med ugjevn høyremarg.</li>
                 <li>Tabellceller med numerisk data bør som hovedregel være justert slik at tall over og under er lette å sammenlikne. Dette kan vi oppnå ved å justere tall etter desimalen.</li>
             </ul>
-
+            
             <details class="read-more">
                 <summary>Les mer om tabeller</summary>
                 <p>En huskeregel er at vi alltid skal sørge for at innhold skal være kodet som det ser ut som. Dette er for at innholdet også skal bli tilgjengelig for personer som er avhengig av skjermleserteknologi.</p>
@@ -234,8 +248,8 @@
                     </ul>    
                 </div>
             </details>
-
-            <sec name="acessible-tables-word" rel="app-word">
+            
+            <sec id="acessible_tables_word" app="text word">
                 <title>Lag tilgjengelige tabeller i Microsoft Word</title>
                 <p>Noen nyttige lenker:</p>
                 <ul>
@@ -243,15 +257,15 @@
                     <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">Video: Opprette tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>    
                 </ul>
             </sec>
- 
-            <sec name="accessible-docs-in-pages" rel="app-pages">
+            
+            <sec id="accessible_docs_in_pages" app="text pages">
                 <title>Lag tilgjengelige dokumenter med Apple Pages</title>
                 <p>Se avsnittet under "Use header rows and columns in tables" i veiledningen <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or Keynote (support.apple.com)</a></p>
             </sec>
             
         </topic>
         
-        <topic>
+        <topic id="list">
             <title>Liste</title>
             <p>Kort huskeliste for lister:</p>
             <ul>
@@ -259,7 +273,7 @@
                     <ul>
                         <li>Bygg opp liste med listeverktøy</li>
                         <li>Ikke lag noe som ser ut som en liste ved å sette inn spesielle tegn som ser ut som kulepunkter.</li>
-                        <li rel="app-word app-writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet i redigeringsprogrammet er valgt.</li>
+                        <li app="text word writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet i redigeringsprogrammet er valgt.</li>
                     </ul>
                 </li>
             </ul>

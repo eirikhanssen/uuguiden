@@ -10,12 +10,12 @@ var uuguiden = function () {
         }
     }
 
-    var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
+
 
     var filter_main_customize_button = document.querySelector("#filter-main-customize");
     var filter_main_show_all_button = document.querySelector("#filter-main-show-all");
     var confirm_choices_button = document.getElementById("confirm-choices-button");
-    
+
     var section_customize = document.querySelector("#customize");
 
     function filter_main_customize_button_action() {
@@ -52,7 +52,7 @@ var uuguiden = function () {
             let href = "#" + el.id;
             let link_text = el.querySelector('h3,h4').innerHTML;
             link.setAttribute("href", href);
-            link.innerHTML=link_text;
+            link.innerHTML = link_text;
             list_item.appendChild(link);
             return list_item;
         }
@@ -61,7 +61,7 @@ var uuguiden = function () {
 
             var visible_subsections = el.querySelectorAll('section:not([hidden])');
 
-            if(visible_subsections.length == 0) {
+            if (visible_subsections.length == 0) {
                 return false;
             }
 
@@ -69,123 +69,193 @@ var uuguiden = function () {
 
             var sub_nav_list = document.createElement('ul');
 
-            for(let i=0; i<visible_subsections.length; i++) {
+            for (let i = 0; i < visible_subsections.length; i++) {
                 sub_nav_list.appendChild(create_sub_navlist_item(visible_subsections[i]));
             }
             return sub_nav_list;
         }
 
-        function create_nav_link_item(el){
+        function create_nav_link_item(el) {
             var link_item = document.createElement("li");
             var internal_link = document.createElement('a');
             internal_link.setAttribute("href", "#" + el.id);
-            internal_link.innerHTML=el.querySelector('h3').innerHTML;
+            internal_link.innerHTML = el.querySelector('h3').innerHTML;
             link_item.appendChild(internal_link);
 
             let sub_nav_list = create_sub_nav_list(el);
 
-            if(sub_nav_list) {
+            if (sub_nav_list) {
                 link_item.appendChild(sub_nav_list);
             }
 
             return link_item;
         }
 
-        for(let i=0; i<active_topics.length; i++) {
+        for (let i = 0; i < active_topics.length; i++) {
             nav_list.appendChild(create_nav_link_item(active_topics[i]));
         }
-        nav.innerHTML="";
+        nav.innerHTML = "";
         nav.appendChild(nav_list);
-    }
+    } // update_toc()
 
-    // TODO/WIP - need checking!
-    function initialize_filtering () {
+    function initialize_filtering() {
         var all_topics = document.querySelectorAll("#topics > article");
-        var all_rels= document.querySelectorAll("[data-rel]");
+        var all_rels = document.querySelectorAll("[data-rel]");
+        var all_app_checkboxes = document.querySelectorAll("#filters input[type=checkbox][data-app]");
+        var all_topic_checkboxes = document.querySelectorAll('#filters input[type=checkbox][data-topic]');
+        var all_app_subtopics = document.querySelectorAll("#topics [data-app]");
+        
+
+        function get_selected_apps() {
+            var selected_apps = [];
+            for (var i = 0; i < all_app_checkboxes.length; i++) {
+                if (all_app_checkboxes[i].checked) {
+                    selected_apps.push(all_app_checkboxes[i].dataset.app);
+                }
+            }
+            return selected_apps;  
+        }
 
         function get_selected_topics() {
             var selected_topics = [];
-    
-            for (var i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].checked) {
-                    selected_topics.push(checkboxes[i].dataset.topic);
+
+            for (var i = 0; i < all_topic_checkboxes.length; i++) {
+                if (all_topic_checkboxes[i].checked) {
+                    selected_topics.push(all_topic_checkboxes[i].dataset.topic);
                 }
             }
-            dmsg("get_selected_topics()");
-            dmsg(selected_topics);
             return selected_topics;
         }
 
+        function show_all_app_subtopics () {
+            for (let i = 0; i < all_app_subtopics.length; i++) {
+                all_app_subtopics[i].hidden = false;
+            }
+        }
+
         function show_all_topics() {
-           
+
             document.body.classList.remove('filtered');
 
             // dmsg("show_all_topics()");
 
-            for(let i=0; i<all_topics.length; i++) {
-                all_topics[i].hidden=false;
+            for (let i = 0; i < all_topics.length; i++) {
+                all_topics[i].hidden = false;
             }
 
-            for(let i=0; i<all_rels.length; i++) {
-                all_rels[i].hidden=false;
+            for (let i = 0; i < all_rels.length; i++) {
+                all_rels[i].hidden = false;
             }
+
+            show_all_app_subtopics ();
 
             update_toc();
         }
-    
+
         function hide_all_topics() {
-          // dmsg("hide_all_topics()");
-            for(let i=0; i<all_topics.length; i++) {
-                all_topics[i].hidden=true;
+            // dmsg("hide_all_topics()");
+            for (let i = 0; i < all_topics.length; i++) {
+                all_topics[i].hidden = true;
             }
         }
 
-        function apply_filtering_to_topics_based_on_checked_status() {
+        function have_common_words(a, b) {
+            //            dmsg("have_common_words()");
+            //            dmsg("a: " + a);
+            //            dmsg("b: " + b);
+            var setA;
+            var setB;
+            if (typeof (a) == "string") {
+                setA = a.split(" ");
+            } else if (Array.isArray(a)) {
+                setA = a;
+            }
+            if (typeof (b) == "string") {
+                setB = b.split(" ");
+            } else if (Array.isArray(b)) {
+                setB = b;
+            }
 
-         // dmsg("apply_filtering_to_topics_based_on_checked_status()");
-            
+            dmsg("setA: " + setA + "\nsetB: " + setB);
+            dmsg("typeof(setA): " + typeof (setA) + "\ntypeof(setB): " + typeof (setB));
+            dmsg("Array.isArray(setA): " + Array.isArray(setA) + "\nArray.isArray(setB): " + Array.isArray(setB));
+
+            for (let i = 0; i < setA.length; i++) {
+                if (setB.includes(setA[i])) {
+                    dmsg("match: " + setA[i]);
+                    return true;
+                }
+            }
+
+            dmsg("no match");
+            return false;
+        }
+
+        function apply_filtering() {
+
+            // dmsg("apply_filtering()");
+
             var selected_topics = get_selected_topics();
+            var selected_apps = get_selected_apps();
 
-            if(selected_topics.length == 0) {
+
+            if (selected_topics.length == 0) {
                 show_all_topics();
                 document.body.classList.remove('filtered');
-                return
             } else {
                 document.body.classList.add('filtered');
-            }
 
-            for(let i=0; i<all_topics.length; i++) {
-                let id = all_topics[i].id;
-                let topic = id.replace('topic-','');
-                dmsg(" selected_topics: " + selected_topics + "\nid: " + id + " topic: " + topic);
-                if(selected_topics.includes(topic)) {
-                    all_topics[i].hidden=false;
-                } else {
-                    all_topics[i].hidden=true;
+                for (let i = 0; i < all_topics.length; i++) {
+                    let id = all_topics[i].id;
+                    let topic = id.replace('topic-', '');
+                    dmsg(" selected_topics: " + selected_topics + "\nid: " + id + " topic: " + topic);
+                    if (selected_topics.includes(topic)) {
+                        all_topics[i].hidden = false;
+                    } else {
+                        all_topics[i].hidden = true;
+                    }
                 }
-            }
-
-            // show or hide specific information depending on dataset.specific and selected topics
-
-            for(let i=0; i<all_rels.length; i++) {
-                if(selected_topics.includes(all_rels[i].dataset.rel)) {
-                    all_rels[i].hidden=false;
-                } else {
-                    all_rels[i].hidden=true;
+    
+                for (let i = 0; i < all_rels.length; i++) {
+                    if (have_common_words(get_selected_topics(), all_rels[i].dataset.rel)) {
+                        all_rels[i].hidden = false;
+                    } else {
+                        all_rels[i].hidden = true;
+                    }
                 }
+
+                if(selected_apps.length == 0) {
+                    show_all_app_subtopics();
+                } else {
+                    for (let i = 0; i < all_app_subtopics.length; i++) {
+                        if (have_common_words(get_selected_apps(), all_app_subtopics[i].dataset.app)) {
+                            all_app_subtopics[i].hidden = false;
+                        } else {
+                            all_app_subtopics[i].hidden = true;
+                        }
+                    }
+                }
+    
+    
+                
             }
-        }
+
+            
+
+        } // apply_filtering()
 
         // add the event listener to the confirm button
-        document.getElementById('filter-main-show-all').addEventListener("click",show_all_topics,false);
-        document.querySelector("#confirm-choices-button").addEventListener("click", apply_filtering_to_topics_based_on_checked_status,false);
-    }
+        document.getElementById('filter-main-show-all').addEventListener("click", show_all_topics, false);
+        document.querySelector("#confirm-choices-button").addEventListener("click", apply_filtering, false);
 
-        
+    } // initialize_filtering ()
+
+
 
     // get_selected_topics();
 
     function add_checkbox_listeners() {
+        var all_checkboxes = document.querySelectorAll("#filters input[type=checkbox]");
 
         function set_parent_checkbox_to_checked(ID) {
             var parent_checkbox = document.getElementById(ID);
@@ -193,7 +263,7 @@ var uuguiden = function () {
                 parent_checkbox.checked = true;
             }
             // if the parent checkbox also has a parent value
-            if (parent_checkbox.dataset.parent && (document.getElementById(parent_checkbox.dataset.parent).checked==false)) {
+            if (parent_checkbox.dataset.parent && (document.getElementById(parent_checkbox.dataset.parent).checked == false)) {
                 set_parent_checkbox_to_checked(parent_checkbox.dataset.parent);
             }
         }
@@ -202,12 +272,12 @@ var uuguiden = function () {
 
         function see_if_parent_checkbox_should_be_checked(e) {
             var target = e.target;
-         //   dmsg(target.id);
+            //   dmsg(target.id);
             if (target.dataset.parent && target.checked) {
-         //       dmsg('parent: ' + target.dataset.parent);
+                //       dmsg('parent: ' + target.dataset.parent);
                 set_parent_checkbox_to_checked(target.dataset.parent);
             } else {
-         //       dmsg('no parent');
+                //       dmsg('no parent');
                 return;
             }
         }
@@ -229,7 +299,7 @@ var uuguiden = function () {
                     // dmsg("child_ids: " + child_ids);
                     current_el = document.getElementById(child_ids[i]);
                     if (current_el && current_el.tagName == "INPUT" && current_el.type == "checkbox") {
-                    // dmsg("child_checkboxes.push(current_el) :" + current_el.id);
+                        // dmsg("child_checkboxes.push(current_el) :" + current_el.id);
                         child_checkboxes.push(current_el);
                     }
                 }
@@ -252,8 +322,8 @@ var uuguiden = function () {
             }
         }
 
-        for (let i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].addEventListener('change', see_if_parent_checkbox_should_be_checked, false);
+        for (let i = 0; i < all_checkboxes.length; i++) {
+            all_checkboxes[i].addEventListener('change', see_if_parent_checkbox_should_be_checked, false);
         }
 
         var parent_checkboxes = document.querySelectorAll("input[type=checkbox][data-children]");
@@ -265,15 +335,14 @@ var uuguiden = function () {
 
     // when checking a checkbox, also set parent checkbox to checked
 
-
     // when unchecking a checkbox, also uncheck it's children
 
     add_checkbox_listeners();
     initialize_filtering();
 
     // refresh table of contents when confirming filtering
-    confirm_choices_button.addEventListener('click',update_toc,false);
-    
+    confirm_choices_button.addEventListener('click', update_toc, false);
+
     // generate table of contents on page load
     update_toc();
 }

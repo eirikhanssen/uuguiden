@@ -15,9 +15,9 @@
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
                 <meta charset="UTF-8"/>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-                <link rel="stylesheet" href="css/uuguiden.css?v=3.0a"/>
-                <link rel="stylesheet" href="css/debug.css?v=3.0a"/>
-                <script src="js/uuguiden.js?v=3.0a"></script> 
+                <link rel="stylesheet" href="css/uuguiden.css?v=3.0b"/>
+                <link rel="stylesheet" href="css/debug.css?v=3.0b"/>
+                <script src="js/uuguiden.js?v=3.0b"></script> 
             </head>
             <body data-filter-main="show-all">
                 <header id="header">
@@ -29,15 +29,18 @@
                 <a class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
                 
                 <section>
-                    <h2>Tilpass denne veilederen</h2>
-                    <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
-                        med nå?</p>
-                    
+                    <!-- <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
+                        med nå?</p>-->
                     <fieldset id="filter-main" action="" >
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
+                        <ul class="intro">
+                            <li>Bruk veilederen som et oppslagsverk: <a href="#contents">Gå til "Innhold"</a></li>
+                            <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">Gå til "Vis filter"</a></li>
+                        </ul>
+                        
                         <div class="gh2">
-                            <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (deaktiver og skjul filter)</span><span class="selected">  (valgt)</span></button>
+                            <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button>
 
                             <button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>
                            
@@ -81,9 +84,18 @@
         <li>
             <label>
                 <input id="{concat($fieldset_prefix,@topic)}" type="checkbox">
+                    <xsl:choose>
+                        <xsl:when test="@topic">
+                            <xsl:attribute name="id" select="concat($fieldset_prefix,'topic-',@topic)"/>
+                        </xsl:when>
+                        <xsl:when test="@app">
+                            <xsl:attribute name="id" select="concat($fieldset_prefix,'app-',@app)"/>
+                        </xsl:when>
+                        <xsl:otherwise/>
+                    </xsl:choose>
+                    
                     <xsl:variable name="this" select="."/>
                     <xsl:choose>
-
                         <xsl:when test="parent::filter-group[@parent] and @parent">
                             <xsl:attribute name="data-parent" select="concat($fieldset_prefix, parent::filter-group/@parent), ' ' , @parent"/>
                         </xsl:when>
@@ -100,6 +112,9 @@
                     </xsl:if>
                     <xsl:if test="@topic">
                         <xsl:attribute name="data-topic" select="@topic"/>
+                    </xsl:if>
+                    <xsl:if test="@app">
+                        <xsl:attribute name="data-app" select="@app"/>
                     </xsl:if>
                     <xsl:if test="@topic = ../filter-group/@parent">
                         <xsl:variable name="current_topic" select="@topic"/>
@@ -141,8 +156,8 @@
     </xsl:template>
     
     <xsl:template match="topic">
-        <article id="{concat('topic-',@name)}">
-            <xsl:apply-templates/>
+        <article>
+            <xsl:apply-templates select="@*|node()"/>
         </article>
     </xsl:template>
     
@@ -164,16 +179,20 @@
         <xsl:attribute name="data-rel" select="."/>
     </xsl:template>
     
-    <xsl:template match="topic/sec/@name">
-        <xsl:attribute name="id" select="concat('topic-', ../../@name, '-', ../@name)"></xsl:attribute>
+    <xsl:template match="@app">
+        <xsl:attribute name="data-app" select="."/>
+    </xsl:template>
+    
+    <xsl:template match="topic/@id">
+        <xsl:attribute name="id" select="concat('topic-', .)"></xsl:attribute>
+    </xsl:template>
+    
+    <xsl:template match="topic/sec/@id">
+        <xsl:attribute name="id" select="concat('topic-', ../../@id, '-', .)"></xsl:attribute>
     </xsl:template>
     
     <xsl:template match="topic/sec">
         <section>
-            <!-- <xsl:if test="@rel">
-                <xsl:attribute name="data-rel" select="@rel"/>
-            </xsl:if>-->
-<!--            <xsl:attribute name="id" select="concat('topic-', ../@name, '-', @name)"/>-->
             <xsl:apply-templates select="@*|node()"/>
         </section>
     </xsl:template>
