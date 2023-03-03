@@ -16,8 +16,8 @@
          <fieldset id="filter-main" action="">
             <legend>Hvordan vil du bruke veilederen?</legend>
             <ul class="intro">
-               <li>Bruk veilederen som et oppslagsverk: <a href="#contents">Gå til "Innhold"</a></li>
-               <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">Gå til "Vis filter"</a></li>
+               <li>Bruk veilederen som et oppslagsverk: <a href="#contents">gå til <strong>Innhold</strong></a></li>
+               <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>Vis filter</strong></a></li>
             </ul>
             <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
          </fieldset>
@@ -47,7 +47,7 @@
                      <li><label><input id="filter-topic-text" type="checkbox" data-topic="text"><span>Ren tekst</span></label></li>
                      <li><label><input id="filter-topic-list" type="checkbox" data-topic="list"><span>Liste</span></label></li>
                      <li><label><input id="filter-topic-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
-                     <li><label><input id="filter-topic-images" type="checkbox" data-topic="images"><span>Bilde</span></label></li>
+                     <li><label><input id="filter-topic-image" type="checkbox" data-topic="image"><span>Bilde</span></label></li>
                      <ul>
                         <li><label><input id="filter-topic-photo" type="checkbox" data-parent="filter-topic-images" data-topic="photo"><span>Foto og illustrasjon</span></label></li>
                         <li><label><input id="filter-topic-infographics" type="checkbox" data-parent="filter-topic-images" data-topic="infographics"><span>Infografikk og diagram</span></label></li>
@@ -264,6 +264,25 @@
                      <h4>Overskrifter i lysbilde</h4>
                      <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
                   </section>
+                  <section id="topic-presenter-reading_order">
+                     <h4>Leserekkefølge</h4>
+                     <p>For at lystbilder skal kunne leses opp i rett rekkefølge av en skjermleser må leserekkefølgen
+                        være i orden.</p>
+                     <p>Standard leserekkefølge er at ting blir lest opp i den rekkefølgen de blir lagt inn
+                        i lysbildet.</p>
+                     <p>Hvis vi endrer visuell plassering på elementer i et lysbilde etter at de er lagt inn,
+                        så endrer ikke dette leserekkefølgen. Dette kan føre til at lysbildet ikke leses opp
+                        slik man hadde tenkt av en skjermleser, og vil føre til at det kan bli nesten umulig
+                        å forstå innholdet for blinde.</p>
+                     <h4>Tips for å sørge for rett leserekkefølge</h4>
+                     <ul>
+                        <li>Bruk en lysbildemal som innenholder felt for overskrift og innhold, da kommer overskriften
+                           først i leserekkefølgen.</li>
+                        <li>Legg elementer inn i den rekkefølgen som de er tenkt å leses opp</li>
+                        <li>Hvis du må endre på plassering etter at elementer er lagt inn, kan du endre på z-index
+                           til elementene for å endre leserekkefølgen.</li>
+                     </ul>
+                  </section>
                   <section id="topic-presenter-powerpoint" data-app="presenter powerpoint">
                      <h4>Overskrifter i PowerPoint</h4>
                      <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
@@ -292,44 +311,99 @@
                         under er lette å sammenlikne. Dette kan vi oppnå ved å justere tall etter desimalen.</li>
                   </ul>
                   <details class="read-more">
-                     <summary>Les mer om tabeller</summary>
+                     <summary>Les mer om hvorfor det er viktig å bygge opp tabeller med tabellverktøy</summary>
                      <p>En huskeregel er at vi alltid skal sørge for at innhold skal være kodet som det ser
                         ut som. Dette er for at innholdet også skal bli tilgjengelig for personer som er avhengig
                         av skjermleserteknologi.</p>
-                     <p>Hvis du setter inn bilde av en tabell, så er det en sak at oppløsningen som regel
-                        er dårligere enn å faktisk lage tabellen. Det blir uskarpt. En annen sak er at all
-                        informasjonen i bildet er utilgjengelig for maskinlesning og skjermlesere.</p>
-                     <p>Hvis du har et bilde av en tabell, forsøk heller å finne kildedokumentet som ble brukt
-                        til å lage tabellen. Hvis det ikke er mulig, så er det som regel mer hensiktsmessig
+                     <p>Hvis du setter inn bilde av en tabell, så er et problem at oppløsningen som regel
+                        er dårligere enn å faktisk lage tabellen.</p>
+                     <p>Et annet problem er at all informasjonen i bildet er utilgjengelig for maskinlesning
+                        og skjermlesere.</p>
+                     <p>Hvis du har et bilde av en tabell du ønsker å bruke, forsøk heller å finne kildedokumentet
+                        som ble brukt til å lage tabellen. Hvis det ikke er mulig, så er det som mer hensiktsmessig
+                        
                         å bygge opp hele tabellen på nytt med tabellverktøy enn å bruke et bilde og sette
-                        inn bildebeskrivelse for å gjengi informasjon i tabellen. Det fins også verktøy som
-                        kan generere tabell fra bilde av tabell.</p>
+                        inn bildebeskrivelse for å gjengi informasjon i tabellen.
+                        Å lage en bildebeskrivelse som gjengir informasjonen i en tabell er som regel vanskeligere
+                        enn å lage tabellen med tabellverktøy, og dessuten skal bildebeskrivelser som hovedregel
+                        være ganske korte.
+                        </p>
                      <p>Når vi bygger opp en tabell med tabellverktøyet, så blir innholdet kodet som en tabell.
                         Husker vi i tillegg å definere kolonneoverskrift og radoverskrift hvis det er mulig
                         med verktøyet vi bruker for å lage tabellen, så vil skjermleserteknologien kunne presentere
                         tabelldata i tabell-modus. Da vil man kunne få lest opp celleverdien, og hvilke overskrifter
                         som gjelder for celleverdien.</p>
-                     <div class="external">
-                        <p>Eksterne lenker om tabeller:</p>
-                        <ul>
-                           <li><a href="https://www.uutilsynet.no/veiledning/tabeller/225">Løsningsforslag for nettsider - Tabeller (uutilsynet)</a></li>
-                           <li><a lang="EN" href="https://www.w3.org/WAI/tutorials/tables/">Tables Tutorial (Web Accesibility Initiative)</a></li>
-                           <li><a href="https://www.uutilsynet.no/veiledning/dokumenter-pa-nettsider/208">Dokumenter på nettsider (uutilsynet.no)</a></li>
-                        </ul>
-                     </div>
+                     <p>Det fins også <a href="https://www.google.com/search?q=extract+table+from+images">verktøy som kan generere tabell fra bilde av tabell (Google Search)</a>.</p>
                   </details>
                   <section id="topic-table-acessible_tables_word" data-app="text word">
                      <h4>Lag tilgjengelige tabeller i Microsoft Word</h4>
-                     <p>Noen nyttige lenker:</p>
+                     <p>For å sørge for at kolonneoverskrifter blir kodet som kolonneoverskrifter i tabeller
+                        må vi aktivere noen innstilliger i tabellegenskapene. Dette oppnår vi f.eks ved å
+                        velge at tabelloverskrift skal gjentas på etterfølgende sider.</p>
+                     <p>Se instruksjoner fra Kundestøtte for Microsoft 365 for en innføring. Video i den første
+                        lenken anbefales spesielt, den gir en god innføring:</p>
                      <ul>
-                        <li><a href="https://support.microsoft.com/nb-no/office/gjenta-tabelloverskrift-p%C3%A5-etterf%C3%B8lgende-sider-2ff677e0-3150-464a-a283-fa52794b4b41">Gjenta tabelloverskrift på etterfølgende sider (Kundestøtte for Microsoft 365)</a></li>
                         <li><a href="https://support.microsoft.com/nb-no/office/video-opprette-tilgjengelige-tabeller-i-word-cb464015-59dc-46a0-ac01-6217c62210e5">Video: Opprette tilgjengelige tabeller i Word (Kundestøtte for Microsoft 365)</a></li>
+                        <li><a href="https://support.microsoft.com/nb-no/office/gjenta-tabelloverskrift-p%C3%A5-etterf%C3%B8lgende-sider-2ff677e0-3150-464a-a283-fa52794b4b41">Gjenta tabelloverskrift på etterfølgende sider (Kundestøtte for Microsoft 365)</a></li>
                      </ul>
                   </section>
                   <section id="topic-table-accessible_docs_in_pages" data-app="text pages">
                      <h4>Lag tilgjengelige dokumenter med Apple Pages</h4>
                      <p>Se avsnittet under "Use header rows and columns in tables" i veiledningen <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or
                            Keynote (support.apple.com)</a></p>
+                  </section>
+                  <section id="topic-table-external" class="external">
+                     <h4>Eksterne lenker om å lage tilgjengelige tabeller</h4>
+                     <ul>
+                        <li><a href="https://www.uutilsynet.no/veiledning/tabeller/225">Løsningsforslag for nettsider - Tabeller (uutilsynet)</a></li>
+                        <li><a lang="EN" href="https://www.w3.org/WAI/tutorials/tables/">Tables Tutorial (Web Accesibility Initiative)</a></li>
+                        <li><a href="https://www.uutilsynet.no/veiledning/dokumenter-pa-nettsider/208">Dokumenter på nettsider (uutilsynet.no)</a></li>
+                        <li id="google-search-extract-table-from-images">Har du mange bilder av tabeller du trenger å konvertere til ordentlige tabeller kan
+                           du sjekke ut <a href="https://www.google.com/search?q=extract+table+from+images">extract table from images (Google Search)</a></li>
+                     </ul>
+                  </section>
+               </article>
+               <article id="topic-image" data-rel="image photo infographics">
+                  <h3>Bilder</h3>
+                  <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon, men
+                     vi må huske på at dersom informasjon kun er tilgjengelige i bildeform, så er det mange
+                     personer som ikke vil kunne få den.</p>
+                  <section id="topic-image-blindness_and_visual_impairments">
+                     <h4>Synshemminger</h4>
+                     <p>Vi vet at det er <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden som er blind eller har en form for synshemming
+                           (WHO)</a>.
+                        I tillegg er ca 8% av menn og 0.5% av kvinner har en form for fargeblindhet som gjør
+                        at det er vanskelig eller umulig å skille enkelte farger fra hverandre.</p>
+                     <p>Dette fører til at vi må følge noen retningslinjer for at bilder skal være tilgjenelige.
+                        Det er ikke alltid like enkelt å vurdere hva som er rett.</p>
+                  </section>
+                  <section id="topic-image-text_alternative">
+                     <h4>Tekstalternativer</h4>
+                     <p>For hvert bilde som brukes må det tas en vurdering:</p>
+                     <dl>
+                        <dt>Bildet er kun pynt og er ikke viktig for budskapet</dt>
+                        <dd>Bildet skal ikke leses opp.</dd>
+                        <dd>Bildet skal ikke ha tekstalternativ</dd>
+                        <dd>Vi må markere at bildet er dekorativt, ellers risikerer vi at filbanen/filnavnet til
+                           bildet blir lest opp.</dd>
+                        <dt>Bildet er meningsbærende og en kort beskrivelse er nok for å forklare bildet sett
+                           i sammenheng med teksten/konteksten rundt</dt>
+                        <dd>Vi skal sette inn en kort alternativ tekst.</dd>
+                        <dt>Bildet er en figur som gjengir data</dt>
+                        <dd>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst
+                           til bildet om at det er figuren som beskrevet rett over.</dd>
+                        <dd>Vurder å presentere samme materialet i en tabell som er laget med tabellverktøyet.
+                           En passende alternativ tekst kan være "figur som viser data i tabell 2".</dd>
+                     </dl>
+                  </section>
+                  <section id="topic-image-">
+                     <h4>Presentasjon av meningsbærende informasjon</h4>
+                     <dd>
+                        <dt>Bruk ikke kun farge til å formidle informasjon</dt>
+                        <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige
+                           kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig
+                           linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
+                     </dd>
                   </section>
                </article>
                <article id="topic-list">
@@ -342,7 +416,7 @@
                            <li>Bygg opp liste med listeverktøy</li>
                            <li>Ikke lag noe som ser ut som en liste ved å sette inn spesielle tegn som ser ut som
                               kulepunkter.</li>
-                           <li data-app="text word writer">Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet
+                           <li>Er du usikker på om du har en ekte liste, plasser markør inni listen og se om listeverktøyet
                               i redigeringsprogrammet er valgt.</li>
                         </ul>
                      </li>

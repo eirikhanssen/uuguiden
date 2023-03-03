@@ -35,8 +35,8 @@
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
                         <ul class="intro">
-                            <li>Bruk veilederen som et oppslagsverk: <a href="#contents">Gå til "Innhold"</a></li>
-                            <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">Gå til "Vis filter"</a></li>
+                            <li>Bruk veilederen som et oppslagsverk: <a href="#contents">gå til <strong>Innhold</strong></a></li>
+                            <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>Vis filter</strong></a></li>
                         </ul>
                         
                         <div class="gh2">
