@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-topics>
+    <filter-group category="filter-document-type">
+        <title>Dokumenttype</title>
+    </filter-group>
+    <filter-group category="filter-software">
+        <title>Programvare</title>
+        <item-group>
+            <item>Dokument/skriveprogram</item>
+            <item>Microsoft Word</item>
+            <item>Apple Pages</item>
+            <item>Libre Office Writer</item>
+        </item-group>
+    </filter-group>
+    <filter-group category="filter-content-type">Innholdstype</filter-group>
+</filter-topics>

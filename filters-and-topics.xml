@@ -26,9 +26,9 @@
                 <filter topic="table">Tabell</filter>
                 
                 <filter topic="image">Bilde</filter>
-                <filter-group parent="topic-images">
+                <filter-group parent="topic-image">
                     <filter topic="photo">Foto og illustrasjon</filter>
-                    <filter topic="infographics">Infografikk og diagram</filter>
+                    <filter topic="infographic">Infografikk og diagram</filter>
                 </filter-group>
                 
                 <filter topic="audio">Audio/lyd</filter>
@@ -295,7 +295,7 @@
             <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon, men vi må huske på at dersom informasjon kun er tilgjengelige i bildeform, så er det mange personer som ikke vil kunne få den.</p>
             <sec id="blindness_and_visual_impairments">
                 <title>Synshemminger</title>
-                <p>Vi vet at det er <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden som er blind eller har en form for synshemming (WHO)</a>.
+                <p>Vi vet at <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden er blind eller har en form for synshemming (WHO)</a>.
                 I tillegg er ca 8% av menn og 0.5% av kvinner har en form for fargeblindhet som gjør at det er vanskelig eller umulig å skille enkelte farger fra hverandre.</p>
                 <p>Dette fører til at vi må følge noen retningslinjer for at bilder skal være tilgjenelige. Det er ikke alltid like enkelt å vurdere hva som er rett.</p>
             </sec>
@@ -312,15 +312,24 @@
                     <dt>Bildet er en figur som gjengir data</dt>
                     <dd>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst til bildet om at det er figuren som beskrevet rett over.</dd>
                     <dd>Vurder å presentere samme materialet i en tabell som er laget med tabellverktøyet. En passende alternativ tekst kan være "figur som viser data i tabell 2".</dd>
+                    <dt>Bildet illustrerer et viktig poeng som ikke kan beskrives kort</dt>
+                    <dd>Vurder å skrive et avsnitt om de viktige poengene som bildet illustrerer rett før bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet slik forfatteren ønsker.. Da er det tilstrekkelig med en kort bildebeskrivelse.</dd>
                 </dl>
-            </sec>            
+            </sec>
+
+            <sec id="infographic" rel="infographic image">
+                <title>Infografikk</title>
+                <p>Infografikk er bilder eller illustrasjoner som ofte illustrerer eller presenterer data.</p>
+            </sec>
             
             <sec id="">
                 <title>Presentasjon av meningsbærende informasjon</title>
-                <dd>
-                    <dt>Bruk ikke kun farge til å formidle informasjon</dt>
-                    <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
-                </dd>
+                <dl>
+                    <dd>
+                        <dt>Bruk ikke kun farge til å formidle informasjon</dt>
+                        <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
+                    </dd>
+                </dl>
             </sec>
         </topic>
         

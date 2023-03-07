@@ -1,0 +1,38 @@
+
+    <filters>
+        <filter-group>
+            <filter topic="text-documents">Tekstbehandling</filter>
+            <filter-group>
+                <filter topic="plaintext">Ren tekst (.txt)</filter>
+                <filter topic="docx-documents">Word-dokumenter (.docx)</filter>
+                <filter topic="odt-documents">OpenDocument (.odt)</filter>
+                <filter topic="apple-pages-documents">Apple Pages (.Pages)</filter>
+            </filter-group>
+            <filter topic="webpage">Nettsider</filter>
+            <filter-group>
+                <filter topic="presenter">Presentasjon</filter>
+                <filter-group>
+                    <filter topic="powerpoint">PowerPoint (.pptx)</filter>
+                    <filter topic="impress">Impress (.odp)</filter>
+                    <filter topic="keynote">Keynote (.key)</filter>
+                    <filter topic="sozi">Sozi</filter>
+                    <filter topic="google-slides">Google Slides</filter>
+                </filter-group>
+            </filter-group>
+            <filter-group>
+                <filter topic="images">Bilder</filter>
+                <filter-group>
+                    <filter topic="photo">Foto og illustrasjoner</filter>
+                    <filter topic="infographics">Infografikk og diagrammer</filter>
+                </filter-group>
+            </filter-group>
+            <filter-group>
+                <filter topic="audio">Audio/lyd</filter>
+                <filter-group>
+                    <filter topic="podcast">Podcast</filter>
+                    <filter topic="vision-">Synstolking</filter>
+                </filter-group>
+            </filter-group>
+            <filter topic="video">Video</filter>
+        </filter-group>
+    </filters>
