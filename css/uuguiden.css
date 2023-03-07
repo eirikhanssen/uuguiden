@@ -16,13 +16,69 @@
     --form-background: white;
     --form-control-gap: .5rem;
     --page-max-width: 70rem;
+
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+body * {
+    line-height: 1.4em;
 }
 
 *,
 *::before, *::after {
   box-sizing: border-box;
 }
-    
+
+* {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700;1,800&display=swap');
+* {font-family: 'Open Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+h2,h3,h4,h5 {
+  margin-top:1.5em;
+}
+
+p, ul, ol, dl {
+ margin-top: .5rem; 
+}
+
+ul ul {
+  margin-top: 0;
+}
+
+h1 {font-size: 3.5rem; margin-top:0; padding-top: 1rem;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.5rem;}
+
+/*
+main {
+  border: 2px dotted brown;
+}
+
+article {
+  border: 2px dashed blue;
+}
+
+section {
+  border: 2px solid red;
+}
+section  section {
+  border: 3px double orange;
+}
+*/
+
  #main-filter-options {
     background-color: var(--filter-bg);
     border-radius: var(--widget-radius);
@@ -32,28 +88,15 @@
     margin-top: var(--widget-space);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700;1,800&display=swap');
-* {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 700;
-}
-
-h1,h2,h3,h4,h5,h6 {margin-bottom: 0;}
-
-h1 {font-size: 3.5rem; margin-top:0; padding-top: 1rem;}
-h2 {font-size: 2.5rem;}
-h3 {font-size: 2rem;}
-h4 {font-size: 1.5rem;}
-
-
-
 #header {
     margin-left: -1rem;
     margin-right: -1rem;
     position: relative;
-    background-color: mintcream;
+    background-color: #eee;
     border-bottom: 1px solid silver;
     box-sizing: content-box;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .headercontent {
@@ -64,8 +107,8 @@ h4 {font-size: 1.5rem;}
     background-size: 6rem auto;
     padding-bottom: .5rem;
 }
-.headercontent p, legend+p {
-    margin-top: 0;
+.headercontent p  {
+    margin-top: 1.5rem;
 }
 
 #header::after {
@@ -78,7 +121,7 @@ h4 {font-size: 1.5rem;}
     background-color:inherit;
     border-bottom: inherit;
     left:50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 1px);
     z-index: -1;
     height: 100%;
     
@@ -98,16 +141,9 @@ h4 {font-size: 1.5rem;}
 html {background-color: white; margin:0;padding:0rem;}
 body {background-color: white; max-width: var(--page-max-width); margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
 
-/*
-.intro {
-    background-color: #fffdee; border: 1px solid #ddd; padding: .5rem 1rem; border-radius: 1rem;
-    background-color: red;
-}*/
-
-.read-more {
-  margin-top: 2rem;
+.read-more,table {
+  margin-top: 1rem;
 }
-
 
 .self-url {margin-top: 2rem;}
 
@@ -177,8 +213,8 @@ button {
 
 /* details & summary */
 details {
-  padding: .5rem;
-  padding-left: 1.5rem;
+  padding: 1rem .25rem;
+  padding-left: 1.6rem;
   border: 1px solid transparent;
   background-color: oldlace;
   border-color: rosybrown;
@@ -305,6 +341,14 @@ fieldset {
     }
 }
 
+#customize[hidden] {
+    display: none;
+  }
+  
+
+#customize h2 {
+    margin-top: 0;
+  }
 
 #customize input {
  
@@ -342,26 +386,16 @@ nav#guide-toc ul ul {
   padding-left: 2rem;
 }
 
-/*
-@media screen and (min-width: 40rem) {
-    #filters {
-      display: flex;
-    }
-    #filters fieldset {
-      flex-grow: 1;
-      flex-basis: 50%;
-    }
-  }
 
-  */
-
-  legend {line-height: 1em;}
+  legend {line-height: 1.2em;}
 
   .intro {
     margin: 2rem 0;
     background-color: #ffff66;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 1rem 1rem 3rem;
     border-radius: 1rem;
+    font-size: 1.5em;
+
   }
 
   #filter-main legend {
@@ -377,42 +411,40 @@ nav#guide-toc ul ul {
 
   #customize {
     position: relative;
-    z-index:1;
-    margin-top:3rem;
+    z-index: 1;
+    margin-top: 3.7rem;
     margin-left: .25rem;
     margin-right: .25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .75rem;
   }
-  
   #customize::before {
     content:"";
     display: block;
     border: 4px solid #aaa;
-    top:-1rem;
+    top:-1.5rem;
     left:-1rem;
     right:-1rem;
     bottom: -1rem;
     position: absolute;
     z-index: -1;
-    box-shadow: 0 0 5px #444,
-      0 0 20px #aaa;
+    box-shadow: 0 0 5px #444, 0 0 20px #aaa;
     border-radius: 4px;
+    box-sizing: border-box;
   }
 
   @media screen and (min-width: 40rem) {
-  
     #filters {
-  
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
     }
-    
   }
   
   #filters label {
     border: 1px solid #fff;
   }
-  
   
   fieldset {
     border: none;
