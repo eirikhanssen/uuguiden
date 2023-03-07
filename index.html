@@ -17,7 +17,7 @@
             <legend>Hvordan vil du bruke veilederen?</legend>
             <ul class="intro">
                <li>Bruk veilederen som et oppslagsverk: <a href="#contents">gå til <strong>Innhold</strong></a></li>
-               <li>For tilpasset visning og anbefalte tema basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>Vis filter</strong></a></li>
+               <li>Få anbefalinger basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>filter</strong></a></li>
             </ul>
             <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
          </fieldset>
@@ -49,8 +49,8 @@
                      <li><label><input id="filter-topic-table" type="checkbox" data-topic="table"><span>Tabell</span></label></li>
                      <li><label><input id="filter-topic-image" type="checkbox" data-topic="image"><span>Bilde</span></label></li>
                      <ul>
-                        <li><label><input id="filter-topic-photo" type="checkbox" data-parent="filter-topic-images" data-topic="photo"><span>Foto og illustrasjon</span></label></li>
-                        <li><label><input id="filter-topic-infographics" type="checkbox" data-parent="filter-topic-images" data-topic="infographics"><span>Infografikk og diagram</span></label></li>
+                        <li><label><input id="filter-topic-photo" type="checkbox" data-parent="filter-topic-image" data-topic="photo"><span>Foto og illustrasjon</span></label></li>
+                        <li><label><input id="filter-topic-infographic" type="checkbox" data-parent="filter-topic-image" data-topic="infographic"><span>Infografikk og diagram</span></label></li>
                      </ul>
                      <li><label><input id="filter-topic-audio" type="checkbox" data-topic="audio"><span>Audio/lyd</span></label></li>
                      <ul>
@@ -370,8 +370,7 @@
                      personer som ikke vil kunne få den.</p>
                   <section id="topic-image-blindness_and_visual_impairments">
                      <h4>Synshemminger</h4>
-                     <p>Vi vet at det er <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden som er blind eller har en form for synshemming
-                           (WHO)</a>.
+                     <p>Vi vet at <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden er blind eller har en form for synshemming (WHO)</a>.
                         I tillegg er ca 8% av menn og 0.5% av kvinner har en form for fargeblindhet som gjør
                         at det er vanskelig eller umulig å skille enkelte farger fra hverandre.</p>
                      <p>Dette fører til at vi må følge noen retningslinjer for at bilder skal være tilgjenelige.
@@ -394,16 +393,27 @@
                            til bildet om at det er figuren som beskrevet rett over.</dd>
                         <dd>Vurder å presentere samme materialet i en tabell som er laget med tabellverktøyet.
                            En passende alternativ tekst kan være "figur som viser data i tabell 2".</dd>
+                        <dt>Bildet illustrerer et viktig poeng som ikke kan beskrives kort</dt>
+                        <dd>Vurder å skrive et avsnitt om de viktige poengene som bildet illustrerer rett før
+                           bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet slik
+                           forfatteren ønsker.. Da er det tilstrekkelig med en kort bildebeskrivelse.</dd>
                      </dl>
+                  </section>
+                  <section id="topic-image-infographic" data-rel="infographic image">
+                     <h4>Infografikk</h4>
+                     <p>Infografikk er bilder eller illustrasjoner som ofte illustrerer eller presenterer
+                        data.</p>
                   </section>
                   <section id="topic-image-">
                      <h4>Presentasjon av meningsbærende informasjon</h4>
-                     <dd>
-                        <dt>Bruk ikke kun farge til å formidle informasjon</dt>
-                        <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige
-                           kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig
-                           linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
-                     </dd>
+                     <dl>
+                        <dd>
+                           <dt>Bruk ikke kun farge til å formidle informasjon</dt>
+                           <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige
+                              kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig
+                              linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
+                        </dd>
+                     </dl>
                   </section>
                </article>
                <article id="topic-list">
