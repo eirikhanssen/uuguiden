@@ -43,7 +43,6 @@
                             <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button>
 
                             <button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>
-                           
                         </div>
                     </fieldset>
                     <xsl:comment>#filter-main</xsl:comment>
@@ -64,6 +63,10 @@
                     </section>                    
                     
                 </main>
+                <footer id="footer">
+                    <h2>Feedback</h2>
+                    <p>Hvis du vil legge igjen feedback kan du svare på <a href="https://nettskjema.no/a/317600">et kort spørreskjema om uuguiden (nettskjema.no)</a></p>
+                </footer>
             </body>
         </html>
     </xsl:template>
