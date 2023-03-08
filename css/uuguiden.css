@@ -518,3 +518,22 @@ button, #filters label, #filters input {
 .filtered #contents .filtered {
   display:inline-block;
 }
+
+code {
+  color: white;
+  background: #333;
+  padding: 0 .25rem;
+  border-radius: .2rem;
+}
+
+code .tag {color: deepskyblue;}
+code .att {color: yellowgreen;}
+code .val {color: orange;}
+
+nav li {
+  font-weight: bold;
+}
+
+nav ul ul li {
+  font-weight: normal;
+}

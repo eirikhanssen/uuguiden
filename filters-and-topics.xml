@@ -346,6 +346,27 @@
                 </li>
             </ul>
         </topic>
+        
+        <topic id="lang" rel="webpage text-document">
+            <title>Angi rett språk</title>
+            <p>At vi må angi språk i et dokument er nok ikke det første man tenker på, men 
+            det er en detalj som vi må huske på for å sørge for at teksten kan leses opp av 
+            syntetisk tale med rett språk.</p>
+            <p>Hvis f.eks angitt språk i et dokument eller en nettside er engelsk, men teksten er på Norsk Bokmål,
+            så vil talesyntesen lese den norske teksten med en engelsk uttale. Dette gjør det vanskeligere å forstå.</p>
+            
+            <sec id="webpage" rel="webpage">
+                <title>Angi rett språk i en nettside</title>
+                <p>Vi passer på at rett språk er angitt i html-taggen som f.eks: <code>&lt;<span class="tag">html </span> <span class="att">lang</span>=<span class="val">"nb"</span>></code></p>
+                <p>Dette angir at språket på hele nettsiden er Norsk Bokmål.</p>
+                <p>lang-attributtet kan vi plassere på alle html-tagger. Hvis vi bruker et fremmedord eller en setning på et annet språk enn det som er hovedspråket på nettsiden, 
+                    så kan vi overstyre språket ved å legge inn en lang-attributt med nytt språk.</p>
+                <p>Hvis hovedspråket er norsk, og vi har en engelsk setning, 
+                    så kan vi overstyre språk på den engelske setningen ved å legge den inn i en <code>&lt;<span class="tag">span</span>></code> slik: <code lang="en">&lt;<span class="tag">span </span><span class="att">lang</span>=<span class="val">"en"</span>>it's a piece of cake!&lt;<span class="tag">span</span>/></code></p>
+            </sec>
+            
+        </topic>
+        
     </topics>
     
 </filters-and-topics>
