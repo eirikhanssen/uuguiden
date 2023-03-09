@@ -363,8 +363,18 @@
                     så kan vi overstyre språket ved å legge inn en lang-attributt med nytt språk.</p>
                 <p>Hvis hovedspråket er norsk, og vi har en engelsk setning, 
                     så kan vi overstyre språk på den engelske setningen ved å legge den inn i en <code>&lt;<span class="tag">span</span>></code> slik: <code lang="en">&lt;<span class="tag">span </span><span class="att">lang</span>=<span class="val">"en"</span>>it's a piece of cake!&lt;<span class="tag">span</span>/></code></p>
+                <p>Se også <a href="https://www.uutilsynet.no/veiledning/sprak-i-koden/223"> Språk i koden (uutilsynet.no).</a></p>
             </sec>
             
+        </topic>
+        
+        <topic id="video" rel="video">
+            <title>Video</title>
+            <p>Se veiledninger fra uutilsynet om å lage tilgjengelig video som møter krav i WCAG-standarden:</p>
+            <ul>
+                <li><a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232">Video og lydopptak (uutilsynet)</a></li>
+                <li><a href="https://www.uutilsynet.no/wcag-standarden/sporsmal-og-svar-om-video/895">Spørsmål og svar om video (uutilsynet)</a></li>
+            </ul>
         </topic>
         
     </topics>
