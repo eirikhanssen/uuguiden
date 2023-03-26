@@ -14,9 +14,9 @@
             <head>
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-                <link rel="stylesheet" href="css/uuguiden.css?v=3.0b"/>
-                <link rel="stylesheet" href="css/debug.css?v=3.0b"/>
-                <script src="js/uuguiden.js?v=3.0b"></script> 
+                <link rel="stylesheet" href="css/uuguiden.css?v=4.0b1"/>
+                <link rel="stylesheet" href="css/debug.css?v=4.0b1"/>
+                <script src="js/uuguiden.js?v=4.0b1"></script> 
             </head>
             <body data-filter-main="show-all">
                 <header id="header">
