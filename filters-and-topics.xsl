@@ -10,7 +10,7 @@
     <xsl:mode on-no-match="shallow-copy"/>
     
     <xsl:template match="/">
-        <html lang="no">
+        <html lang="no" id="top">
             <head>
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -33,15 +33,16 @@
                     <fieldset id="filter-main">
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
-                        <ul class="intro">
-                            <li>Bruk veilederen som et oppslagsverk: <a href="#contents">gå til <strong>Innhold</strong></a></li>
-                            <li>Få anbefalinger basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>filter</strong></a></li>
-                        </ul>
+                        <ol class="intro">
+                            <li><label for="show-all-content-button">Se hele veilederen og bruk den som et oppslagsverk</label></li>
+                            <li><label for="open-filter-button">Åpne filter og få anbefalinger basert på innhold du jobber med</label></li>
+                        </ol>
                         
-                        <div class="fh">
-                            <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button>
-<!--<button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>-->
+                        <div class="introbuttons fh">
+                            <button id="show-all-content-button">Se hele veilederen</button>
+                            <button id="open-filter-button">Åpne filter</button>
                         </div>
+                        
                     </fieldset>
                     <xsl:comment>#filter-main</xsl:comment>
                     
@@ -52,12 +53,12 @@
                 <main>
                     <section id="contents">
                         <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
+                        
                         <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
                         <nav id="guide-toc"></nav>
                         <xsl:comment>#guide-toc skal bli generert av JS</xsl:comment>
                         
                         <xsl:apply-templates select="/filters-and-topics/topics"/>
-                        
                     </section>                    
                     
                 </main>

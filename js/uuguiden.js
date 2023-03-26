@@ -18,10 +18,9 @@ var uuguiden = function () {
     var customizer = document.querySelector("#customize");
     var skiplink = document.querySelector("#skiplink");
     var contents = document.querySelector("#contents");
+    var show_all_content_button = document.querySelector("#show-all-content-button");
+    var open_filter_button = document.querySelector("#open-filter-button");
 
-    function click_filter_main_customize_button() {
-        document.getElementById("filter-main-customize").click();
-    }
 
     function scroll_to_contents() {
         contents.scrollIntoView({behavior: "smooth"});
@@ -29,6 +28,10 @@ var uuguiden = function () {
 
     function activate_skiplink() {
         skiplink.click();
+    }
+
+    function open_filters() {
+        customizer.open=true;
     }
 
     function disable_unused_filters() {
@@ -66,14 +69,11 @@ var uuguiden = function () {
         }
     }
 
-    // when clicking the link that leads to the filter main customize button, also activate it.
-    document.querySelector("a[href='#filter-main-customize']").addEventListener('click',click_filter_main_customize_button,false);
-
+/*
     function filter_main_customize_button_action() {
-        filter_main_customize_button.setAttribute("data-selected", "selected");
-        filter_main_show_all_button.removeAttribute("data-selected");
+ 
         show_customize_section();
-    }
+    }*/
     
     //filter_main_customize_button.addEventListener('click', filter_main_customize_button_action, false);
 
@@ -82,15 +82,15 @@ var uuguiden = function () {
         filter_main_customize_button.removeAttribute("data-selected");
         hide_customize_section();
     }
-    filter_main_show_all_button.addEventListener('click', filter_main_show_all_button_action, false);
-
+    /*filter_main_show_all_button.addEventListener('click', filter_main_show_all_button_action, false);*/
+/*
     function show_customize_section() {
         customizer.removeAttribute("hidden");
     }
 
     function hide_customize_section() {
         customizer.setAttribute("hidden", "hidden");
-    }
+    }*/
 
     // WIP
     function update_toc() {
@@ -306,16 +306,21 @@ var uuguiden = function () {
 
         } // apply_filtering()
 
-        // add the event listener to the confirm button
-        document.getElementById('filter-main-show-all').addEventListener("click", show_all_topics, false);
+        // add event listener to the show all content button
+        show_all_content_button.addEventListener("click", show_all_topics, false);
+        show_all_content_button.addEventListener("click",scroll_to_contents,false);
 
+        // add event listener to the open filter button
+        open_filter_button.addEventListener("click",open_filters,false);
+
+        // add the event listener to the confirm button(s)
         for(let i = 0; i<confirm_choices_buttons.length; i++) {
             confirm_choices_buttons[i].addEventListener("click", apply_filtering, false);
             confirm_choices_buttons[i].addEventListener("click", close_filter, false);
         }
     } // initialize_filtering ()
 
-
+    
 
     // get_selected_topics();
 

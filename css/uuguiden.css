@@ -314,7 +314,7 @@ margin: 0rem 0rem 0rem 0rem;
 
 #contents li > details > summary {} 
 /* ------------------- */
-label {
+#filters label {
   background: var(--label-bg);
   margin: var(--widget-margin);
   padding: var(--widget-space);
@@ -476,7 +476,22 @@ legend {line-height: 1.2em;}
   padding: 1rem 1rem 1rem 3rem;
   border-radius: 1rem;
   font-size: 1.5em;
+}
 
+.intro label {
+  cursor: pointer;
+  display: block;
+}
+.intro li+li {
+  margin-top: var(--filterspadding);
+}
+
+.intro label:hover {
+  text-decoration: underline;
+}
+
+.introbuttons button {
+  flex-basis: 40%;
 }
 
 #filter-main legend {
