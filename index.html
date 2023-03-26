@@ -11,20 +11,21 @@
             <h1>uuguiden.no</h1>
             <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
          </div>
-      </header><a class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a><section>
+      </header><a id="skiplink" class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a><section>
          <fieldset id="filter-main">
             <legend>Hvordan vil du bruke veilederen?</legend>
             <ul class="intro">
                <li>Bruk veilederen som et oppslagsverk: <a href="#contents">gå til <strong>Innhold</strong></a></li>
                <li>Få anbefalinger basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>filter</strong></a></li>
             </ul>
-            <div class="gh2"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button><button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button></div>
+            <div class="fh"><button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button></div>
          </fieldset>
          <!--#filter-main-->
          <details id="customize">
             <summary>
                <h2>Filter</h2>
             </summary>
+            <div class="filterbuttons fh"><button id="confirm-choices-button-top">Aktiver filterinnstillinger</button><button id="reset-filter-button-top">Nullstill filter</button></div>
             <div id="filters">
                <fieldset id="filter-content-type">
                   <legend>Kryss av for innhold du jobber med nå</legend>
@@ -93,7 +94,9 @@
                      </li>
                   </ul>
                </fieldset>
-            </div><button id="confirm-choices-button">Aktiver filter</button></details>
+            </div>
+            <div class="filterbuttons fh"><button id="confirm-choices-button-bottom">Aktiver filter</button><button id="reset-filter-button-bottom">Nullstill filter</button></div>
+         </details>
       </section>
       <!--#customize-->
       <main>

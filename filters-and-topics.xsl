@@ -25,7 +25,7 @@
                         <p>Tilpasset veileder for universell utforming av digitalt innhold.</p>
                     </div>
                 </header>
-                <a class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
+                <a id="skiplink" class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
                 
                 <section>
                     <!-- <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
@@ -38,10 +38,9 @@
                             <li>Få anbefalinger basert på hva du jobber med nå: <a href="#filter-main-customize">gå til <strong>filter</strong></a></li>
                         </ul>
                         
-                        <div class="gh2">
+                        <div class="fh">
                             <button id="filter-main-show-all" data-filter="show-all" data-selected="selected">Se hele veilederen<span class="not-selected"> (lukk filter)</span><span class="selected">  (valgt)</span></button>
-
-                            <button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>
+<!--<button id="filter-main-customize" data-filter="customize">Vis filter<span class="selected">  (valgt)</span></button>-->
                         </div>
                     </fieldset>
                     <xsl:comment>#filter-main</xsl:comment>
@@ -73,10 +72,21 @@
     <xsl:template match="filters">
         <details id="customize">
             <summary><h2>Filter</h2></summary>
+
+            <div class="filterbuttons fh">
+                <button id="confirm-choices-button-top">Aktiver filterinnstillinger</button>  
+                <button id="reset-filter-button-top">Nullstill filter</button>
+            </div>
+
             <div id="filters">
                 <xsl:apply-templates/>    
             </div>
-            <button id="confirm-choices-button">Aktiver filter</button>
+            
+            <div class="filterbuttons fh">
+                <button id="confirm-choices-button-bottom">Aktiver filter</button>  
+                <button id="reset-filter-button-bottom">Nullstill filter</button>
+            </div>
+            
         </details>
     </xsl:template>
     

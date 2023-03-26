@@ -10,15 +10,25 @@ var uuguiden = function () {
         }
     }
 
-
-
     var filter_main_customize_button = document.querySelector("#filter-main-customize");
     var filter_main_show_all_button = document.querySelector("#filter-main-show-all");
-    var confirm_choices_button = document.getElementById("confirm-choices-button");
-    var section_customize = document.querySelector("#customize");
+    var filter_checkboxes = document.querySelectorAll("#customize input");
+    var confirm_choices_buttons = document.querySelectorAll("button[id^=confirm-choices-button]");
+    var reset_filters_buttons = document.querySelectorAll("button[id^=reset-filter-button]");
+    var customizer = document.querySelector("#customize");
+    var skiplink = document.querySelector("#skiplink");
+    var contents = document.querySelector("#contents");
 
     function click_filter_main_customize_button() {
         document.getElementById("filter-main-customize").click();
+    }
+
+    function scroll_to_contents() {
+        contents.scrollIntoView({behavior: "smooth"});
+    }
+
+    function activate_skiplink() {
+        skiplink.click();
     }
 
     function disable_unused_filters() {
@@ -64,7 +74,8 @@ var uuguiden = function () {
         filter_main_show_all_button.removeAttribute("data-selected");
         show_customize_section();
     }
-    filter_main_customize_button.addEventListener('click', filter_main_customize_button_action, false);
+    
+    //filter_main_customize_button.addEventListener('click', filter_main_customize_button_action, false);
 
     function filter_main_show_all_button_action() {
         filter_main_show_all_button.setAttribute("data-selected", "selected");
@@ -74,11 +85,11 @@ var uuguiden = function () {
     filter_main_show_all_button.addEventListener('click', filter_main_show_all_button_action, false);
 
     function show_customize_section() {
-        section_customize.removeAttribute("hidden");
+        customizer.removeAttribute("hidden");
     }
 
     function hide_customize_section() {
-        section_customize.setAttribute("hidden", "hidden");
+        customizer.setAttribute("hidden", "hidden");
     }
 
     // WIP
@@ -138,6 +149,12 @@ var uuguiden = function () {
         nav.innerHTML = "";
         nav.appendChild(nav_list);
     } // update_toc()
+
+    function reset_filters() {
+        for(let i = 0; i<filter_checkboxes.length; i++) {
+            filter_checkboxes[i].checked=false;
+        }
+    } // reset_filters()
 
     function initialize_filtering() {
         var all_topics = document.querySelectorAll("#topics > article");
@@ -232,6 +249,13 @@ var uuguiden = function () {
             return false;
         }
 
+
+        function close_filter() {
+            customizer.open=false;
+        }
+
+        
+
         function apply_filtering() {
 
             // dmsg("apply_filtering()");
@@ -276,9 +300,6 @@ var uuguiden = function () {
                         }
                     }
                 }
-    
-    
-                
             }
 
             
@@ -287,8 +308,11 @@ var uuguiden = function () {
 
         // add the event listener to the confirm button
         document.getElementById('filter-main-show-all').addEventListener("click", show_all_topics, false);
-        document.querySelector("#confirm-choices-button").addEventListener("click", apply_filtering, false);
 
+        for(let i = 0; i<confirm_choices_buttons.length; i++) {
+            confirm_choices_buttons[i].addEventListener("click", apply_filtering, false);
+            confirm_choices_buttons[i].addEventListener("click", close_filter, false);
+        }
     } // initialize_filtering ()
 
 
@@ -374,6 +398,7 @@ var uuguiden = function () {
 
     }
 
+
     // when checking a checkbox, also set parent checkbox to checked
 
     // when unchecking a checkbox, also uncheck it's children
@@ -382,15 +407,22 @@ var uuguiden = function () {
     initialize_filtering();
 
     // refresh table of contents when confirming filtering
-    confirm_choices_button.addEventListener('click', update_toc, false);
+    for(let i = 0; i<confirm_choices_buttons.length; i++) {
+        confirm_choices_buttons[i].addEventListener("click", update_toc, false);
+        //confirm_choices_buttons[i].addEventListener("click", activate_skiplink, false);
+        confirm_choices_buttons[i].addEventListener("click", scroll_to_contents, false);
+    }
 
+    //
+    for(let i = 0; i<reset_filters_buttons.length; i++) {
+        reset_filters_buttons[i].addEventListener("click", reset_filters, false);
+    }
+    
     // disable unused_filters on page load
     disable_unused_filters();
 
     // generate table of contents on page load
     update_toc();
 }
-
-
 
 window.addEventListener('load', uuguiden, false);
