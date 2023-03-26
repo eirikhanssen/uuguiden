@@ -13,7 +13,6 @@
         <html lang="no">
             <head>
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
-                <meta charset="UTF-8"/>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
                 <link rel="stylesheet" href="css/uuguiden.css?v=3.0b"/>
                 <link rel="stylesheet" href="css/debug.css?v=3.0b"/>
@@ -31,7 +30,7 @@
                 <section>
                     <!-- <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
                         med nå?</p>-->
-                    <fieldset id="filter-main" action="" >
+                    <fieldset id="filter-main">
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
                         <ul class="intro">
@@ -72,17 +71,17 @@
     </xsl:template>
     
     <xsl:template match="filters">
-        <section id="customize" hidden="hidden">
-            <h2>Filter</h2>
+        <details id="customize">
+            <summary><h2>Filter</h2></summary>
             <div id="filters">
                 <xsl:apply-templates/>    
             </div>
             <button id="confirm-choices-button">Aktiver filter</button>
-        </section>
+        </details>
     </xsl:template>
     
     <xsl:template match="filter">
-
+        
         <xsl:variable name="fieldset_prefix" select="'filter-'"/>
         <li>
             <label>
@@ -131,7 +130,8 @@
                         </xsl:variable>
                         <xsl:attribute name="data-children" select="$filter_children_string"></xsl:attribute>
                     </xsl:if>
-                </input><span><xsl:value-of select="."/></span></label>
+                </input><span><xsl:value-of select="text()[1]"/></span></label>
+            <xsl:apply-templates select="filter-group"/>
         </li>
     </xsl:template>
     

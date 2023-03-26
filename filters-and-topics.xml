@@ -1,67 +1,81 @@
 <filters-and-topics>
     
     <filters>
-        <fieldset legend="Kryss av for innhold du jobber med nå">
+        <fieldset prefix="content-type" legend="Kryss av for innhold du jobber med nå">
+            
             <filter-group>
-                <filter topic="text-document">Tekstdokument</filter>
-                <filter-group parent="topic-text-document">
-                    <filter topic="plaintext">Ren tekst (.txt)</filter>
-                    <filter topic="docx-document">Word-dokumenter (.docx)</filter>
-                    <filter topic="odt-document">OpenDocument (.odt)</filter>
-                    <filter topic="apple-pages-document">Apple Pages (.Pages)</filter>
-                </filter-group>
+                <filter topic="text-document">Tekstdokument
+                    <filter-group parent="topic-text-document">
+                        <filter topic="plaintext">Ren tekst (.txt)</filter>
+                        <filter topic="docx-document">Word-dokumenter (.docx)</filter>
+                        <filter topic="odt-document">OpenDocument (.odt)</filter>
+                        <filter topic="apple-pages-document">Apple Pages (.Pages)</filter>
+                    </filter-group>
+                </filter>
+                
                 <filter topic="webpage">Nettside</filter>
                 
-                <filter topic="presenter">Presentasjon</filter>
-                <filter-group parent="topic-presenter">
-                    <filter topic="powerpoint">PowerPoint (.pptx)</filter>
-                    <filter topic="impress">Impress (.odp)</filter>
-                    <filter topic="keynote">Keynote (.key)</filter>
-                    <filter topic="sozi">Sozi</filter>
-                    <filter topic="google-slides">Google Slides</filter>
-                </filter-group>
+                <filter topic="presenter">Presentasjon
+                    <filter-group parent="topic-presenter">
+                        <filter topic="powerpoint">PowerPoint (.pptx)</filter>
+                        <filter topic="impress">Impress (.odp)</filter>
+                        <filter topic="keynote">Keynote (.key)</filter>
+                        <filter topic="sozi">Sozi</filter>
+                        <filter topic="google-slides">Google Slides</filter>
+                    </filter-group>
+                </filter>
                 
                 <filter topic="text">Ren tekst</filter>
                 <filter topic="list">Liste</filter>
                 <filter topic="table">Tabell</filter>
                 
-                <filter topic="image">Bilde</filter>
-                <filter-group parent="topic-image">
-                    <filter topic="photo">Foto og illustrasjon</filter>
-                    <filter topic="infographic">Infografikk og diagram</filter>
-                </filter-group>
-                
-                <filter topic="audio">Audio/lyd</filter>
-                <filter-group parent="topic-audio">
-                    <filter topic="podcast">Podcast</filter>
-                    <filter topic="vision">Synstolking</filter>
-                </filter-group>
+                <filter topic="image">Bilde
+                    <filter-group parent="topic-image">
+                        <filter topic="photo">Foto og illustrasjon</filter>
+                        <filter topic="infographic">Infografikk og diagram</filter>
+                    </filter-group>
+                </filter>
+                                
+                <filter topic="audio">Audio/lyd
+                    <filter-group parent="topic-audio">
+                        <filter topic="podcast">Podcast</filter>
+                        <filter topic="vision">Synstolking</filter>
+                    </filter-group>
+                </filter>
                 <filter topic="video">Video</filter>
+
             </filter-group>
+
         </fieldset>
         
-        <fieldset legend="Kryss av for program du bruker nå">
+        <fieldset prefix="software" legend="Kryss av for program du bruker nå">
             <filter-group>
-                <filter app="text" parent="topic-text-document">Tekstbehandlingsprogram</filter>
-                <filter-group parent="app-text">
-                    <filter app="word">Microsoft Word</filter>
-                    <filter app="writer">Libre Office Writer</filter>
-                    <filter app="pages">Apple Pages</filter>
-                </filter-group>
-                <filter app="web-lcms" parent="topic-webpage">Publiseringssystem for nettsider (CMS/LMS)</filter>
-                <filter-group parent="app-web-lcms">
-                    <filter app="openedx">OpenEdx</filter>
-                    <filter app="canvas">Canvas</filter>
-                    <filter app="wordpress">Wordpress</filter>
-                </filter-group>
-                <filter app="presenter" parent="topic-presenter">Presentasjonsprogram</filter>
-                <filter-group parent="app-presenter">
-                    <filter app="powerpoint">PowerPoint</filter>
-                    <filter app="impress">Impress</filter>
-                    <filter app="keynote">Keynote</filter>
-                    <filter app="sozi">Sozi</filter>
-                    <filter app="google-slides">Google Slides</filter>
-                </filter-group>
+                <filter app="text" parent="topic-text-document">Tekstbehandlingsprogram
+                    <filter-group parent="app-text">
+                        <filter app="word">Microsoft Word</filter>
+                        <filter app="writer">Libre Office Writer</filter>
+                        <filter app="pages">Apple Pages</filter>
+                    </filter-group>
+                </filter>
+                
+                <filter app="web-lcms" parent="topic-webpage">Publiseringssystem for nettsider (CMS/LMS)
+                    <filter-group parent="app-web-lcms">
+                        <filter app="openedx">OpenEdx</filter>
+                        <filter app="canvas">Canvas</filter>
+                        <filter app="wordpress">Wordpress</filter>
+                    </filter-group>
+                </filter>
+                
+                <filter app="presenter" parent="topic-presenter">Presentasjonsprogram
+                    <filter-group parent="app-presenter">
+                        <filter app="powerpoint">PowerPoint</filter>
+                        <filter app="impress">Impress</filter>
+                        <filter app="keynote">Keynote</filter>
+                        <filter app="sozi">Sozi</filter>
+                        <filter app="google-slides">Google Slides</filter>
+                    </filter-group>
+                </filter>
+                
             </filter-group>
         </fieldset>
     </filters>
@@ -71,41 +85,42 @@
             <title>Dokumentstruktur for tilgjengelighet</title>
             <sec id="assistive_technology">
                 <title>Støtteteknologi</title>
-                <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert digitalt innhold til en form de kan ha nytte av. Eksempler på     støtteteknologi: <ul>
+                <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert digitalt innhold til en form de kan ha nytte av. Eksempler på støtteteknologi:</p>
+                <ul>
                     <li>skjermleser</li>
                     <li>leselist</li>
                     <li>bryterstyring</li>
                 </ul>
-                </p>
+                
             </sec>
             <sec id="code_right">
                 <title>Ting må kodes slik de ser ut</title>
                 <p>En viktig jobb når vi lager digitalt innhold er å sørge for at innholdet er kodet slik det ser ut.</p>
                 <p>Støtteteknologi bruker disse kodene for å kunne fortelle brukerene hva slags type innhold det er, og også å gi brukerne effektiv tilgang til innholdet</p>
-                <p>Godt kodet innhold kan f.eks la blinde personer:
+                <p>Godt kodet innhold kan f.eks la blinde personer:</p>
                     <ul>
                         <li>navigere raskt gjennom overskrifter</li>
                         <li>få lest opp alle lenker i et dokument</li>
                     </ul>
-                </p>
-                <p>For å få dette til bruker vi innebygde verktøy i redigeringsprogram til å lage forskjellig innhold:
+                
+                <p>For å få dette til bruker vi innebygde verktøy i redigeringsprogram til å lage forskjellig innhold:</p>
                     <ul>
                         <li>Lag overskrifter med bruk av innebygde overskriftsstiler eller overskriftsverktøy</li>
                         <li>Lag tabeller med tabellverktøy</li>
                         <li>Lag lister med listeverktøy</li>
                     </ul>
-                </p>
+                
             </sec>
             <sec id="discoverable">
                 <title>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte det</title>
-                <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere det på en måte som gjøre det mulig å oppfatte. Noen eksempler på hvordan vi kan gjøre ting mulig å oppfatte for personer som i utgangspunktet ikke kan oppfatte innholdet:
+                <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere det på en måte som gjøre det mulig å oppfatte. Noen eksempler på hvordan vi kan gjøre ting mulig å oppfatte for personer som i utgangspunktet ikke kan oppfatte innholdet:</p>
                     <ul>
                         <li>Et bilde trenger et tekstalternativ - vi setter inn alternativ tekst</li>
                         <li>Tale i video transkriberes og/eller tekstes til undertekster</li>
                         <li>Tale i lyd eller podcast transkriberes og kan leses på en nettside</li>
                         <li>Handlig i video som ikke kan høres blir synstolket - et lydspor som forteller hva som skjer</li>
-                        <li>Man setter ikke inn et bilde av en tabell. Man bygger tabellen opp med tabellverktøy så kan en skjermleser presentere data i tabellen for brukeren.</li>                </ul>
-                </p>
+                        <li>Man setter ikke inn et bilde av en tabell. Man bygger tabellen opp med tabellverktøy så kan en skjermleser presentere data i tabellen for brukeren.</li>
+                    </ul>
             </sec>
         </topic>
         
@@ -113,10 +128,10 @@
             <title>Tilgjengelighetssjekk</title>
             <sec id="accessibility-check-in-word" app="word">
                 <title>Bruk tilgjengelighetssjekken i Word</title>
-                <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:
+                <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:</p>
                     <ul>
                         <li><a href="https://support.microsoft.com/nb-no/office/gj%C3%B8re-word-dokumenter-tilgjengelige-for-personer-med-funksjonshemninger-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Gjøre Word-dokumenter tilgjengelige for personer med funksjonshemninger (Kundestøtte for Microsoft 365)</a></li>
-                    </ul></p>
+                    </ul>
             </sec>
         </topic>
         
@@ -125,7 +140,7 @@
             <p>God og rett bruk av overkskrifter er noe av det viktigste vi gjør for å lage tilgjengelig innhold.</p>
             <p>Overskrifter lar oss raskt scanne innholdet for å få en oversikt over det.</p>
             <p>For de som bruker skjermleser, kan man gi skjemleseren en kommando for å få presentert alle overskriftene i et dokument. Så får man raskt oversikt over innholdet og kan hoppe til en av overskriftene i innholdet for å lese derfa.</p>
-            <p>NB: Dette forutsetter at overskriftene er kodet på rett måte:
+            <p>NB: Dette forutsetter at overskriftene er kodet på rett måte:</p>
                 <ul>
                     <li>Bruk innebygde overskrifter til å strukturere dokumentet</li>
                     <li>Bruk klart og forståelig språk som så kort som mulig beskriver innholdet</li>
@@ -136,19 +151,19 @@
                     <li>Visuelt bør en overskrift av høyere nivå skille seg fra brødtekst og andre overskrifter ved å være større.</li>
                     <li><em>Ikke lag jukseoverskrifter</em> ved å f.eks kun endre på tekststørrelse og gjøre den fet - dette er ikke noe som en skjermleser forstår</li>
                 </ul>
-            </p>
+            
             
             <sec id="app_text" app="text" rel="text-document">
                 <title>Bruk innebygde overskriftsstiler i skriveprogram</title>
                 <p>De innebygde overskriftsstilene i skriveprogrammer har en egenskap som heter overskriftsnivå eller outline-level. Denne egenskapen forteller om overskriftshierarkiet og brukes av skjermlesere for å presentere overskrifter og muliggjør effektiv navigering.</p>
-                <p>I skriveprogram bruker du følgende stiler til overskrifter: 
+                <p>I skriveprogram bruker du følgende stiler til overskrifter: </p>
                     <ul>
                         <li>Overskrift 1 (Heading 1) - bruk denne kun på hovedoverskriften</li>
                         <li>Overskrift 2 (Heading 2)</li>
                         <li>Overskrift 3 (Heading 3)</li>
                         <li>(...)</li>
                     </ul>
-                </p>
+              
             </sec>
             
             <sec id="webpage" rel="webpage">
@@ -321,13 +336,11 @@
                 <p>Infografikk er bilder eller illustrasjoner som ofte illustrerer eller presenterer data.</p>
             </sec>
             
-            <sec id="">
+            <sec id="presenting-information">
                 <title>Presentasjon av meningsbærende informasjon</title>
                 <dl>
-                    <dd>
-                        <dt>Bruk ikke kun farge til å formidle informasjon</dt>
-                        <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
-                    </dd>
+                    <dt>Bruk ikke kun farge til å formidle informasjon</dt>
+                    <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige kategorier med kun bruk av forskjellig farge. Bruk i tillegg mønster eller forskjellig linjestil som f.eks heltrukken, striplet, prikket linje for å skille kategorier.</dd>
                 </dl>
             </sec>
         </topic>
