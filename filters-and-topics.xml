@@ -36,7 +36,6 @@
                     <filter topic="podcast">Podcast</filter>
                     <filter topic="vision">Synstolking</filter>
                 </filter-group>
-                
                 <filter topic="video">Video</filter>
             </filter-group>
         </fieldset>
@@ -110,7 +109,7 @@
             </sec>
         </topic>
         
-        <topic id="checking_accessibility">
+        <topic id="checking_accessibility" rel="webpage app-text">
             <title>Tilgjengelighetssjekk</title>
             <sec id="accessibility-check-in-word" app="word">
                 <title>Bruk tilgjengelighetssjekken i Word</title>
@@ -197,7 +196,7 @@
             </ul>
         </topic>
         
-        <topic id="presenter" topic="presenter">
+        <topic id="presenter" rel="presenter">
             <title>Presentasjon/lysbilde</title>
             
             <sec id="heading">
@@ -225,7 +224,7 @@
             </sec>
         </topic>
         
-        <topic id="table">
+        <topic id="table" rel="table">
             <title>Tabell</title>
             <p>Kort huskeliste for tabeller:</p>
             <ul>
@@ -333,7 +332,7 @@
             </sec>
         </topic>
         
-        <topic id="list">
+        <topic id="list" rel="list">
             <title>Liste</title>
             <p>Kort huskeliste for lister:</p>
             <ul>
@@ -347,13 +346,11 @@
             </ul>
         </topic>
         
-        <topic id="lang" rel="webpage text-document">
+<!--        <topic id="lang" rel="webpage text-document">
             <title>Angi rett språk</title>
-            <p>At vi må angi språk i et dokument er nok ikke det første man tenker på, men 
-            det er en detalj som vi må huske på for å sørge for at teksten kan leses opp av 
-            syntetisk tale med rett språk.</p>
-            <p>Hvis f.eks angitt språk i et dokument eller en nettside er engelsk, men teksten er på Norsk Bokmål,
-            så vil talesyntesen lese den norske teksten med en engelsk uttale. Dette gjør det vanskeligere å forstå.</p>
+            <p>Talesyntese bruker språkangivelse for å velge hvilken stemme eller hvilket språk som skal leses opp.</p>
+            <p>Hvis det ikke er angitt språk språk i et dokument eller en nettside, eller at angitt språk ikke stemmer over ens med språket som er i teksten
+               så risikerer vi at teksten blir lest opp med feil språk av talesyntesen. Dette gjør det vanskeligere å forstå.</p>
             
             <sec id="webpage" rel="webpage">
                 <title>Angi rett språk i en nettside</title>
@@ -366,14 +363,77 @@
                 <p>Se også <a href="https://www.uutilsynet.no/veiledning/sprak-i-koden/223"> Språk i koden (uutilsynet.no).</a></p>
             </sec>
             
+            <sec id="lcms" app="web-lcms">
+                <title>Angi språk i et publiseringssystem for nettsider</title>
+                <p>De som installerer et publiseringssystem for nettsider har ansvar å angi hovedspråket til nettsidene.</p>
+            </sec>
+            
+        </topic>
+-->        
+        <topic id="audio" rel="audio">
+            <title>Lyd</title>
+            <p>Noen personer kan ikke høre og svært mange har nedsatt hørsel. <a href="https://www.fhi.no/ml/miljo/stoy/om-horselstap/">Omtrent 10 prosent av befolkningen har et hørselstap som svekker evnen til å kommunisere, og andelen øker med alderen (fhi.no)</a>.
+               Derfor er hovedregelen at forhåndsinnspilt lyd må ha et tekstalternativ.</p>
+            <p>Tekstalternativet bør ligge i nærhet til lydavspillingen, og kan være:</p>
+            <ul>
+                <li>En transkripsjon av lydinnholdet</li>
+                <li>En lenke til et tekstdokument eller nettside med tilsvarene innhold som lydfilen</li>
+            </ul>
+            <sec id="unntak">
+                <title>Unntak</title>
+                <p>Hvis lydmaterialet i seg selv er et alternativ for tekstlig innhold, er det <a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232#unntak">unntak fra krav om å ha et tekstalternativ for lydmaterialet (uutilsynet.no)</a>.</p>
+            </sec>
+            
+            <sec id="sjekkliste">
+                <title>Sjekkliste</title>
+            <p>Her er flere ting å tenke på hvis du bruker lyd i innholdet ditt:</p>
+            <dl>
+                <dt>Lydkvalitet og komprimering</dt>
+                <dd>Finn en balanse mellom kvalitet og komprimering. Høyere komprimering kan redusere filstørrelsen, 
+                    men kan også gå ut over kvaliteten. Noen personer har nedsatt hørsel i frekvensområdet som brukes i dagligtale, 
+                    og da kan tale bli spesielt vanskelig å oppfatte dersom lyden er komprimert for mye.</dd>
+                <dt>Signal/støyforhold og bakgrunnsstøy</dt>
+                <dd>I et hvert opptak vil det være noe støy. Støykilder kan f.eks. være opptaksutstyr som mikrofoner eller elektronisk støy fra elektriske apparater eller innstallasjoner.
+                    Sørg for gode opptaksforhold for å redusere støy i forhold til signalet (den lyden man ønsker skal bli tatt opp). 
+                    Hvis det er tale i opptaket og det samtidig er bakgrunnslyder, som f.eks. musikk eller andre lyder, 
+                    så vil det for noen bli svært krevende å oppfatte talen.</dd>
+                <dt>Informasjon i forhåndsinnspilt lyd må også komme frem i tekst</dt>
+                <dd>Det er mange personer som har forskjellig grad av hørselssvekkelser eller tap av hørsel som er avhengig av å kunne lese tekst for å få med seg innholdet.
+                Teksten bør være tilgjengelig nær lydavspilleren. Som et minimum bør det være transkripsjon av lyden. 
+                Hvis det er ressursmessig mulig og teksten er bearbeidet litt, kan den være i form av en nettside med overskrifter og angivelse av hvem som snakker. 
+                Dette vil hørselshemmende sette pris på.</dd>
+            </dl>
+            </sec>
+            
+            <sec id="podcast" rel="podcast">
+                <title>Podcast</title>
+                <p>Forhåndsinnspilt lyd må være tekstet. Podcast er også forhåndsinnspilt lydmateriale, så husk på teksalternativ til podcast! Les mer på <a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232#lydopptak_">Video og lydopptak - lydopptak (uutilsyet.no)</a></p>
+            </sec>
         </topic>
         
         <topic id="video" rel="video">
             <title>Video</title>
+            <p>For forhåndsinnspilt video må du tenke på at informasjonen i video må kunne være tilgjengelig for personer som har synshemming eller hørselshemming.</p>
+            <sec id="undertekster">
+                <title>Undertekster for hørselshemmede</title>
+                <p>For å ikke gå glipp av handling og informasjon er hørselshemmede er avhengig av undertekster. 
+                Undertekster for hørselshemmede skal også inneholde informasjon om lyder som er viktige for handlingen.</p></sec>
+            <sec>
+                <title>Synstolking for synshemmede</title>
+                <p>Synshemmede som kan høre har kun lyden å støtte seg på, og er avhengig av synstolking for å ikke gå glipp av viktig handling og informasjon. 
+                    synstoling kan være et eget lydspor som beskriver ting som skjer som ikke kan oppfattes kun med originallyden i videoen.</p>
+            </sec>
             <p>Se veiledninger fra uutilsynet om å lage tilgjengelig video som møter krav i WCAG-standarden:</p>
             <ul>
-                <li><a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232">Video og lydopptak (uutilsynet)</a></li>
-                <li><a href="https://www.uutilsynet.no/wcag-standarden/sporsmal-og-svar-om-video/895">Spørsmål og svar om video (uutilsynet)</a></li>
+                <li>
+                    <a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232">Video og
+                        lydopptak (uutilsynet)</a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.uutilsynet.no/wcag-standarden/sporsmal-og-svar-om-video/895"
+                        >Spørsmål og svar om video (uutilsynet)</a>
+                </li>
             </ul>
         </topic>
         

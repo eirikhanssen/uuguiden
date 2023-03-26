@@ -21,6 +21,41 @@ var uuguiden = function () {
         document.getElementById("filter-main-customize").click();
     }
 
+    function disable_unused_filters() {
+        console.log("disable_unused_filters()");
+        var app_filters = document.querySelectorAll("#filters [data-app]");
+        var topic_filters = document.querySelectorAll("#filters [data-topic]");
+
+        function times_used(attribute, value) {
+            var elements = document.querySelectorAll('main ['+ attribute + '*=' + value + ']');
+            //console.log('main ['+ attribute + '=' + value + ']');
+            return elements.length;
+        }
+
+        // ikke klar!
+        function disable_filter(el) {
+            ///el.parent.parent.parent.classList.add('disabled');
+            console.log("removing: " + el.id);
+            el.parentElement.parentElement.classList.add('disabled');
+        }
+
+        for(let i=0; i<app_filters.length; i++) {
+            if(times_used("data-app", app_filters[i].dataset.app) == 0) {
+                disable_filter(app_filters[i]);
+            } else {
+                console.log("keeping: " + app_filters[i].id);
+            }
+        }
+
+        for(let i=0; i<topic_filters.length; i++) {
+            if(times_used("data-rel", topic_filters[i].dataset.topic) == 0) {
+                disable_filter(topic_filters[i]);
+            } else {
+                console.log("keeping: " + topic_filters[i].id);
+            }
+        }
+    }
+
     // when clicking the link that leads to the filter main customize button, also activate it.
     document.querySelector("a[href='#filter-main-customize']").addEventListener('click',click_filter_main_customize_button,false);
 
@@ -348,6 +383,9 @@ var uuguiden = function () {
 
     // refresh table of contents when confirming filtering
     confirm_choices_button.addEventListener('click', update_toc, false);
+
+    // disable unused_filters on page load
+    disable_unused_filters();
 
     // generate table of contents on page load
     update_toc();
