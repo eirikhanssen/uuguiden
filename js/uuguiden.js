@@ -20,6 +20,7 @@ var uuguiden = function () {
     var contents = document.querySelector("#contents");
     var show_all_content_button = document.querySelector("#show-all-content-button");
     var open_filter_button = document.querySelector("#open-filter-button");
+    var permalink_container = document.querySelector("#permalink-container");
 
 
     function scroll_to_contents() {
@@ -40,6 +41,17 @@ var uuguiden = function () {
 
     function close_filters() {
         customizer.open=false;
+    }
+
+    // when filters are applied, generate a permalink that can be used to apply the filters on page load
+    // add this link to the permalink_container
+    function generate_permalink() {
+        // TODO
+    }
+
+    // to be run on page load - if filters are in the url-string, activate them
+    function apply_permalink_filters() {
+        // TODO
     }
 
     function disable_unused_filters() {

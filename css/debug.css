@@ -14,3 +14,12 @@ body[data-filter-main=by-software] {
     opacity:0.5;
 }
 
+/* debugging func to hide unused filters*/
+.disabled {
+    color: magenta;
+  }
+  
+  .disabled li:not(.disabled) {
+    /* parent li is disabled but not the current li */
+    color: cyan;
+  }

@@ -53,7 +53,7 @@
                 <main>
                     <section id="contents">
                         <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
-                        
+                        <div id="permalink-container"></div>
                         <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
                         <nav id="guide-toc"></nav>
                         <xsl:comment>#guide-toc skal bli generert av JS</xsl:comment>
