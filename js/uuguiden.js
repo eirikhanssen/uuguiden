@@ -26,12 +26,20 @@ var uuguiden = function () {
         contents.scrollIntoView({behavior: "smooth"});
     }
 
+    function scroll_to_customizer() {
+        customizer.scrollIntoView({behavior: "smooth"});
+    }
+
     function activate_skiplink() {
         skiplink.click();
     }
 
     function open_filters() {
         customizer.open=true;
+    }
+
+    function close_filters() {
+        customizer.open=false;
     }
 
     function disable_unused_filters() {
@@ -308,10 +316,12 @@ var uuguiden = function () {
 
         // add event listener to the show all content button
         show_all_content_button.addEventListener("click", show_all_topics, false);
+        show_all_content_button.addEventListener("click", close_filters, false);
         show_all_content_button.addEventListener("click",scroll_to_contents,false);
 
         // add event listener to the open filter button
         open_filter_button.addEventListener("click",open_filters,false);
+        open_filter_button.addEventListener("click",scroll_to_customizer,false);
 
         // add the event listener to the confirm button(s)
         for(let i = 0; i<confirm_choices_buttons.length; i++) {
