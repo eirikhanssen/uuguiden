@@ -540,7 +540,7 @@ nav ul ul li {
 
 /* debugging func to hide unused filters*/
 .disabled {
-  color: black;
+  color: magenta;
 }
 
 .disabled li:not(.disabled) {

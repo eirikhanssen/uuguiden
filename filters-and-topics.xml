@@ -346,7 +346,7 @@
             </ul>
         </topic>
         
-<!--        <topic id="lang" rel="webpage text-document">
+        <topic id="lang" rel="webpage text-document">
             <title>Angi rett språk</title>
             <p>Talesyntese bruker språkangivelse for å velge hvilken stemme eller hvilket språk som skal leses opp.</p>
             <p>Hvis det ikke er angitt språk språk i et dokument eller en nettside, eller at angitt språk ikke stemmer over ens med språket som er i teksten
@@ -369,7 +369,7 @@
             </sec>
             
         </topic>
--->        
+       
         <topic id="audio" rel="audio">
             <title>Lyd</title>
             <p>Noen personer kan ikke høre og svært mange har nedsatt hørsel. <a href="https://www.fhi.no/ml/miljo/stoy/om-horselstap/">Omtrent 10 prosent av befolkningen har et hørselstap som svekker evnen til å kommunisere, og andelen øker med alderen (fhi.no)</a>.
