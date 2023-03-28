@@ -157,7 +157,7 @@ var uuguiden = function () {
             var link_item = document.createElement("li");
             var internal_link = document.createElement('a');
             internal_link.setAttribute("href", "#" + el.id);
-            internal_link.innerHTML = el.querySelector('h3').innerHTML;
+            internal_link.innerHTML = el.querySelector('h2').innerHTML;
             link_item.appendChild(internal_link);
 
             let sub_nav_list = create_sub_nav_list(el);

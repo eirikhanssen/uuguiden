@@ -20,6 +20,8 @@
   --page-max-width: 70rem;
   --filterspadding: .75rem;
   --details-border-color: rosybrown;
+  --table-border-thin: 1px solid #aaa;
+  --table-border-thick: 2px solid black;
 }
 
 body {
@@ -27,7 +29,7 @@ font-size: 1.2rem;
 }
 
 body * {
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 *,
@@ -46,41 +48,47 @@ padding-top:0;
 * {font-family: 'Open Sans', sans-serif;}
 h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
+  line-height: 1.2em;
 }
 
 h2,h3,h4,h5 {
-margin-top:1.5em;
+margin-top:0em;
+}
+
+h1 {font-size: 5rem; margin-top:0; padding-top: 1rem;}
+h2 {
+  font-size: 3rem;
+}
+main h2 {
+  margin-top: 1.75em;
+  color: #2F1C6A;
+  font-weight: 800;
+}
+h3 {
+  font-size: 2.25rem;
+  margin-top: 1em;
+}
+h4 {
+  font-size: 1.5rem;
+  margin-top: .75em;
+  color: #2F1C6A;
+}
+
+h2 + *:not(h2,h3,table) {
+  margin-top: .5rem;
+}
+
+h3 + *:not(h3,h4) {
+  margin-top: .5rem;
 }
 
 p, ul, ol, dl {
-margin-top: .5rem; 
+margin-top: 1rem; 
 }
 
 ul ul {
 margin-top: 0;
 }
-
-h1 {font-size: 3.5rem; margin-top:0; padding-top: 1rem;}
-h2 {font-size: 2.5rem;}
-h3 {font-size: 2rem;}
-h4 {font-size: 1.5rem;}
-
-/*
-main {
-border: 2px dotted brown;
-}
-
-article {
-border: 2px dashed blue;
-}
-
-section {
-border: 2px solid red;
-}
-section  section {
-border: 3px double orange;
-}
-*/
 
 #main-filter-options {
   background-color: var(--filter-bg);
@@ -613,14 +621,70 @@ nav ul ul li {
   font-weight: normal;
 }
 
-
+ul li,ol li {
+  
+}
 
 .filterbuttons {
+  list-style-type: none;
   gap: var(--filterspadding);
   margin: 1.5rem 0;
 }
+.filterbuttons > *,
+.introbuttons > * {
+  flex-basis: 40%;
+  display: flex;
+  flex-grow: 1;
+}
 
-.filterbuttons button {
+.filterbuttons button,
+.introbuttons button {
   flex-grow: 1;
   flex-basis: 40%;
+}
+
+/* tables */
+table, td, th {
+  border: var(--table-border-thin);
+  border-collapse: collapse;
+  padding: .5rem .75rem;
+  text-align: left;
+  vertical-align: top;
+}
+table {
+  border-bottom: var(--table-border-thick);
+}
+thead tr:first-child {
+  border-top: var(--table-border-thick);
+}
+thead tr:last-child {
+  border-bottom: var(--table-border-thick);
+}
+table caption {
+  text-align: left
+}
+
+td > *:first-child,
+th > *:first-child{
+  margin-top: 0;
+}
+
+td > *:last-child,
+th > *:last-child{
+  margin-bottom: 0;
+}
+
+table caption {
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+table caption header {
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+table caption header + p {
+  margin-top: 0;
 }

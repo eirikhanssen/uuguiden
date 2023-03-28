@@ -306,29 +306,61 @@
         
         <topic id="image" rel="image photo infographics">
             <title>Bilder</title>
-            <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon, men vi må huske på at dersom informasjon kun er tilgjengelige i bildeform, så er det mange personer som ikke vil kunne få den.</p>
-            <sec id="blindness_and_visual_impairments">
-                <title>Synshemminger</title>
-                <p>Vi vet at <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden er blind eller har en form for synshemming (WHO)</a>.
-                I tillegg er ca 8% av menn og 0.5% av kvinner har en form for fargeblindhet som gjør at det er vanskelig eller umulig å skille enkelte farger fra hverandre.</p>
-                <p>Dette fører til at vi må følge noen retningslinjer for at bilder skal være tilgjenelige. Det er ikke alltid like enkelt å vurdere hva som er rett.</p>
-            </sec>
+            <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon og kan gjøre det lettere å forstå budskapet.</p> 
+            <p>Når vi bruker bilder må vi sørge for at personer som er blinde, svaksynte, fargeblinde eller personer som bare har slått av bildevisning også har muligheten til å ikke gå glipp av informasjonen som bildet formidler.</p>
+            <p>Dette gjør vi med bildebeskrivelser og tekstalternativer - at informasjonen som bildet formidler også finnes i tekstlig form.</p>
+            
             <sec id="text_alternative">
                 <title>Tekstalternativer</title>
-                <p>For hvert bilde som brukes må det tas en vurdering:</p>
-                <dl>
-                    <dt>Bildet er kun pynt og er ikke viktig for budskapet</dt>
-                    <dd>Bildet skal ikke leses opp.</dd>
-                    <dd>Bildet skal ikke ha tekstalternativ</dd>
-                    <dd>Vi må markere at bildet er dekorativt, ellers risikerer vi at filbanen/filnavnet til bildet blir lest opp.</dd>
-                    <dt>Bildet er meningsbærende og en kort beskrivelse er nok for å forklare bildet sett i sammenheng med teksten/konteksten rundt</dt>
-                    <dd>Vi skal sette inn en kort alternativ tekst.</dd>
-                    <dt>Bildet er en figur som gjengir data</dt>
-                    <dd>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst til bildet om at det er figuren som beskrevet rett over.</dd>
-                    <dd>Vurder å presentere samme materialet i en tabell som er laget med tabellverktøyet. En passende alternativ tekst kan være "figur som viser data i tabell 2".</dd>
-                    <dt>Bildet illustrerer et viktig poeng som ikke kan beskrives kort</dt>
-                    <dd>Vurder å skrive et avsnitt om de viktige poengene som bildet illustrerer rett før bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet slik forfatteren ønsker.. Da er det tilstrekkelig med en kort bildebeskrivelse.</dd>
-                </dl>
+                
+                <table>
+                    <caption>Hvordan man tekster forskjellige typer bilder</caption>
+                    <thead>
+                        <tr>
+                            <th>Type bilde</th>
+                            <th>Løsningsforslag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pynt</td>
+                            <td>
+                                <ul>
+                                    <li>Vi må markere at bildet er dekorativt</li>
+                                    <li>Bildet skal ikke leses opp av skjermleser</li>
+                                    <li>Bildet skal ikke ha alternativ tekst</li>
+                                    <li>Kanskje bør du finne et annet bilde som støtter budskapet i stedet for å bruke et bilde som kun er til pynt!</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Meningsbærende bilde, foto eller illustrasjon</td>
+                            <td>
+                                <ul>
+                                    <li>Vi skal sette inn en kort alternativ tekst</li>
+                                    <li>En skjermleser vil lese opp den alternative teksten - så blinde og svaksynte vil forstå hva det er</li>
+                            </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bildet er en figur som gjengir data</td>
+                            <td>
+                                <ul>
+                                    <li>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst til bildet om at det er figuren som beskrevet i teksten rett over.</li>
+                                    <li>Vurder å presentere samme materialet i en tabell som er laget med en tabell. En passende alternativ tekst kan da være "figur som viser data i tabell 2".</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Modell, foto eller infografikk som illustrerer et viktig poeng som ikke kan forklares med en kort beskrivelse.</td>
+                            <td><ul>
+                                <li>Vurder å skrive et avsnitt om de viktige poengene som bildet eller modellen illustrerer rett før bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet slik forfatteren ønsker.</li>
+                                <li>Da er det tilstrekkelig med en kort alternativ tekst.</li>
+                            </ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </sec>
 
             <sec id="infographic" rel="infographic image">

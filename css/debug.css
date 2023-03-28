@@ -23,3 +23,20 @@ body[data-filter-main=by-software] {
     /* parent li is disabled but not the current li */
     color: cyan;
   }
+
+/*
+main {
+border: 2px dotted brown;
+}
+
+article {
+border: 2px dashed blue;
+}
+
+section {
+border: 2px solid red;
+}
+section  section {
+border: 3px double orange;
+}
+*/

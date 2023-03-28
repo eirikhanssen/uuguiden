@@ -3,8 +3,8 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
       <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-      <link rel="stylesheet" href="css/uuguiden.css?v=4.0b7">
-      <link rel="stylesheet" href="css/debug.css?v=4.0b7"><script src="js/uuguiden.js?v=4.0b7"></script></head>
+      <link rel="stylesheet" href="css/uuguiden.css?v=4.0b13">
+      <link rel="stylesheet" href="css/debug.css?v=4.0b13"><script src="js/uuguiden.js?v=4.0b13"></script></head>
    <body data-filter-main="show-all">
       <header id="header">
          <div class="headercontent">
@@ -13,19 +13,27 @@
          </div>
       </header><a id="skiplink" class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a><section>
          <fieldset id="filter-main">
-            <legend>Hvordan vil du bruke veilederen?</legend>
+            <legend>
+               <h2>Hvordan vil du bruke veilederen?</h2>
+            </legend>
             <ol class="intro">
+               <li><label for="open-filter-button">Tilpass veilederen – få råd basert på akkurat det du jobber med nå.</label></li>
                <li><label for="show-all-content-button">Se hele veilederen og bruk den som et oppslagsverk</label></li>
-               <li><label for="open-filter-button">Åpne filter og få anbefalinger basert på innhold du jobber med</label></li>
             </ol>
-            <div class="introbuttons fh"><button id="show-all-content-button">Se hele veilederen</button><button id="open-filter-button">Åpne filter</button></div>
+            <menu class="introbuttons fh">
+               <li><button id="open-filter-button">Tilpass veilederen</button></li>
+               <li><button id="show-all-content-button">Se hele veilederen</button></li>
+            </menu>
          </fieldset>
          <!--#filter-main-->
          <details id="customize">
             <summary tabindex="-1">
-               <h2>Filter</h2>
+               <h2>Hva jobber du med nå?</h2>
             </summary>
-            <div class="filterbuttons fh"><button id="confirm-choices-button-top">Aktiver filterinnstillinger</button><button id="reset-filter-button-top">Nullstill filter</button></div>
+            <menu class="filterbuttons fh">
+               <li><button id="confirm-choices-button-top">Aktiver innstillinger</button></li>
+               <li><button id="reset-filter-button-top">Ta vekk avkrysninger</button></li>
+            </menu>
             <div id="filters">
                <fieldset id="filter-content-type">
                   <legend>Kryss av for innhold du jobber med nå</legend>
@@ -95,22 +103,25 @@
                   </ul>
                </fieldset>
             </div>
-            <div class="filterbuttons fh"><button id="confirm-choices-button-bottom">Aktiver filter</button><button id="reset-filter-button-bottom">Nullstill filter</button></div>
+            <menu class="filterbuttons fh">
+               <li><button id="confirm-choices-button-bottom">Aktiver filter</button></li>
+               <li><button id="reset-filter-button-bottom">Ta vekk avkrysninger</button></li>
+            </menu>
          </details>
       </section>
       <!--#customize-->
       <main>
          <section id="contents" tabindex="-1">
-            <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
+            <h2 id="contents-heading">På denne siden <span class="filtered">(tilpasset)</span></h2>
             <div id="permalink-container"></div>
             <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
             <nav id="guide-toc"></nav>
             <!--#guide-toc skal bli generert av JS-->
             <div id="topics">
                <article id="topic-document_structure" data-rel="text-document">
-                  <h3>Dokumentstruktur for tilgjengelighet</h3>
+                  <h2>Dokumentstruktur for tilgjengelighet</h2>
                   <section id="topic-document_structure-assistive_technology">
-                     <h4>Støtteteknologi</h4>
+                     <h3>Støtteteknologi</h3>
                      <p>Mange personer er avhengig av støtteteknologi for å kunne navigere eller få presentert
                         digitalt innhold til en form de kan ha nytte av. Eksempler på støtteteknologi:</p>
                      <ul>
@@ -120,7 +131,7 @@
                      </ul>
                   </section>
                   <section id="topic-document_structure-code_right">
-                     <h4>Ting må kodes slik de ser ut</h4>
+                     <h3>Ting må kodes slik de ser ut</h3>
                      <p>En viktig jobb når vi lager digitalt innhold er å sørge for at innholdet er kodet
                         slik det ser ut.</p>
                      <p>Støtteteknologi bruker disse kodene for å kunne fortelle brukerene hva slags type
@@ -139,8 +150,8 @@
                      </ul>
                   </section>
                   <section id="topic-document_structure-discoverable">
-                     <h4>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte
-                        det</h4>
+                     <h3>Innhold må være mulig å oppfatte også for personer som i utgangspunktet ikke kan oppfatte
+                        det</h3>
                      <p>Hvis innholdet er tilgjengelig i tekstlig form, vil det ofte være mulig å presentere
                         det på en måte som gjøre det mulig å oppfatte. Noen eksempler på hvordan vi kan gjøre
                         ting mulig å oppfatte for personer som i utgangspunktet ikke kan oppfatte innholdet:</p>
@@ -156,9 +167,9 @@
                   </section>
                </article>
                <article id="topic-checking_accessibility" data-rel="webpage app-text">
-                  <h3>Tilgjengelighetssjekk</h3>
+                  <h2>Tilgjengelighetssjekk</h2>
                   <section id="topic-checking_accessibility-accessibility-check-in-word" data-app="word">
-                     <h4>Bruk tilgjengelighetssjekken i Word</h4>
+                     <h3>Bruk tilgjengelighetssjekken i Word</h3>
                      <p>Hvis du bruker fullversjonen av Word, kan du bruke den innebygde tilgjengelighetssjekken:</p>
                      <ul>
                         <li><a href="https://support.microsoft.com/nb-no/office/gj%C3%B8re-word-dokumenter-tilgjengelige-for-personer-med-funksjonshemninger-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Gjøre Word-dokumenter tilgjengelige for personer med funksjonshemninger (Kundestøtte
@@ -167,7 +178,7 @@
                   </section>
                </article>
                <article id="topic-heading" data-rel="text-document webpage presenter">
-                  <h3>Overskrift</h3>
+                  <h2>Overskrift</h2>
                   <p>God og rett bruk av overkskrifter er noe av det viktigste vi gjør for å lage tilgjengelig
                      innhold.</p>
                   <p>Overskrifter lar oss raskt scanne innholdet for å få en oversikt over det.</p>
@@ -188,7 +199,7 @@
                         en skjermleser forstår</li>
                   </ul>
                   <section id="topic-heading-app_text" data-app="text" data-rel="text-document">
-                     <h4>Bruk innebygde overskriftsstiler i skriveprogram</h4>
+                     <h3>Bruk innebygde overskriftsstiler i skriveprogram</h3>
                      <p>De innebygde overskriftsstilene i skriveprogrammer har en egenskap som heter overskriftsnivå
                         eller outline-level. Denne egenskapen forteller om overskriftshierarkiet og brukes
                         av skjermlesere for å presentere overskrifter og muliggjør effektiv navigering.</p>
@@ -201,7 +212,7 @@
                      </ul>
                   </section>
                   <section id="topic-heading-webpage" data-rel="webpage">
-                     <h4>Overskrifter i nettside</h4>
+                     <h3>Overskrifter i nettside</h3>
                      <p>Til en nettside bruker du overskriftene Heading 1 til Heading 6, hvor Heading 1 er
                         høyeste nivå. Hvis du jobber i et <em>publiseringssystem for nettsider</em>, se om du finner rett nivå overskrift i editoren. Hvis du redigerer kode, kodes en
                         nivå 1 overskrift kodes i HTML på denne måten: <code>&lt;h1&gt;En nivå 1 overskrift&lt;/h1&gt;</code></p>
@@ -209,7 +220,7 @@
                </article>
                <!-- outline -->
                <article id="topic-text_properties" data-rel="text-document webpage presenter">
-                  <h3>Tekstegenskaper for god lesbarhet</h3>
+                  <h2>Tekstegenskaper for god lesbarhet</h2>
                   <p>Tekstegenskapene har mye å si for hvor raskt og lett det er å lese tekst. Noen anbefalinger:</p>
                   <ul>
                      <li>Sørg for god nok fargekontrast. Bruk sort tekst på hvit bakgrunn, eller finn fargekodene
@@ -257,13 +268,13 @@
                   </ul>
                </article>
                <article id="topic-presenter" data-rel="presenter">
-                  <h3>Presentasjon/lysbilde</h3>
+                  <h2>Presentasjon/lysbilde</h2>
                   <section id="topic-presenter-heading">
-                     <h4>Overskrifter i lysbilde</h4>
+                     <h3>Overskrifter i lysbilde</h3>
                      <p>I en presentasjon bør du velge lysbildemal som har felt for overskrift og innhold.</p>
                   </section>
                   <section id="topic-presenter-reading_order">
-                     <h4>Leserekkefølge</h4>
+                     <h3>Leserekkefølge</h3>
                      <p>For at lystbilder skal kunne leses opp i rett rekkefølge av en skjermleser må leserekkefølgen
                         være i orden.</p>
                      <p>Standard leserekkefølge er at ting blir lest opp i den rekkefølgen de blir lagt inn
@@ -282,12 +293,12 @@
                      </ul>
                   </section>
                   <section id="topic-presenter-powerpoint" data-app="presenter powerpoint">
-                     <h4>Overskrifter i PowerPoint</h4>
+                     <h3>Overskrifter i PowerPoint</h3>
                      <p>Se <a href="https://support.microsoft.com/nb-no/office/gi-et-lysbilde-tittel-c5286802-495a-4b47-a8ae-212fb8a7dc74">Gi et lysbilde tittel (Microsoft Kundestøtte)</a></p>
                   </section>
                </article>
                <article id="topic-table" data-rel="table">
-                  <h3>Tabell</h3>
+                  <h2>Tabell</h2>
                   <p>Kort huskeliste for tabeller:</p>
                   <ul>
                      <li>Tabeller er for data, ikke for layout</li>
@@ -334,7 +345,7 @@
                      <p>Det fins også <a href="https://www.google.com/search?q=extract+table+from+images">verktøy som kan generere tabell fra bilde av tabell (Google Search)</a>.</p>
                   </details>
                   <section id="topic-table-acessible_tables_word" data-app="text word">
-                     <h4>Lag tilgjengelige tabeller i Microsoft Word</h4>
+                     <h3>Lag tilgjengelige tabeller i Microsoft Word</h3>
                      <p>For å sørge for at kolonneoverskrifter blir kodet som kolonneoverskrifter i tabeller
                         må vi aktivere noen innstilliger i tabellegenskapene. Dette oppnår vi f.eks ved å
                         velge at tabelloverskrift skal gjentas på etterfølgende sider.</p>
@@ -346,12 +357,12 @@
                      </ul>
                   </section>
                   <section id="topic-table-accessible_docs_in_pages" data-app="text pages">
-                     <h4>Lag tilgjengelige dokumenter med Apple Pages</h4>
+                     <h3>Lag tilgjengelige dokumenter med Apple Pages</h3>
                      <p>Se avsnittet under "Use header rows and columns in tables" i veiledningen <a lang="en" href="https://support.apple.com/en-us/HT210563">Create accessible documents, spreadsheets or presentations with Pages, Numbers or
                            Keynote (support.apple.com)</a></p>
                   </section>
                   <section id="topic-table-external" class="external">
-                     <h4>Eksterne lenker om å lage tilgjengelige tabeller</h4>
+                     <h3>Eksterne lenker om å lage tilgjengelige tabeller</h3>
                      <ul>
                         <li><a href="https://www.uutilsynet.no/veiledning/tabeller/225">Løsningsforslag for nettsider - Tabeller (uutilsynet)</a></li>
                         <li><a lang="EN" href="https://www.w3.org/WAI/tutorials/tables/">Tables Tutorial (Web Accesibility Initiative)</a></li>
@@ -362,48 +373,83 @@
                   </section>
                </article>
                <article id="topic-image" data-rel="image photo infographics">
-                  <h3>Bilder</h3>
-                  <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon, men
-                     vi må huske på at dersom informasjon kun er tilgjengelige i bildeform, så er det mange
-                     personer som ikke vil kunne få den.</p>
-                  <section id="topic-image-blindness_and_visual_impairments">
-                     <h4>Synshemminger</h4>
-                     <p>Vi vet at <a href="https://medium.com/who/over-2-2-billion-people-are-blind-or-visually-impaired-and-the-numbers-are-rising-heres-why-f0da6df0a191">over 2 milliarder mennesker i verden er blind eller har en form for synshemming (WHO)</a>.
-                        I tillegg er ca 8% av menn og 0.5% av kvinner har en form for fargeblindhet som gjør
-                        at det er vanskelig eller umulig å skille enkelte farger fra hverandre.</p>
-                     <p>Dette fører til at vi må følge noen retningslinjer for at bilder skal være tilgjenelige.
-                        Det er ikke alltid like enkelt å vurdere hva som er rett.</p>
-                  </section>
+                  <h2>Bilder</h2>
+                  <p>Bilder er gode verktøy til å formidle eller forsterke budskap og informasjon og kan
+                     gjøre det lettere å forstå budskapet.</p>
+                  <p>Når vi bruker bilder må vi sørge for at personer som er blinde, svaksynte, fargeblinde
+                     eller personer som bare har slått av bildevisning også har muligheten til å ikke gå
+                     glipp av informasjonen som bildet formidler.</p>
+                  <p>Dette gjør vi med bildebeskrivelser og tekstalternativer - at informasjonen som bildet
+                     formidler også finnes i tekstlig form.</p>
                   <section id="topic-image-text_alternative">
-                     <h4>Tekstalternativer</h4>
-                     <p>For hvert bilde som brukes må det tas en vurdering:</p>
-                     <dl>
-                        <dt>Bildet er kun pynt og er ikke viktig for budskapet</dt>
-                        <dd>Bildet skal ikke leses opp.</dd>
-                        <dd>Bildet skal ikke ha tekstalternativ</dd>
-                        <dd>Vi må markere at bildet er dekorativt, ellers risikerer vi at filbanen/filnavnet til
-                           bildet blir lest opp.</dd>
-                        <dt>Bildet er meningsbærende og en kort beskrivelse er nok for å forklare bildet sett
-                           i sammenheng med teksten/konteksten rundt</dt>
-                        <dd>Vi skal sette inn en kort alternativ tekst.</dd>
-                        <dt>Bildet er en figur som gjengir data</dt>
-                        <dd>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst
-                           til bildet om at det er figuren som beskrevet rett over.</dd>
-                        <dd>Vurder å presentere samme materialet i en tabell som er laget med tabellverktøyet.
-                           En passende alternativ tekst kan være "figur som viser data i tabell 2".</dd>
-                        <dt>Bildet illustrerer et viktig poeng som ikke kan beskrives kort</dt>
-                        <dd>Vurder å skrive et avsnitt om de viktige poengene som bildet illustrerer rett før
-                           bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet slik
-                           forfatteren ønsker.. Da er det tilstrekkelig med en kort bildebeskrivelse.</dd>
-                     </dl>
+                     <h3>Tekstalternativer</h3>
+                     <table>
+                        <caption>
+                           <header>Tabell 1</header>
+                           <p>Hvordan man tekster forskjellige typer bilder</p>
+                        </caption>
+                        <thead>
+                           <tr>
+                              <th>Type bilde</th>
+                              <th>Løsningsforslag</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Pynt</td>
+                              <td>
+                                 <ul>
+                                    <li>Vi må markere at bildet er dekorativt</li>
+                                    <li>Bildet skal ikke leses opp av skjermleser</li>
+                                    <li>Bildet skal ikke ha alternativ tekst</li>
+                                    <li>Kanskje bør du finne et annet bilde som støtter budskapet i stedet for å bruke et
+                                       bilde som kun er til pynt!</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Meningsbærende bilde, foto eller illustrasjon</td>
+                              <td>
+                                 <ul>
+                                    <li>Vi skal sette inn en kort alternativ tekst</li>
+                                    <li>En skjermleser vil lese opp den alternative teksten - så blinde og svaksynte vil forstå
+                                       hva det er</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Bildet er en figur som gjengir data</td>
+                              <td>
+                                 <ul>
+                                    <li>Skriv om hva figuren viser i teksten før bildet, og legg inn en kort alternativ tekst
+                                       til bildet om at det er figuren som beskrevet i teksten rett over.</li>
+                                    <li>Vurder å presentere samme materialet i en tabell som er laget med en tabell. En passende
+                                       alternativ tekst kan da være "figur som viser data i tabell 2".</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Modell, foto eller infografikk som illustrerer et viktig poeng som ikke kan forklares
+                                 med en kort beskrivelse.</td>
+                              <td>
+                                 <ul>
+                                    <li>Vurder å skrive et avsnitt om de viktige poengene som bildet eller modellen illustrerer
+                                       rett før bildet. Denne teksten kan også hjelpe leseren å tolke informasjonen i bildet
+                                       slik forfatteren ønsker.</li>
+                                    <li>Da er det tilstrekkelig med en kort alternativ tekst.</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
                   </section>
                   <section id="topic-image-infographic" data-rel="infographic image">
-                     <h4>Infografikk</h4>
+                     <h3>Infografikk</h3>
                      <p>Infografikk er bilder eller illustrasjoner som ofte illustrerer eller presenterer
                         data.</p>
                   </section>
                   <section id="topic-image-presenting-information">
-                     <h4>Presentasjon av meningsbærende informasjon</h4>
+                     <h3>Presentasjon av meningsbærende informasjon</h3>
                      <dl>
                         <dt>Bruk ikke kun farge til å formidle informasjon</dt>
                         <dd>F.eks er det ikke nok å skille forskjellige grafer og søyler som skal vise til forskjellige
@@ -413,7 +459,7 @@
                   </section>
                </article>
                <article id="topic-list" data-rel="list">
-                  <h3>Liste</h3>
+                  <h2>Liste</h2>
                   <p>Kort huskeliste for lister:</p>
                   <ul>
                      <li>Ting skal være kodet slik det ser ut:
@@ -429,7 +475,7 @@
                   </ul>
                </article>
                <article id="topic-lang" data-rel="webpage text-document">
-                  <h3>Angi rett språk</h3>
+                  <h2>Angi rett språk</h2>
                   <p>Talesyntese bruker språkangivelse for å velge hvilken stemme eller hvilket språk som
                      skal leses opp.</p>
                   <p>Hvis det ikke er angitt språk språk i et dokument eller en nettside, eller at angitt
@@ -437,7 +483,7 @@
                      så risikerer vi at teksten blir lest opp med feil språk av talesyntesen. Dette gjør
                      det vanskeligere å forstå.</p>
                   <section id="topic-lang-webpage" data-rel="webpage">
-                     <h4>Angi rett språk i en nettside</h4>
+                     <h3>Angi rett språk i en nettside</h3>
                      <p>Vi passer på at rett språk er angitt i html-taggen som f.eks: <code>&lt;<span class="tag">html </span><span class="att">lang</span>=<span class="val">"nb"</span>&gt;</code></p>
                      <p>Dette angir at språket på hele nettsiden er Norsk Bokmål.</p>
                      <p>lang-attributtet kan vi plassere på alle html-tagger. Hvis vi bruker et fremmedord
@@ -448,13 +494,13 @@
                      <p>Se også <a href="https://www.uutilsynet.no/veiledning/sprak-i-koden/223"> Språk i koden (uutilsynet.no).</a></p>
                   </section>
                   <section id="topic-lang-lcms" data-app="web-lcms">
-                     <h4>Angi språk i et publiseringssystem for nettsider</h4>
+                     <h3>Angi språk i et publiseringssystem for nettsider</h3>
                      <p>De som installerer et publiseringssystem for nettsider har ansvar å angi hovedspråket
                         til nettsidene.</p>
                   </section>
                </article>
                <article id="topic-audio" data-rel="audio">
-                  <h3>Lyd</h3>
+                  <h2>Lyd</h2>
                   <p>Noen personer kan ikke høre og svært mange har nedsatt hørsel. <a href="https://www.fhi.no/ml/miljo/stoy/om-horselstap/">Omtrent 10 prosent av befolkningen har et hørselstap som svekker evnen til å kommunisere,
                         og andelen øker med alderen (fhi.no)</a>.
                      Derfor er hovedregelen at forhåndsinnspilt lyd må ha et tekstalternativ.</p>
@@ -464,11 +510,11 @@
                      <li>En lenke til et tekstdokument eller nettside med tilsvarene innhold som lydfilen</li>
                   </ul>
                   <section id="topic-audio-unntak">
-                     <h4>Unntak</h4>
+                     <h3>Unntak</h3>
                      <p>Hvis lydmaterialet i seg selv er et alternativ for tekstlig innhold, er det <a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232#unntak">unntak fra krav om å ha et tekstalternativ for lydmaterialet (uutilsynet.no)</a>.</p>
                   </section>
                   <section id="topic-audio-sjekkliste">
-                     <h4>Sjekkliste</h4>
+                     <h3>Sjekkliste</h3>
                      <p>Her er flere ting å tenke på hvis du bruker lyd i innholdet ditt:</p>
                      <dl>
                         <dt>Lydkvalitet og komprimering</dt>
@@ -496,24 +542,24 @@
                      </dl>
                   </section>
                   <section id="topic-audio-podcast" data-rel="podcast">
-                     <h4>Podcast</h4>
+                     <h3>Podcast</h3>
                      <p>Forhåndsinnspilt lyd må være tekstet. Podcast er også forhåndsinnspilt lydmateriale,
                         så husk på teksalternativ til podcast! Les mer på <a href="https://www.uutilsynet.no/veiledning/video-og-lydopptak/232#lydopptak_">Video og lydopptak - lydopptak (uutilsyet.no)</a></p>
                   </section>
                </article>
                <article id="topic-video" data-rel="video">
-                  <h3>Video</h3>
+                  <h2>Video</h2>
                   <p>For forhåndsinnspilt video må du tenke på at informasjonen i video må kunne være tilgjengelig
                      for personer som har synshemming eller hørselshemming.</p>
                   <section id="topic-video-undertekster">
-                     <h4>Undertekster for hørselshemmede</h4>
+                     <h3>Undertekster for hørselshemmede</h3>
                      <p>For å ikke gå glipp av handling og informasjon er hørselshemmede er avhengig av undertekster.
                         
                         Undertekster for hørselshemmede skal også inneholde informasjon om lyder som er viktige
                         for handlingen.</p>
                   </section>
                   <section>
-                     <h4>Synstolking for synshemmede</h4>
+                     <h3>Synstolking for synshemmede</h3>
                      <p>Synshemmede som kan høre har kun lyden å støtte seg på, og er avhengig av synstolking
                         for å ikke gå glipp av viktig handling og informasjon. 
                         synstoling kan være et eget lydspor som beskriver ting som skjer som ikke kan oppfattes

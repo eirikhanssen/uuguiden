@@ -9,7 +9,7 @@
     
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <xsl:variable name="version" select="'4.0b7'"/>
+    <xsl:variable name="version" select="'4.0b13'"/>
     
     <xsl:template match="/">
         <html lang="no" id="top">
@@ -31,17 +31,17 @@
                 
                 <section>
                     <fieldset id="filter-main">
-                        <legend>Hvordan vil du bruke veilederen?</legend>
+                        <legend><h2>Hvordan vil du bruke veilederen?</h2></legend>
                         
                         <ol class="intro">
+                            <li><label for="open-filter-button">Tilpass veilederen – få råd basert på akkurat det du jobber med nå.</label></li>
                             <li><label for="show-all-content-button">Se hele veilederen og bruk den som et oppslagsverk</label></li>
-                            <li><label for="open-filter-button">Åpne filter og få anbefalinger basert på innhold du jobber med</label></li>
                         </ol>
                         
-                        <div class="introbuttons fh">
-                            <button id="show-all-content-button">Se hele veilederen</button>
-                            <button id="open-filter-button">Åpne filter</button>
-                        </div>
+                        <menu class="introbuttons fh">
+                            <li><button id="open-filter-button">Tilpass veilederen</button></li>
+                            <li><button id="show-all-content-button">Se hele veilederen</button></li>
+                        </menu>
                         
                     </fieldset>
                     <xsl:comment>#filter-main</xsl:comment>
@@ -52,7 +52,7 @@
                 <xsl:comment>#customize</xsl:comment>
                 <main>
                     <section id="contents" tabindex="-1">
-                        <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
+                        <h2 id="contents-heading">På denne siden <span class="filtered">(tilpasset)</span></h2>
                         <div id="permalink-container"></div>
                         <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
                         <nav id="guide-toc"></nav>
@@ -72,21 +72,21 @@
     
     <xsl:template match="filters">
         <details id="customize">
-            <summary tabindex="-1"><h2>Filter</h2></summary>
+            <summary tabindex="-1"><h2>Hva jobber du med nå?</h2></summary>
 
-            <div class="filterbuttons fh">
-                <button id="confirm-choices-button-top">Aktiver filterinnstillinger</button>  
-                <button id="reset-filter-button-top">Nullstill filter</button>
-            </div>
+            <menu class="filterbuttons fh">
+                <li><button id="confirm-choices-button-top">Aktiver innstillinger</button></li>  
+                <li><button id="reset-filter-button-top">Ta vekk avkrysninger</button></li>
+            </menu>
 
             <div id="filters">
                 <xsl:apply-templates/>    
             </div>
             
-            <div class="filterbuttons fh">
-                <button id="confirm-choices-button-bottom">Aktiver filter</button>  
-                <button id="reset-filter-button-bottom">Nullstill filter</button>
-            </div>
+            <menu class="filterbuttons fh">
+                <li><button id="confirm-choices-button-bottom">Aktiver filter</button></li>  
+                <li><button id="reset-filter-button-bottom">Ta vekk avkrysninger</button></li>
+            </menu>
             
         </details>
     </xsl:template>
@@ -176,10 +176,14 @@
     </xsl:template>
     
     <xsl:template match="topic/title">
-        <h3><xsl:value-of select="."/></h3>
+        <h2><xsl:value-of select="."/></h2>
     </xsl:template>
     
     <xsl:template match="topic/sec/title">
+        <h3><xsl:value-of select="."/></h3>
+    </xsl:template>
+    
+    <xsl:template match="topic/sec/sec/title">
         <h4><xsl:value-of select="."/></h4>
     </xsl:template>
     
@@ -209,6 +213,14 @@
         <section>
             <xsl:apply-templates select="@*|node()"/>
         </section>
+    </xsl:template>
+    
+    <xsl:template match="table/caption">
+        <xsl:variable name="table_number" select="count(preceding::table)+1"/>
+        <xsl:copy>
+            <header>Tabell <xsl:value-of select="$table_number"/></header>
+            <p><xsl:apply-templates/></p>
+        </xsl:copy>
     </xsl:template>
     
 </xsl:stylesheet>
