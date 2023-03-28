@@ -9,14 +9,16 @@
     
     <xsl:mode on-no-match="shallow-copy"/>
     
+    <xsl:variable name="version" select="'4.0b7'"/>
+    
     <xsl:template match="/">
         <html lang="no" id="top">
             <head>
                <title>uuguiden.no | tilpasset veiledning for universell utforming av digitalt innhold</title>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-                <link rel="stylesheet" href="css/uuguiden.css?v=4.0b1"/>
-                <link rel="stylesheet" href="css/debug.css?v=4.0b1"/>
-                <script src="js/uuguiden.js?v=4.0b1"></script> 
+                <link rel="stylesheet" href="{concat('css/uuguiden.css?v=', $version)}"/>
+                <link rel="stylesheet" href="{concat('css/debug.css?v=', $version)}"/>
+                <script src="{concat('js/uuguiden.js?v=', $version)}"></script> 
             </head>
             <body data-filter-main="show-all">
                 <header id="header">
@@ -28,8 +30,6 @@
                 <a id="skiplink" class="skiplink" href="#contents">Hopp over tilpasningsalternativer og gå til innholdsfortegnelsen</a>
                 
                 <section>
-                    <!-- <p>Vil du se hele veilederen eller vil du ha en tilpasset visning med kun det som er relevant for det du jobber
-                        med nå?</p>-->
                     <fieldset id="filter-main">
                         <legend>Hvordan vil du bruke veilederen?</legend>
                         
@@ -51,7 +51,7 @@
                 </section>
                 <xsl:comment>#customize</xsl:comment>
                 <main>
-                    <section id="contents">
+                    <section id="contents" tabindex="-1">
                         <h2 id="contents-heading">Innhold <span class="filtered">(tilpasset)</span></h2>
                         <div id="permalink-container"></div>
                         <p class="filtered">Basert på dine valg anbefales du å sjekke følgende tema:</p>
@@ -72,7 +72,7 @@
     
     <xsl:template match="filters">
         <details id="customize">
-            <summary><h2>Filter</h2></summary>
+            <summary tabindex="-1"><h2>Filter</h2></summary>
 
             <div class="filterbuttons fh">
                 <button id="confirm-choices-button-top">Aktiver filterinnstillinger</button>  

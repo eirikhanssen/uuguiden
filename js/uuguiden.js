@@ -16,6 +16,7 @@ var uuguiden = function () {
     var confirm_choices_buttons = document.querySelectorAll("button[id^=confirm-choices-button]");
     var reset_filters_buttons = document.querySelectorAll("button[id^=reset-filter-button]");
     var customizer = document.querySelector("#customize");
+    var customizer_summary = customizer.querySelector("summary");
     var skiplink = document.querySelector("#skiplink");
     var contents = document.querySelector("#contents");
     var show_all_content_button = document.querySelector("#show-all-content-button");
@@ -25,10 +26,12 @@ var uuguiden = function () {
 
     function scroll_to_contents() {
         contents.scrollIntoView({behavior: "smooth"});
+        contents.focus();
     }
 
     function scroll_to_customizer() {
         customizer.scrollIntoView({behavior: "smooth"});
+        customizer_summary.focus();
     }
 
     function activate_skiplink() {
@@ -65,16 +68,19 @@ var uuguiden = function () {
             return elements.length;
         }
 
-        // ikke klar!
-        function disable_filter(el) {
-            ///el.parent.parent.parent.classList.add('disabled');
+        
+        function disable_unused_filter(el) {
+            // el is expected to be input[type=checkbox]
+            // el.parentElement is expected to be label
+            // el.parentElement.parentElement is expected to be li
             console.log("removing: " + el.id);
-            el.parentElement.parentElement.classList.add('disabled');
+            el.parentElement.parentElement.classList.add('unused');
+            el.disabled=true;
         }
 
         for(let i=0; i<app_filters.length; i++) {
             if(times_used("data-app", app_filters[i].dataset.app) == 0) {
-                disable_filter(app_filters[i]);
+                disable_unused_filter(app_filters[i]);
             } else {
                 console.log("keeping: " + app_filters[i].id);
             }
@@ -82,7 +88,7 @@ var uuguiden = function () {
 
         for(let i=0; i<topic_filters.length; i++) {
             if(times_used("data-rel", topic_filters[i].dataset.topic) == 0) {
-                disable_filter(topic_filters[i]);
+                disable_unused_filter(topic_filters[i]);
             } else {
                 console.log("keeping: " + topic_filters[i].id);
             }

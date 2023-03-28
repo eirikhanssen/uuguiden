@@ -15,8 +15,8 @@ body[data-filter-main=by-software] {
 }
 
 /* debugging func to hide unused filters*/
-.disabled {
-    color: magenta;
+.unused {
+    color: red;
   }
   
   .disabled li:not(.disabled) {
