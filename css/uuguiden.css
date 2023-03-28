@@ -2,7 +2,7 @@
   --filter-bg: rgb(255, 241, 232);
   --widget-radius: .5rem;
   --button-bg: rgb(17, 49, 92);
-  --button-bg-hover: rgb(110, 255, 90);
+  --button-bg-hover: var(--green-marker);
   --button-bg-active: rgb(7, 128, 77);
   --button-fg-active: white;
   --button-fg: white;
@@ -22,6 +22,19 @@
   --details-border-color: rosybrown;
   --table-border-thin: 1px solid #aaa;
   --table-border-thick: 2px solid black;
+  --link-fg: blue;
+  --link-bg: transparent;
+  --link-visited-fg: purple;
+  --link-visited-bg: transparent;
+  --link-hover-fg: black;
+  --link-hover-bg: var(--yellow-marker);
+  --link-focus-fg: var(--link-hover-fg);
+  --link-focus-bg: var(--link-hover-bg);
+  --link-active-fg: var(--yellow-marker);
+  --link-active-bg: black;
+  --dark-purple:#2F1C6A;
+  --yellow-marker: #ffff66;
+  --green-marker:rgb(110, 255, 90);
 }
 
 body {
@@ -116,6 +129,7 @@ border-bottom: 1px solid silver;
 #footer {
 margin-top: 2rem;
 border-top: 1px solid silver;
+padding-bottom: 6rem;
 }
 
 #footer h2 {
@@ -170,7 +184,7 @@ border-top: inherit;
   margin-top: 0;
 }
 html {background-color: white; margin:0;padding:0rem;}
-body {background-color: white; max-width: var(--page-max-width); margin: auto; margin-top:0; padding:1rem; padding-top: 0; overflow-x: hidden;}
+body {background-color: white; max-width: var(--page-max-width); margin: auto; margin-top:0; padding:0 1rem; overflow-x: hidden;}
 
 details, table {
 margin-top: 1rem;
@@ -625,6 +639,8 @@ ul li,ol li {
   
 }
 
+menu {padding-left: 0;}
+
 .filterbuttons {
   list-style-type: none;
   gap: var(--filterspadding);
@@ -688,3 +704,46 @@ table caption header {
 table caption header + p {
   margin-top: 0;
 }
+
+/* link to go to top */
+
+a[href='#top'] {
+  display: none;
+}
+
+a.show {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-flow: row-nowrap;
+  align-content: center;
+  justify-content: center;
+  line-height: 4rem;
+  height: 4rem;
+  width: 4rem;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+a:link {
+  color: var(--link-fg);
+  background-color: var(--link-bg);
+}
+a:visited {
+  color: var(--link-visited-fg);
+  background-color: var(--link-visited-bg);
+}
+a:hover {
+  color: var(--link-hover-fg);
+  background-color: var(--link-hover-bg);
+}
+a:focus {
+  color: var(--link-focus-fg);
+  background-color: var(--link-focus-bg);
+}
+a:active {
+ color: var(--link-active-fg);
+ background-color: var(--link-active-bg);
+}           

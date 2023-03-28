@@ -9,7 +9,7 @@
     
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <xsl:variable name="version" select="'4.0b13'"/>
+    <xsl:variable name="version" select="'4.0b14'"/>
     
     <xsl:template match="/">
         <html lang="no" id="top">
@@ -34,13 +34,13 @@
                         <legend><h2>Hvordan vil du bruke veilederen?</h2></legend>
                         
                         <ol class="intro">
-                            <li><label for="open-filter-button">Tilpass veilederen – få råd basert på akkurat det du jobber med nå.</label></li>
-                            <li><label for="show-all-content-button">Se hele veilederen og bruk den som et oppslagsverk</label></li>
+                            <li><label for="open-filter-button">Tilpass veilederen – basert på det du jobber med nå (mindre å lese)</label></li>
+                            <li><label for="show-all-content-button">Se hele veilederen – bruk innholdsfortegnelsen som et oppslagsverk</label></li>
                         </ol>
                         
                         <menu class="introbuttons fh">
-                            <li><button id="open-filter-button">Tilpass veilederen</button></li>
-                            <li><button id="show-all-content-button">Se hele veilederen</button></li>
+                            <li><button id="open-filter-button">Jeg vil tilpasse veilederen</button></li>
+                            <li><button id="show-all-content-button">Jeg vil se hele veilederen</button></li>
                         </menu>
                         
                     </fieldset>
@@ -66,14 +66,17 @@
                     <h2>Feedback</h2>
                     <p>Hvis du vil legge igjen feedback kan du svare på <a href="https://nettskjema.no/a/317600">et kort spørreskjema om uuguiden (nettskjema.no)</a></p>
                 </footer>
+                <a class="show" href="#top" title="Gå til toppen av siden">Topp</a>
             </body>
         </html>
     </xsl:template>
     
     <xsl:template match="filters">
         <details id="customize">
-            <summary tabindex="-1"><h2>Hva jobber du med nå?</h2></summary>
+            <summary><h2>Hva jobber du med nå?</h2></summary>
 
+            <p class="info">Få anbefalinger basert på det du jobber med nå. Hvis du krysser av og aktiverer innstillingene får du en forkortet og tilpasset veileder.</p>
+    
             <menu class="filterbuttons fh">
                 <li><button id="confirm-choices-button-top">Aktiver innstillinger</button></li>  
                 <li><button id="reset-filter-button-top">Ta vekk avkrysninger</button></li>
