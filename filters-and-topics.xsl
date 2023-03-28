@@ -75,7 +75,7 @@
         <details id="customize">
             <summary><h2>Hva jobber du med nå?</h2></summary>
 
-            <p class="info">Få anbefalinger basert på det du jobber med nå. Hvis du krysser av og aktiverer innstillingene får du en forkortet og tilpasset veileder.</p>
+            <p class="info">Kryss av og aktiver innstillingene for en forkortet veileder med kun relevante anbefalinger.</p>
     
             <menu class="filterbuttons fh">
                 <li><button id="confirm-choices-button-top">Aktiver innstillinger</button></li>  
@@ -87,7 +87,7 @@
             </div>
             
             <menu class="filterbuttons fh">
-                <li><button id="confirm-choices-button-bottom">Aktiver filter</button></li>  
+                <li><button id="confirm-choices-button-bottom">Aktiver innstillinger</button></li>  
                 <li><button id="reset-filter-button-bottom">Ta vekk avkrysninger</button></li>
             </menu>
             
